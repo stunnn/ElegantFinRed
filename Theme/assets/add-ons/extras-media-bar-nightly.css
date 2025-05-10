@@ -1,0 +1,62 @@
+.gradient-overlay {
+    background: linear-gradient(0deg, var(--darkerGradientPoint) 0%, rgba(29, 38, 53, 0.45));
+}
+
+.gradient-overlay:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(10px);
+    mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.age-rating {
+    font-size: smaller;
+}
+
+.button-container>.detailButton,
+.favorite-button {
+    display: block;
+    width: auto;
+    border-radius: 3em;
+    border: var(--defaultLighterBorder);
+    padding: .5em 1em !important;
+    margin: 0.125em !important;
+    backdrop-filter: none;
+    color: black;
+    background: var(--textColor) !important;
+    padding-inline: 1em !important;
+}
+
+.button-container>.detailButton:hover,
+.favorite-button:hover,
+.button-container>.detailButton:active,
+.favorite-button:ative {
+    background-color: white !important;
+    opacity: 1 !important
+}
+
+.play-text {
+    display: none;
+}
+
+.play-button:after {
+    padding-inline-start: .25em;
+    content: "Play";
+    font-weight: 700;
+    font-family: "Archivo Narrow", sans-serif;
+}
+
+.favorite-button:after {
+    padding-inline-start: .5em;
+    font-weight: 700;
+    font-family: "Archivo Narrow", sans-serif;
+}
+
+.layout-desktop .detail-button:after,
+.layout-tv .detail-button:after {
+    padding-inline-start: .5em;
+    content: "More Info";
+    font-weight: 700;
+    font-family: "Archivo Narrow", sans-serif;
+}
