@@ -1346,6 +1346,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     border-radius: var(--smallRadius);
     background: var(--lighterGradientPoint);
     border: var(--defaultBorder);
+    transition: all .125s;
 }
 
 .editItemMetadataForm>.metadataFormFields div:has(.formDialogFooterItem) {
@@ -1377,6 +1378,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 .fab:active,
 .emby-button:active {
     filter: brightness(1.2) !important;
+    transform: scale(0.98);
 }
 
 .localnav>.emby-button {
