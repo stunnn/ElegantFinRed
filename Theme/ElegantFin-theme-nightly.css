@@ -279,11 +279,17 @@ html {
 }
 
 .listViewUserDataButtons {
+    /* flex-direction: column; */
+    font-size: small;
+}
+
+.layout-mobile .listViewUserDataButtons {
     flex-direction: column;
     font-size: x-small;
 }
 
 .listItem-largeImage[data-type="Episode"] .listViewUserDataButtons {
+    flex-direction: column;
     font-size: small;
 }
 
