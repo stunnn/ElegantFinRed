@@ -655,17 +655,18 @@ html {
     background: var(--backgroundGradient)
 }
 
-.backgroundContainer:not(.withBackdrop) {
+.backgroundContainer:not(.withBackdrop, .backgroundContainer-transparent) {
     background: var(--lighterGradientPoint);
 }
 
-.backgroundContainer:not(.withBackdrop):after {
+.backgroundContainer:not(.withBackdrop,
+    .backgroundContainer-transparent):after {
     content: '';
     background: linear-gradient(0deg, var(--darkerGradientPoint) 35%, transparent 100%);
     position: absolute;
     inset: 0%;
     filter: contrast(1.25);
-    -webkit-mask: var(--ditheringMask);
+    mask: var(--ditheringMask);
 }
 
 .backgroundContainer.withBackdrop {
@@ -697,7 +698,7 @@ html {
     position: absolute;
     inset: 0%;
     background: var(--darkerGradientPointAlpha);
-    -webkit-mask: var(--ditheringMask);
+    mask: var(--ditheringMask);
 }
 
 .appfooter {
