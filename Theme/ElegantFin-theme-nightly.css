@@ -588,6 +588,10 @@ html {
         margin-top: -47vh;
     }
 
+    .layout-mobile .detailPageWrapperContainer:has(.card.backdropCard) {
+        margin-top: -50vh;
+    }
+
     [data-type=Movie] .listItemImage,
     [data-type=Series] .listItemImage {
         display: unset;
@@ -2468,4 +2472,38 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .headroom--unpinned {
     -webkit-transform: translateY(-3.7em);
     transform: translateY(-3.7em);
+}
+
+@media (orientation: portrait) {
+
+
+    .layout-mobile [dir=ltr] .infoWrapper:has(.card.backdropCard),
+    .layout-mobile .itemDetailPage.hide+.itemDetailPage .infoWrapper {
+        padding-left: 0;
+    }
+
+    .layout-mobile .detailImageContainer:has(.card.backdropCard),
+    .layout-mobile .itemDetailPage.hide+.itemDetailPage .detailImageContainer {
+        position: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0 !important;
+    }
+
+    .layout-mobile .detailImageContainer .card.backdropCard,
+    .layout-mobile .itemDetailPage.hide+.itemDetailPage .detailImageContainer .card {
+        position: inherit !important;
+        transform-origin: bottom;
+    }
+
+    .layout-mobile .detailImageContainer .card.backdropCard,
+    .layout-mobile .itemDetailPage.hide+.itemDetailPage .detailImageContainer .card {
+        transform: scale(1.75);
+    }
+
+    .layout-mobile .detailImageContainer .card.portraitCard {
+        /* transform: scale(1.25); */
+    }
+
 }
