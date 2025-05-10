@@ -2452,8 +2452,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     background-color: var(--headerColor);
     border: var(--defaultBorder);
     border-width: 0 0 var(--borderWidth) 0;
-    transition-property: background-color, backdrop-filter, transform, border-width;
     transition: .5s ease-in-out;
+    transition-property: background-color, backdrop-filter, transform, border-width;
 }
 
 .skinHeader-withBackground.semiTransparent,
@@ -2461,7 +2461,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     backdrop-filter: none;
     background-color: transparent;
     border: none;
-    transition: all .5s ease-in-out;
+    transition: .5s ease-in-out;
+    transition-property: background-color, backdrop-filter, transform, border-width;
 }
 
 .headerTop {
