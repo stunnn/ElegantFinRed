@@ -1,6 +1,7 @@
 /* ElegantFin Theme for Jellyfin by lscambo13 */
 
 /* Add-ons: Uncomment to enable */
+/* @import url(./assets/add-ons/extras-media-bar-nightly.css); */
 /* @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
 
 /* Inter Font Family */
@@ -409,7 +410,8 @@ html {
 }
 
 .layout-desktop .detailPageWrapperContainer {
-    background: linear-gradient(0deg, var(--darkerGradientPoint) 80%, transparent);
+    /* background: linear-gradient(0deg, var(--darkerGradientPoint) 80%, transparent); */
+    background: transparent;
     min-height: calc(100vh - 13em);
 }
 
@@ -651,30 +653,39 @@ html {
 }
 
 .backgroundContainer:not(.withBackdrop) {
-    background: var(--backgroundGradient)
+    background: var(--lighterGradientPoint);
+}
+
+.backgroundContainer:not(.withBackdrop):after {
+    content: '';
+    background: linear-gradient(0deg, var(--darkerGradientPoint) 35%, transparent 100%);
+    position: absolute;
+    inset: 0%;
+    filter: contrast(1.25);
+    -webkit-mask: url(https://grainy-gradients.vercel.app/noise.svg);
 }
 
 .backgroundContainer.withBackdrop {
-    opacity: .9375;
-    background: var(--backgroundGradient)
+    opacity: .98;
+    background: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPointAlpha) 100%);
 }
 
-.skinHeader-blurred:not(.osdHeader),
+.backdropContainer {
+    scale: 1.125;
+    overflow: hidden;
+}
+
+.backdropContainer::after {
+    content: '';
+    position: absolute;
+    inset: 0%;
+    background: var(--darkerGradientPointAlpha);
+    -webkit-mask: url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
 .appfooter {
     background-color: var(--headerColor) !important;
     backdrop-filter: var(--blurDefault) !important;
-}
-
-.headroom--unpinned {
-    -webkit-transform: translateY(-3.5em);
-    transform: translateY(-3.5em);
-}
-
-.skinHeader:not(.osdHeader) {
-    border-style: solid;
-    border-width: 0 0 var(--borderWidth) 0;
-    border-color: var(--borderColor);
-    transition: all .375s ease-in-out;
 }
 
 .lyricPage {
@@ -847,7 +858,7 @@ progress+span {
     border: var(--defaultLighterBorder);
     padding: .5em .5em !important;
     margin: 0.125em !important;
-    backdrop-filter: var(--blurSmallest);
+    backdrop-filter: var(--blurLarge);
 }
 
 .btnPlay.detailButton {
