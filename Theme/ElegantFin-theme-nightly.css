@@ -540,6 +540,11 @@ html {
     width: 23vw !important;
 }
 
+.layout-mobile .detailImageContainer .card {
+    -webkit-filter: drop-shadow(0 0 .25rem rgba(0, 0, 0, 0.75));
+    filter: drop-shadow(0 0 .25rem rgba(0, 0, 0, 0.75));
+}
+
 @media (max-width: 62.5em) {
     .layout-desktop .itemBackdrop {
         height: 7em !important;
