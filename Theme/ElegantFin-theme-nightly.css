@@ -671,9 +671,23 @@ html {
     background: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPointAlpha) 100%);
 }
 
-.backdropContainer {
-    scale: 1.125;
+@keyframes scaleOnce {
+    from {
+        transform: scale(1) translate(0, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1.075) translate(2%, -3%);
+        opacity: 1;
+    }
+}
+
+
+.backdropImageFadeIn,
+.layout-mobile .itemBackdrop {
     overflow: hidden;
+    animation: scaleOnce 3s ease-out forwards;
 }
 
 .backdropContainer::after {
