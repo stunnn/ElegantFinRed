@@ -2438,3 +2438,30 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 #viewPanel .ui-panel-inner {
     margin-top: 4em;
 }
+
+.skinHeader-blurred:not(.osdHeader) {
+    backdrop-filter: var(--blurDefault);
+    background-color: var(--headerColor);
+    border: var(--defaultBorder);
+    border-width: 0 0 var(--borderWidth) 0;
+    transition-property: background-color, backdrop-filter, transform, border-width;
+    transition: .5s ease-in-out;
+}
+
+.skinHeader-withBackground.semiTransparent,
+.layout-mobile .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty) {
+    backdrop-filter: none;
+    background-color: transparent;
+    border: none;
+    transition: all .5s ease-in-out;
+}
+
+.headerTop {
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.headroom--unpinned {
+    -webkit-transform: translateY(-3.7em);
+    transform: translateY(-3.7em);
+}
