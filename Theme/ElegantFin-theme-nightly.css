@@ -2237,6 +2237,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .endTimeText {
     justify-content: right;
     padding-inline-end: .8em;
+    margin: 0 0 0 .75em !important;
 }
 
 .startTimeText,
