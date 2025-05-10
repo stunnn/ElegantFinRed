@@ -675,7 +675,7 @@ html {
 }
 
 .backgroundContainer.withBackdrop {
-    opacity: .98;
+    opacity: .975;
     background: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPointAlpha) 100%);
 }
 
@@ -690,7 +690,6 @@ html {
         opacity: 1;
     }
 }
-
 
 .backdropImageFadeIn,
 .layout-mobile .itemBackdrop {
