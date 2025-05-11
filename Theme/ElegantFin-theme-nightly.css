@@ -418,10 +418,6 @@ html {
     }
 }
 
-.detailLogo {
-    display: none;
-}
-
 .detailPageWrapperContainer {
     padding-top: unset;
     margin-top: unset;
@@ -638,11 +634,6 @@ html {
     .layout-mobile .detailImageContainer .card {
         max-width: 15vw;
     }
-
-    .layout-mobile [dir=ltr] .infoWrapper {
-        padding-left: 25% !important;
-    }
-
 }
 
 .layout-mobile .itemBackdrop {
@@ -699,22 +690,66 @@ html {
     background: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPointAlpha) 100%);
 }
 
-@keyframes scaleOnce {
+@keyframes scaleUp {
     from {
-        transform: scale(1) translate(0, 0);
+        transform: scale(1) ;
         opacity: 0;
     }
 
     to {
-        transform: scale(1.075) translate(2%, -3%);
+        transform: scale(1.075);
         opacity: 1;
     }
 }
 
-.backdropImageFadeIn,
-.layout-mobile .itemBackdrop {
-    overflow: hidden;
-    animation: scaleOnce 3s ease-out forwards;
+@keyframes moveDown {
+    from {
+        transform: translateY(-2em) ;
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) ;
+        opacity: 1;
+    }
+}
+
+.backdropImageFadeIn
+{
+    transform-origin: bottom left;
+    animation: scaleUp 3s ease-out forwards;
+}
+
+.layout-mobile .itemBackdrop{
+    animation: moveDown 1s ease-out forwards;
+}
+
+.detailLogo {
+    display: none;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(-90%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+}
+
+.layout-mobile .detailLogo {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    left: 1em;
+    top: 44vh;
+    width: calc(100vw - 2em);
+    max-height: 20vh;
+    background-position: bottom;
+    animation: moveUp 1s ease-out forwards;
 }
 
 .backdropContainer::after {
@@ -2488,6 +2523,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     margin-top: 4em;
 }
 
+/* this is the default header, visible in home and libraries */
 .skinHeader-blurred:not(.osdHeader) {
     backdrop-filter: var(--blurDefault);
     background-color: var(--headerColor);
@@ -2497,6 +2533,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     transition-property: background-color, backdrop-filter, transform, border-width;
 }
 
+/* this is the transparent header, visible in main media page */
 .skinHeader-withBackground.semiTransparent,
 .layout-mobile .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty) {
     backdrop-filter: none;
@@ -2506,46 +2543,63 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     transition-property: background-color, backdrop-filter, transform, border-width;
 }
 
+.skinHeader-withBackground.semiTransparent .headerButton,
+.layout-mobile .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty) .headerButton{
+    text-shadow: 1px 1px 0px #00000080;
+}
+
+/* this keeps the header elements aligned when its height is modified */
 .headerTop {
     -webkit-align-items: flex-end;
     align-items: flex-end;
 }
 
+/* this prevents the section tabs from hiding all the way up */
 .headroom--unpinned {
     -webkit-transform: translateY(-3.7em);
     transform: translateY(-3.7em);
 }
 
-@media (orientation: portrait) {
-
-
-    .layout-mobile [dir=ltr] .infoWrapper:has(.card.backdropCard),
-    .layout-mobile .itemDetailPage.hide+.itemDetailPage .infoWrapper {
-        padding-left: 0;
-    }
-
-    .layout-mobile .detailImageContainer:has(.card.backdropCard),
-    .layout-mobile .itemDetailPage.hide+.itemDetailPage .detailImageContainer {
-        position: inherit;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-left: 0 !important;
-    }
-
-    .layout-mobile .detailImageContainer .card.backdropCard,
-    .layout-mobile .itemDetailPage.hide+.itemDetailPage .detailImageContainer .card {
-        position: inherit !important;
-        transform-origin: bottom;
-    }
-
-    .layout-mobile .detailImageContainer .card.backdropCard,
-    .layout-mobile .itemDetailPage.hide+.itemDetailPage .detailImageContainer .card {
-        transform: scale(1.75);
-    }
-
-    .layout-mobile .detailImageContainer .card.portraitCard {
-        /* transform: scale(1.25); */
-    }
-
+/* this brings the buttons and title to the center in main media page */
+.layout-mobile [dir=ltr] .infoWrapper,
+.layout-mobile .infoWrapper{
+    padding-left: 0;
 }
+
+/* Both the blocks below position the poster in main media page in the center */
+.layout-mobile .detailImageContainer{
+    height: 12em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-left: 0 !important;
+}
+
+.layout-mobile .detailImageContainer .card{
+    position: inherit !important;
+    transform-origin: bottom;
+    opacity: 0;
+    width: 100% !important;
+    max-width: 45vw;
+}
+
+/* this hides the main media title when the clear logo is available*/
+.layout-mobile #itemDetailPage:has(.detailLogo:not(.hide)) .infoWrapper .parentNameLast,
+.layout-mobile #itemDetailPage:has(.detailLogo:not(.hide)) .infoWrapper .parentName {
+    z-index: 2;
+    display: none;
+}
+
+/* this shows the main media title and the poster when the clear logo is unavailable*/
+.layout-mobile #itemDetailPage:has(.detailLogo.hide) .infoWrapper .parentNameLast,
+.layout-mobile #itemDetailPage:has(.detailLogo.hide) .detailImageContainer .card {
+    opacity: 1;
+}
+
+/* .noHomeButtonHeader .emby-tab-button[data-index="1"] .emby-button-foreground{
+    display: none;
+}
+
+.noHomeButtonHeader .emby-tab-button[data-index="1"]:after{
+    content: "Watchlist";
+} */
