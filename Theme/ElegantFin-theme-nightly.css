@@ -2009,7 +2009,8 @@ div[data-role=controlgroup] a.ui-btn-active {
     padding-bottom: 2%;
 }
 
-.infoWrapper h1.itemName {
+.infoWrapper h1.itemName,
+.infoWrapper h1.parentName  {
     font-size: xxx-large;
 }
 
