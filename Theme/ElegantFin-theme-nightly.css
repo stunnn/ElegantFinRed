@@ -988,7 +988,7 @@ progress+span {
 
 .layout-mobile [dir=ltr] .mainDetailButtons {
     flex-wrap: wrap;
-    padding-inline: 20%;
+    padding-inline: 10%;
 }
 
 .mainDrawer,
