@@ -671,24 +671,36 @@ html {
     background: var(--backgroundGradient)
 }
 
+
+/* Uncomment to turn dithering back on - START*/
 .backgroundContainer:not(.withBackdrop, .backgroundContainer-transparent) {
-    background: var(--lighterGradientPoint);
+    background: var(--backgroundGradient)
+    /* background: var(--lighterGradientPoint); */
 }
 
-.backgroundContainer:not(.withBackdrop,
-    .backgroundContainer-transparent):after {
+/* .backdropContainer::after {
+    content: '';
+    position: absolute;
+    inset: 0%;
+    background: var(--darkerGradientPointAlpha);
+    mask: var(--ditheringMask);
+} */
+
+.backgroundContainer.withBackdrop {
+    opacity: .98;
+    background: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPointAlpha) 100%);
+}
+
+/* .backgroundContainer:not(.withBackdrop, .backgroundContainer-transparent):after {
     content: '';
     background: linear-gradient(0deg, var(--darkerGradientPoint) 35%, transparent 100%);
     position: absolute;
     inset: 0%;
     filter: contrast(1.25);
     mask: var(--ditheringMask);
-}
+} */
 
-.backgroundContainer.withBackdrop {
-    opacity: .975;
-    background: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPointAlpha) 100%);
-}
+/* Uncomment to turn dithering back on - END*/
 
 @keyframes scaleUp {
     from {
@@ -750,14 +762,6 @@ html {
     max-height: 20vh;
     background-position: bottom;
     animation: moveUp 1s ease-out forwards;
-}
-
-.backdropContainer::after {
-    content: '';
-    position: absolute;
-    inset: 0%;
-    background: var(--darkerGradientPointAlpha);
-    mask: var(--ditheringMask);
 }
 
 .appfooter {
