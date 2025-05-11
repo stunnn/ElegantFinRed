@@ -423,11 +423,6 @@ html {
     margin-top: unset;
 }
 
-/* This adds a light tint on the backdrop on phones */
-.layout-mobile .detailPageWrapperContainer {
-    background: rgb(17 24 39 / 40%);
-}
-
 .layout-desktop .detailPageWrapperContainer {
     background: transparent;
     min-height: calc(100vh - 13em);
@@ -494,10 +489,6 @@ html {
 
 .detailRibbon {
     background-color: transparent;
-}
-
-.itemBackdrop {
-    height: 13em;
 }
 
 .mediaInfoItem {
@@ -580,7 +571,6 @@ html {
 @media (orientation: landscape) and (min-width: 40em) {
     .layout-mobile .itemBackdrop {
         height: 40vh;
-        opacity: .10;
     }
 
     .layout-mobile .detailPageWrapperContainer {
@@ -634,18 +624,6 @@ html {
     .layout-mobile .detailImageContainer .card {
         max-width: 15vw;
     }
-}
-
-.layout-mobile .itemBackdrop {
-    margin-top: 0;
-    position: sticky;
-    top: -30%;
-    mask: linear-gradient(180deg, black 50%, transparent);
-}
-
-.layout-tv .itemBackdrop {
-    display: block;
-    height: 13vh;
 }
 
 h2 {
@@ -714,6 +692,12 @@ html {
     }
 }
 
+.backdropImageFadeIn
+{
+    transform-origin: bottom left;
+    animation: scaleUp 3s ease-out forwards;
+}
+
 @keyframes moveDown {
     from {
         transform: translateY(-2em) ;
@@ -726,15 +710,6 @@ html {
     }
 }
 
-.backdropImageFadeIn
-{
-    transform-origin: bottom left;
-    animation: scaleUp 3s ease-out forwards;
-}
-
-.layout-mobile .itemBackdrop{
-    animation: moveDown 1s ease-out forwards;
-}
 
 .detailLogo {
     display: none;
@@ -745,7 +720,6 @@ html {
         transform: translateY(-90%);
         opacity: 0;
     }
-
     to {
         transform: translateY(-100%);
         opacity: 1;
@@ -762,6 +736,23 @@ html {
     max-height: 20vh;
     background-position: bottom;
     animation: moveUp 1s ease-out forwards;
+}
+
+.layout-mobile .itemBackdrop {
+    margin-top: 0;
+    position: sticky;
+    top: -30%;
+    mask: linear-gradient(180deg, rgba(0,0,0,.75) 50%, transparent);
+    animation: moveDown 1s ease-out forwards;
+}
+
+.layout-desktop .itemBackdrop{
+    height: 13em;
+}
+
+.layout-tv .itemBackdrop {
+    display: block;
+    height: 13vh;
 }
 
 .appfooter {
