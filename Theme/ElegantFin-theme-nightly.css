@@ -427,12 +427,12 @@ html {
     margin-top: unset;
 }
 
+/* This adds a light tint on the backdrop on phones */
 .layout-mobile .detailPageWrapperContainer {
-    background: var(--darkerGradientPointAlpha);
+    background: rgb(17 24 39 / 40%);
 }
 
 .layout-desktop .detailPageWrapperContainer {
-    /* background: linear-gradient(0deg, var(--darkerGradientPoint) 80%, transparent); */
     background: transparent;
     min-height: calc(100vh - 13em);
 }
@@ -448,16 +448,8 @@ html {
     padding-right: 0;
 }
 
-.layout-mobile .detailPagePrimaryContainer {
-    background: linear-gradient(0deg, var(--darkerGradientPoint) 70%, transparent);
-}
-
 .layout-desktop .detailPagePrimaryContainer {
     background: transparent;
-}
-
-.layout-mobile .detailPageSecondaryContainer {
-    background-color: var(--darkerGradientPoint);
 }
 
 .layout-desktop .detailPageSecondaryContainer {
@@ -656,7 +648,8 @@ html {
 .layout-mobile .itemBackdrop {
     margin-top: 0;
     position: sticky;
-    top: -10%;
+    top: -30%;
+    mask: linear-gradient(180deg, black 50%, transparent);
 }
 
 .layout-tv .itemBackdrop {
