@@ -2014,7 +2014,8 @@ div[data-role=controlgroup] a.ui-btn-active {
     font-size: xxx-large;
 }
 
-.layout-mobile .infoWrapper h1.itemName {
+.layout-mobile .infoWrapper h1.itemName,
+.layout-mobile .infoWrapper h1.parentName  {
     font-size: 1.6em;
 }
 
