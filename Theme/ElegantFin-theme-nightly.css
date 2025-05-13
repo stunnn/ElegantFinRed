@@ -533,6 +533,65 @@ html {
     margin-top: unset !important;
 }
 
+@keyframes animMoveDown {
+    from {
+        transform: translateY(-2em);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.detailLogo {
+    display: none;
+}
+
+@keyframes animMoveUp {
+    from {
+        transform: translateY(-90%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+}
+
+.layout-mobile .detailLogo {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    left: 1em;
+    top: 45vh;
+    width: calc(100vw - 2em);
+    max-height: 20vh;
+    background-position: bottom;
+    animation: animMoveUp 1s ease-out forwards;
+}
+
+.layout-mobile .itemBackdrop {
+    margin-top: 0;
+    position: sticky;
+    top: -30%;
+    background-position: 50% 50%;
+    mask: linear-gradient(180deg, rgba(0, 0, 0, .75) 50%, transparent);
+    animation: animMoveDown 1s ease-out forwards;
+}
+
+.layout-desktop .itemBackdrop {
+    height: 13em;
+}
+
+.layout-tv .itemBackdrop {
+    display: block;
+    height: 13vh;
+}
+
 .layout-desktop .detailImageContainer .card {
     top: unset !important;
     width: 23vw !important;
@@ -545,6 +604,128 @@ html {
 .layout-mobile .detailImageContainer .card {
     -webkit-filter: drop-shadow(0 0 .25rem rgba(0, 0, 0, 0.75));
     filter: drop-shadow(0 0 .25rem rgba(0, 0, 0, 0.75));
+}
+
+.detailButton {
+    border: var(--defaultLighterBorder);
+    padding: .5em .5em !important;
+}
+
+.detailButton-icon {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+.detailButton:not(.btnPlay) {
+    color: var(--textColor);
+    backdrop-filter: none;
+    border-color: transparent;
+    margin: .5em !important;
+    border-radius: 50%;
+}
+
+.btnPlay.detailButton {
+    background-color: var(--textColor);
+    color: black;
+    border-radius: 3em;
+    border-color: var(--borderColor);
+    height: 3em;
+    width: 10em;
+    margin-right: .5em !important;
+}
+
+.layout-mobile .btnPlay.detailButton {
+    flex: 0 0 100%;
+    margin-right: 0 !important;
+}
+
+.btnPlay>.detailButton-content {
+    -webkit-align-items: unset;
+    align-items: unset;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: unset;
+    flex-direction: unset;
+    -webkit-justify-content: unset;
+    align-content: unset;
+    justify-content: flex-start;
+}
+
+
+.btnPlay[title="Play"]>.detailButton-content::after {
+    content: "Play";
+}
+
+.btnPlay[title="Resume"]>.detailButton-content::after {
+    content: "Resume";
+}
+
+.btnPlay>.detailButton-content::after {
+    padding-left: .25em;
+    padding-right: .5em;
+    place-content: center;
+}
+
+.layout-mobile .mainDetailButtons {
+    /* margin-top: .5em; */
+}
+
+.layout-mobile [dir=ltr] .mainDetailButtons {
+    flex-wrap: wrap;
+    padding-inline: 1.25em;
+}
+
+/* this brings the buttons and title to the center in main media page */
+.layout-mobile [dir=ltr] .infoWrapper,
+.layout-mobile .infoWrapper {
+    padding-left: 0;
+}
+
+/* Both the blocks below position the poster in main media page in the center */
+.layout-mobile .detailImageContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-left: 0 !important;
+}
+
+.layout-mobile .detailImageContainer .card {
+    position: inherit !important;
+    margin-top: -70%;
+    max-width: 75vw;
+    display: none;
+}
+
+/* .layout-mobile .detailImageContainer .card.backdropCard {
+}
+
+.layout-mobile .detailImageContainer .card.portraitCard {
+} */
+
+.layout-mobile .itemBackdrop {
+    height: 45vh;
+}
+
+.layout-mobile .detailPageWrapperContainer {
+    padding-top: 0;
+    margin-top: .5em;
+}
+
+/* this hides the main media title when the clear logo is available*/
+.layout-mobile #itemDetailPage:has(.detailLogo:not(.hide)) .infoWrapper .parentNameLast,
+.layout-mobile #itemDetailPage:has(.detailLogo:not(.hide)) .infoWrapper .parentName,
+.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .detailLogo {
+    z-index: 2;
+    display: none;
+}
+
+/* this shows the main media title and the poster when the clear logo is unavailable*/
+.layout-mobile #itemDetailPage:has(.detailLogo.hide) .infoWrapper .parentNameLast,
+.layout-mobile #itemDetailPage:has(.detailLogo.hide) .infoWrapper .parentName,
+.layout-mobile #itemDetailPage:has(.detailLogo.hide) .detailImageContainer .card,
+.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .detailImageContainer .card,
+.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .infoWrapper .parentNameLast,
+.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .infoWrapper .parentName {
+    display: block;
 }
 
 @media (max-width: 62.5em) {
@@ -568,34 +749,24 @@ html {
     min-width: 15%;
 }
 
-@media (orientation: landscape) and (min-width: 40em) {
-    .layout-mobile .itemBackdrop {
-        height: 40vh;
-    }
-
-    .layout-mobile .detailPageWrapperContainer {
-        padding-top: 35vh;
-        margin-top: -47vh;
-    }
-}
+@media (orientation: landscape) and (min-width: 40em) {}
 
 @media (orientation: portrait) and (max-width: 40em) {
-    .layout-mobile .itemBackdrop {
-        height: 40vh;
-    }
-
-    .layout-mobile .detailPageWrapperContainer {
-        padding-top: 35vh;
-        margin-top: -47vh;
-    }
-
-    .layout-mobile .detailPageWrapperContainer:has(.card.backdropCard) {
-        margin-top: -50vh;
-    }
 
     [data-type=Movie] .listItemImage,
     [data-type=Series] .listItemImage {
         display: unset;
+    }
+}
+
+@media (orientation: portrait) {
+
+    .layout-mobile .detailImageContainer .card.backdropCard {
+        width: 65vw !important;
+    }
+
+    .layout-mobile .detailImageContainer .card.portraitCard {
+        width: 45vw !important;
     }
 }
 
@@ -619,10 +790,6 @@ html {
 
     .backdropCard {
         width: 23%;
-    }
-
-    .layout-mobile .detailImageContainer .card {
-        max-width: 15vw;
     }
 }
 
@@ -680,7 +847,7 @@ html {
 
 /* Uncomment to turn dithering back on - END*/
 
-@keyframes scaleUp {
+@keyframes animScaleUp {
     from {
         transform: scale(1);
         opacity: 0;
@@ -694,65 +861,7 @@ html {
 
 .backdropImageFadeIn {
     transform-origin: bottom left;
-    animation: scaleUp 3s ease-out forwards;
-}
-
-@keyframes moveDown {
-    from {
-        transform: translateY(-2em);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
-.detailLogo {
-    display: none;
-}
-
-@keyframes moveUp {
-    from {
-        transform: translateY(-90%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(-100%);
-        opacity: 1;
-    }
-}
-
-.layout-mobile .detailLogo {
-    display: block;
-    z-index: 1;
-    position: absolute;
-    left: 1em;
-    top: 44vh;
-    width: calc(100vw - 2em);
-    max-height: 20vh;
-    background-position: bottom;
-    animation: moveUp 1s ease-out forwards;
-}
-
-.layout-mobile .itemBackdrop {
-    margin-top: 0;
-    position: sticky;
-    top: -30%;
-    mask: linear-gradient(180deg, rgba(0, 0, 0, .75) 50%, transparent);
-    animation: moveDown 1s ease-out forwards;
-}
-
-.layout-desktop .itemBackdrop {
-    height: 13em;
-}
-
-.layout-tv .itemBackdrop {
-    display: block;
-    height: 13vh;
+    animation: animScaleUp 3s ease-out forwards;
 }
 
 .appfooter {
@@ -907,10 +1016,6 @@ progress+span {
     max-height: 2em;
 }
 
-.layout-mobile .mainDetailButtons {
-    margin-top: 2em;
-}
-
 .button-link {
     color: rgb(200, 200, 200);
 }
@@ -923,67 +1028,6 @@ progress+span {
 .button-link:active {
     color: rgb(243, 243, 243) !important;
     text-decoration: none;
-}
-
-.detailButton {
-    border-radius: var(--smallRadius);
-    border: var(--defaultLighterBorder);
-    padding: .5em .5em !important;
-    margin: 0.125em !important;
-    backdrop-filter: var(--blurLarge);
-}
-
-.layout-mobile .detailButton:not(.btnPlay) {
-    color: var(--dimTextColor);
-    backdrop-filter: none;
-    border-color: transparent;
-}
-
-.btnPlay.detailButton {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: var(--defaultLighterBorder);
-}
-
-.layout-mobile .btnPlay.detailButton {
-    background-color: var(--textColor);
-    color: black;
-    flex: 0 0 100%;
-    border-radius: 3em;
-    border-color: var(--borderColor);
-    height: 3em;
-    font-size: medium;
-}
-
-.btnPlay>.detailButton-content {
-    -webkit-align-items: unset;
-    align-items: unset;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: unset;
-    flex-direction: unset;
-    -webkit-justify-content: unset;
-    align-content: unset;
-    justify-content: flex-start;
-}
-
-
-.btnPlay[title="Play"]>.detailButton-content::after {
-    content: "Play";
-}
-
-.btnPlay[title="Resume"]>.detailButton-content::after {
-    content: "Resume";
-}
-
-.btnPlay>.detailButton-content::after {
-    padding-left: .25em;
-    padding-right: .5em;
-    place-content: center;
-}
-
-.layout-mobile [dir=ltr] .mainDetailButtons {
-    flex-wrap: wrap;
-    padding-inline: 10%;
 }
 
 .mainDrawer,
@@ -1961,6 +2005,11 @@ div[data-role=controlgroup] a.ui-btn-active {
         color: white;
     }
 
+    .btnPlay.detailButton:hover {
+        background-color: var(--textColor);
+        color: black;
+    }
+
     .alphaPickerButton:hover {
         color: rgba(255, 255, 255, 1);
     }
@@ -2065,19 +2114,15 @@ div[data-role=controlgroup] a.ui-btn-active {
     flex-direction: row-reverse;
 }
 
-.layout-mobile [dir=ltr] .infoWrapper {
-    padding-left: 34%;
-    padding-bottom: 2%;
-}
-
 .infoWrapper h1.itemName,
 .infoWrapper h1.parentName {
     font-size: xxx-large;
 }
 
 .layout-mobile .infoWrapper h1.itemName,
-.layout-mobile .infoWrapper h1.parentName {
-    font-size: 1.6em;
+.layout-mobile .infoWrapper h1.parentName,
+.layout-mobile .infoWrapper h1.parentNameLast {
+    font-size: 2.5em;
 }
 
 #liveTvSuggestedPage,
@@ -2553,42 +2598,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .headroom--unpinned {
     -webkit-transform: translateY(-3.7em);
     transform: translateY(-3.7em);
-}
-
-/* this brings the buttons and title to the center in main media page */
-.layout-mobile [dir=ltr] .infoWrapper,
-.layout-mobile .infoWrapper {
-    padding-left: 0;
-}
-
-/* Both the blocks below position the poster in main media page in the center */
-.layout-mobile .detailImageContainer {
-    height: 12em;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-left: 0 !important;
-}
-
-.layout-mobile .detailImageContainer .card {
-    position: inherit !important;
-    transform-origin: bottom;
-    opacity: 0;
-    width: 100% !important;
-    max-width: 45vw;
-}
-
-/* this hides the main media title when the clear logo is available*/
-.layout-mobile #itemDetailPage:has(.detailLogo:not(.hide)) .infoWrapper .parentNameLast,
-.layout-mobile #itemDetailPage:has(.detailLogo:not(.hide)) .infoWrapper .parentName {
-    z-index: 2;
-    display: none;
-}
-
-/* this shows the main media title and the poster when the clear logo is unavailable*/
-.layout-mobile #itemDetailPage:has(.detailLogo.hide) .infoWrapper .parentNameLast,
-.layout-mobile #itemDetailPage:has(.detailLogo.hide) .detailImageContainer .card {
-    opacity: 1;
 }
 
 /* .noHomeButtonHeader .emby-tab-button[data-index="1"] .emby-button-foreground{
