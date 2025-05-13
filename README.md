@@ -1,5 +1,5 @@
 # ElegantFin Theme
-This is a Jellyfin theme inspired from JellySeerr to improve the overall look and experience with various fixes to the UI and behaviour.
+This is a Jellyfin theme inspired from Jellyseerr to improve the overall look and experience with various fixes to the UI/UX.
 
 
 #### **Author:** [lscambo13](https://github.com/lscambo13)
@@ -132,7 +132,7 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 <details>
   <summary>3️⃣ - <i>Why do I notice visual bugs and inconsistencies on Jellyfin Media Player?</i></summary>
 
-- Currently JMP uses Qt 5.x which uses an outdated web engine, so many new CSS features do not work. Once they release a new version based on Qt 6.x, most issues should automatically be resolved. Until then, I advise using the web app instead.
+- Currently JMP uses Qt 5.x which uses an outdated web engine, so many new CSS features do not work on it. Once a new version based on Qt 6.x is released, most issues should automatically be resolved. Until then, I advise using the web app instead, and JMP is unsupported.
 </details>
 
 <details>
