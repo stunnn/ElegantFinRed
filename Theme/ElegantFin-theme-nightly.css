@@ -728,6 +728,14 @@ html {
     display: block;
 }
 
+.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .itemBackdrop::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: var(--blurLargest);
+    /* mask: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, transparent 35%); */
+}
+
 @media (max-width: 62.5em) {
     .layout-desktop .itemBackdrop {
         height: 7em !important;
