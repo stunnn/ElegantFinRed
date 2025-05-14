@@ -1066,6 +1066,7 @@ progress+span {
     margin-top: 1em;
     border: var(--defaultBorder);
     border-radius: var(--smallRadius);
+    background-color: var(--lighterGradientPointAlpha);
 }
 
 @supports(display:revert) {
