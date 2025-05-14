@@ -27,6 +27,9 @@
 
     --activeColorAlpha: rgba(119, 91, 244, 0.9);
     --activeColor: rgb(119, 91, 244);
+    --osdSeekBarPlayedColor: var(--textColor);
+    --osdSeekBarBufferedColorAlpha: rgba(128, 128, 128, 0.5);
+    --osdSeekBarThumbColor: white;
     --tableBodyColor: rgb(31 41 55 / 1);
     --uiAccentColor: rgb(117 111 226);
     --btnMiniPlayColor: rgb(41 154 93);
@@ -978,29 +981,51 @@ progress+span {
     padding: 0;
 }
 
+/* this is the osd player slider */
 .sliderContainer:active .mdl-slider-background-flex {
-    transform: scaleY(1.75);
+    height: .6em;
+    margin-top: -.3em;
 }
 
 .mdl-slider-background-flex {
     border-radius: var(--smallRadius);
+    height: .4em;
+    margin-top: -.2em;
+    background: var(--osdSeekBarBufferedColorAlpha);
+    transition: all 0.2s linear;
 }
 
 .mdl-slider-background-lower {
-    background-color: var(--uiAccentColor);
+    background-color: var(--osdSeekBarPlayedColor);
+}
+
+.mdl-slider-background-upper {
+    background-color: var(--osdSeekBarBufferedColorAlpha);
 }
 
 .mdl-slider::-webkit-slider-thumb {
-    background: var(--uiAccentColor);
+    background: var(--osdSeekBarThumbColor);
 }
 
 .mdl-slider::-webkit-slider-thumb {
-    width: .75em !important;
-    height: .75em !important;
+    width: 4px !important;
+    height: .4em !important;
+    border-radius: 0em;
+}
+
+.sliderContainer:hover .mdl-slider::-webkit-slider-thumb {
+    width: .2em !important;
+    height: .8em !important;
+    border-radius: .2em;
+    transform: scale(1);
+}
+
+.sliderContainer:active .mdl-slider::-webkit-slider-thumb {
+    transform: scale(1) scaleY(1.25);
 }
 
 .mdl-slider::-moz-range-thumb {
-    background: var(--uiAccentColor);
+    background: var(--osdSeekBarThumbColor);
 }
 
 .sliderMarkerContainer {
@@ -1008,7 +1033,7 @@ progress+span {
 }
 
 .sliderMarker.watched {
-    background-color: var(--uiAccentColor);
+    background-color: var(--osdSeekBarPlayedColor);
 }
 
 .sliderMarker {
@@ -1017,7 +1042,7 @@ progress+span {
 }
 
 .iconOsdProgressInner {
-    background: var(--uiAccentColor);
+    background: var(--osdSeekBarPlayedColor);
 }
 
 .selectLabel {
