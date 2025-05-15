@@ -735,7 +735,7 @@ html {
     content: "";
     position: absolute;
     inset: 0;
-    backdrop-filter: var(--blurLargest);
+    backdrop-filter: brightness(.5);
     /* mask: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, transparent 35%); */
 }
 
