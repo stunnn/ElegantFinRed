@@ -1106,6 +1106,11 @@ progress+span {
     font-size: 3em;
 }
 
+.osdControls {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .itemDetailsGroup {
     outline: none;
     overflow: hidden;
