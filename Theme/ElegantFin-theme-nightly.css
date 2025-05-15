@@ -2619,6 +2619,14 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     margin-top: 4em;
 }
 
+.videoOsdBottom.videoOsdBottom-maincontrols {
+    background: linear-gradient(0deg, hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0));
+}
+
+.skinHeader-withBackground.osdHeader {
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0));
+}
+
 /* this is the default header, visible in home and libraries */
 .skinHeader-blurred:not(.osdHeader) {
     backdrop-filter: var(--blurDefault);
