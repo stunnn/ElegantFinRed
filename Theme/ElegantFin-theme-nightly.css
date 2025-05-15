@@ -982,17 +982,17 @@ progress+span {
 }
 
 /* this is the osd player slider */
-.sliderContainer:active .mdl-slider-background-flex {
-    height: .6em;
-    margin-top: -.3em;
-}
-
 .mdl-slider-background-flex {
     border-radius: var(--smallRadius);
     height: .4em;
     margin-top: -.2em;
     background: var(--osdSeekBarBufferedColorAlpha);
     transition: all 0.2s linear;
+}
+
+.sliderContainer:active .mdl-slider-background-flex {
+    height: .6em;
+    margin-top: -.3em;
 }
 
 .mdl-slider-background-lower {
@@ -1005,9 +1005,6 @@ progress+span {
 
 .mdl-slider::-webkit-slider-thumb {
     background: var(--osdSeekBarThumbColor);
-}
-
-.mdl-slider::-webkit-slider-thumb {
     width: 4px !important;
     height: .4em !important;
     border-radius: 0em;
@@ -1020,7 +1017,11 @@ progress+span {
     transform: scale(1);
 }
 
-.sliderContainer:active .mdl-slider::-webkit-slider-thumb {
+.sliderContainer:active .mdl-slider::-webkit-slider-thumb,
+.mdl-slider.show-focus:focus::-webkit-slider-thumb {
+    width: .2em !important;
+    height: .8em !important;
+    border-radius: .2em;
     transform: scale(1) scaleY(1.25);
 }
 
