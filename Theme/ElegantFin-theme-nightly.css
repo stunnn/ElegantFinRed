@@ -450,9 +450,14 @@ html {
     background-color: transparent;
 }
 
-/* hides home button from the appbar/header on all layouts */
-.headerHomeButton {
+/* this hides the header home button everywhere except the main media page */
+.skinHeader-withBackground:not(.semiTransparent) .headerHomeButton {
     display: none;
+}
+
+/* workaround to show the header home button on the main media page on phones*/
+.layout-mobile:has(#itemDetailPage:not(.hide)) .headerHomeButton {
+    display: block;
 }
 
 /* hides sync button on home screen on phones only in portrait mode */
