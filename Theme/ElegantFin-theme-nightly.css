@@ -634,6 +634,12 @@ html {
     border-color: transparent;
     margin: .5em !important;
     border-radius: 50%;
+    padding: .6em !important;
+}
+
+.layout-desktop .detailButton:not(.btnPlay):hover {
+    color: black;
+    background: var(--dimTextColor);
 }
 
 .btnPlay.detailButton {
