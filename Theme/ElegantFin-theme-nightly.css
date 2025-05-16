@@ -186,6 +186,11 @@ html {
     transition: transform 125ms;
 }
 
+#castCollapsible .cardScalable {
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
 .layout-mobile .cardScalable {
     border: var(--defaultBorder) !important;
 }
@@ -1379,6 +1384,19 @@ div[data-isfolder="true"] .cardText-first+.itemSelectionPanel>.checkboxContainer
 
 .checkboxContainer .emby-checkbox:checked+span+.checkboxOutline.multiSelectCheckboxOutline {
     border-radius: var(--largeRadius) !important;
+}
+
+#castCollapsible .checkboxContainer .emby-checkbox:checked+span+.checkboxOutline.multiSelectCheckboxOutline {
+    border-radius: 50% !important;
+}
+
+.cardPadder {
+    text-align: center;
+}
+
+.cardPadder .cardImageIcon {
+    position: unset;
+    transform: translateY(50%) translateX(0);
 }
 
 .cardText-secondary+.itemSelectionPanel>.checkboxContainer,
