@@ -642,6 +642,11 @@ html {
     background: var(--dimTextColor);
 }
 
+.layout-desktop .detailButton:not(.btnPlay):active {
+    color: black;
+    background: var(--textColor);
+}
+
 .btnPlay.detailButton {
     background-color: var(--textColor);
     color: black;
