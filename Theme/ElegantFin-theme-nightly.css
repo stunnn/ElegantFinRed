@@ -917,6 +917,17 @@ html {
     width: calc(100% - 7em);
 }
 
+.listItemImage .itemProgressBar {
+    position: absolute;
+    margin: 8%;
+}
+
+.layout-mobile .listItemImage .itemProgressBar {
+    position: absolute;
+    justify-self: center;
+    margin-bottom: 5%;
+}
+
 .itemProgressBar:not(.backgroundProgress, .playbackProgress, .transcodingProgress) {
     backdrop-filter: var(--blurLarge);
     background-color: var(--osdSeekBarBufferedColorAlpha) !important;
