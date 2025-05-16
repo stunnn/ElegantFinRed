@@ -2711,3 +2711,9 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .noHomeButtonHeader .emby-tab-button[data-index="1"]:after{
     content: "Watchlist";
 } */
+
+#itemDetailPage .emby-scroller-container,
+#itemDetailPage .emby-scroller {
+    margin-inline: -6%;
+    padding-inline: 6%;
+}
