@@ -1926,6 +1926,7 @@ div[data-role=controlgroup] a.ui-btn-active {
     border-radius: var(--largeRadius);
     border: var(--defaultBorder);
     overflow: hidden;
+    z-index: 3;
 }
 
 .alphaPickerButton {
