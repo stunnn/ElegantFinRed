@@ -613,7 +613,16 @@ html {
     background-position: 50% 50%;
     mask: linear-gradient(180deg, rgba(0, 0, 0, .75) 50%, transparent);
     animation: animMoveDown 1s ease-out forwards;
+    height: 45vh;
 }
+
+/* .layout-mobile .itemBackdrop:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    z-index: -1;
+} */
 
 .layout-desktop .itemBackdrop {
     height: 13em;
@@ -637,85 +646,6 @@ html {
 .layout-mobile .detailImageContainer .card {
     -webkit-filter: drop-shadow(0 0 .25rem rgba(0, 0, 0, 0.25));
     filter: drop-shadow(0 0 .25rem rgba(0, 0, 0, 0.25));
-}
-
-.detailButton {
-    border: var(--defaultLighterBorder);
-    padding: .5em .5em !important;
-}
-
-.detailButton-icon {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
-}
-
-.detailButton:not(.btnPlay) {
-    color: var(--textColor);
-    backdrop-filter: none;
-    border-color: transparent;
-    margin: .5em !important;
-    border-radius: 50%;
-    padding: .6em !important;
-}
-
-.layout-desktop .detailButton:not(.btnPlay):hover {
-    color: black;
-    background: var(--dimTextColor);
-}
-
-.layout-desktop .detailButton:not(.btnPlay):active {
-    color: black;
-    background: var(--textColor);
-}
-
-.btnPlay.detailButton {
-    background-color: var(--textColor);
-    color: black;
-    border-radius: 3em;
-    border-color: var(--borderColor);
-    height: 3em;
-    width: 10em;
-    margin-right: .5em !important;
-}
-
-.layout-mobile .btnPlay.detailButton {
-    flex: 0 0 100%;
-    margin-right: 0 !important;
-}
-
-.btnPlay>.detailButton-content {
-    -webkit-align-items: unset;
-    align-items: unset;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: unset;
-    flex-direction: unset;
-    -webkit-justify-content: unset;
-    align-content: unset;
-    justify-content: flex-start;
-}
-
-
-.btnPlay[title="Play"]>.detailButton-content::after {
-    content: "Play";
-}
-
-.btnPlay[title="Resume"]>.detailButton-content::after {
-    content: "Resume";
-}
-
-.btnPlay>.detailButton-content::after {
-    padding-left: .25em;
-    padding-right: .5em;
-    place-content: center;
-}
-
-.layout-mobile .mainDetailButtons {
-    /* margin-top: .5em; */
-}
-
-.layout-mobile [dir=ltr] .mainDetailButtons {
-    flex-wrap: wrap;
-    padding-inline: 1.25em;
 }
 
 /* this brings the buttons and title to the center in main media page */
@@ -744,10 +674,6 @@ html {
 
 .layout-mobile .detailImageContainer .card.portraitCard {
 } */
-
-.layout-mobile .itemBackdrop {
-    height: 45vh;
-}
 
 .layout-mobile .detailPageWrapperContainer {
     padding-top: 0;
@@ -1611,6 +1537,80 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 .emby-button:active {
     filter: brightness(1.2) !important;
     transform: scale(0.98);
+}
+
+.detailButton {
+    border: var(--defaultLighterBorder);
+    padding: .5em .5em !important;
+}
+
+.detailButton-icon {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+.detailButton:not(.btnPlay) {
+    color: var(--textColor);
+    backdrop-filter: none;
+    border-color: transparent;
+    margin: .5em !important;
+    border-radius: 50%;
+    padding: .6em !important;
+}
+
+.layout-desktop .detailButton:not(.btnPlay):hover {
+    color: black;
+    background: var(--dimTextColor);
+}
+
+.detailButton:active {
+    color: black;
+    background: var(--textColor);
+}
+
+.btnPlay.detailButton {
+    background-color: var(--textColor);
+    color: black;
+    border-radius: 3em;
+    border-color: var(--borderColor);
+    height: 3em;
+    width: 10em;
+    margin-right: .5em !important;
+}
+
+.layout-mobile .btnPlay.detailButton {
+    flex: 0 0 100%;
+    margin-right: 0 !important;
+}
+
+.btnPlay>.detailButton-content {
+    -webkit-align-items: unset;
+    align-items: unset;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: unset;
+    flex-direction: unset;
+    -webkit-justify-content: unset;
+    align-content: unset;
+    justify-content: flex-start;
+}
+
+.btnPlay[title="Play"]>.detailButton-content::after {
+    content: "Play";
+}
+
+.btnPlay[title="Resume"]>.detailButton-content::after {
+    content: "Resume";
+}
+
+.btnPlay>.detailButton-content::after {
+    padding-left: .25em;
+    padding-right: .5em;
+    place-content: center;
+}
+
+.layout-mobile [dir=ltr] .mainDetailButtons {
+    flex-wrap: wrap;
+    padding-inline: 1.25em;
 }
 
 .localnav>.emby-button {
