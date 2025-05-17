@@ -191,6 +191,10 @@ html {
     border-radius: 50%;
 }
 
+#castCollapsible .cardContent.cardImageContainer {
+    background-position-y: 33%;
+}
+
 .layout-mobile .cardScalable {
     border: var(--defaultBorder) !important;
 }
