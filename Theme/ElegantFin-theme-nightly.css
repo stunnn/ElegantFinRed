@@ -1409,9 +1409,9 @@ div[data-isfolder="true"] .cardText-first+.itemSelectionPanel>.checkboxContainer
     text-align: center;
 }
 
-.cardPadder .cardImageIcon {
+#castCollapsible .cardPadder .cardImageIcon {
     position: unset;
-    transform: translateY(50%) translateX(0);
+    transform: translateY(60%) translateX(0);
 }
 
 .cardText-secondary+.itemSelectionPanel>.checkboxContainer,
