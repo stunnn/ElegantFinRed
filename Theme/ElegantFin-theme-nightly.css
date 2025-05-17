@@ -747,6 +747,29 @@ html {
     .layout-mobile .detailImageContainer .card.portraitCard {
         width: 45vw !important;
     }
+
+    .layout-mobile .overflowPortraitCard {
+        width: 35vw;
+    }
+
+    .layout-mobile .overflowSquareCard {
+        width: 26vw;
+    }
+
+    .layout-mobile .overflowBackdropCard,
+    .layout-mobile .overflowSmallBackdropCard {
+        width: 40vw;
+    }
+
+    .layout-mobile #homeTab .overflowBackdropCard,
+    .layout-mobile #homeTab .overflowSmallBackdropCard {
+        width: 42vw;
+    }
+
+    .layout-mobile #homeTab .overflowBackdropCard:has(.cardOverlayButtonIcon.play_arrow),
+    .layout-mobile #homeTab .overflowSmallBackdropCard:has(.cardOverlayButtonIcon.play_arrow) {
+        width: 60vw;
+    }
 }
 
 @media (orientation: landscape) and (max-height: 40em) {
