@@ -495,6 +495,19 @@ html {
     padding-top: 1.25em !important;
 }
 
+#itemDetailPage .emby-scroller-container,
+#itemDetailPage .emby-scroller {
+    margin-inline: -5%;
+    padding-inline-start: 5%;
+}
+
+/* .sectionTitleContainer-cards,
+.sectionTitle-cards,
+.sectionTitleTextButton {
+    font-weight: 400;
+    font-size: 1.25rem;
+} */
+
 .layout-mobile :not(.sectionTitleContainer-cards)>.sectionTitle-cards {
     text-align: left;
 }
@@ -2720,9 +2733,3 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .noHomeButtonHeader .emby-tab-button[data-index="1"]:after{
     content: "Watchlist";
 } */
-
-#itemDetailPage .emby-scroller-container,
-#itemDetailPage .emby-scroller {
-    margin-inline: -6%;
-    padding-inline: 6%;
-}
