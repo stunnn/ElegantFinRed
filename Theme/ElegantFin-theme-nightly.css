@@ -498,9 +498,10 @@ html {
 }
 
 #itemDetailPage .emby-scroller-container,
-#itemDetailPage .emby-scroller {
+#itemDetailPage .emby-scroller,
+#itemDetailPage .scrollX {
     margin-inline: -5%;
-    padding-inline-start: 5%;
+    padding-inline: 5%;
 }
 
 /* .sectionTitleContainer-cards,
