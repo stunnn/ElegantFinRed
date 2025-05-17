@@ -186,12 +186,14 @@ html {
     transition: transform 125ms;
 }
 
-#castCollapsible .cardScalable {
+#castCollapsible .cardScalable,
+#guestCastContent .cardScalable {
     aspect-ratio: 1 / 1;
     border-radius: 50%;
 }
 
-#castCollapsible .cardContent.cardImageContainer {
+#castCollapsible .cardContent.cardImageContainer,
+#guestCastContent .cardContent.cardImageContainer {
     background-position-y: 33%;
 }
 
@@ -625,6 +627,7 @@ html {
 .layout-desktop .detailImageContainer .card {
     top: unset !important;
     width: 23vw !important;
+    /* position: unset !important; */
 }
 
 .layout-tv .detailImageContainer .card {
@@ -1414,7 +1417,8 @@ div[data-isfolder="true"] .cardText-first+.itemSelectionPanel>.checkboxContainer
     border-radius: var(--largeRadius) !important;
 }
 
-#castCollapsible .checkboxContainer .emby-checkbox:checked+span+.checkboxOutline.multiSelectCheckboxOutline {
+#castCollapsible .checkboxContainer .emby-checkbox:checked+span+.checkboxOutline.multiSelectCheckboxOutline,
+#guestCastContent .checkboxContainer .emby-checkbox:checked+span+.checkboxOutline.multiSelectCheckboxOutline {
     border-radius: 50% !important;
 }
 
@@ -1422,7 +1426,8 @@ div[data-isfolder="true"] .cardText-first+.itemSelectionPanel>.checkboxContainer
     text-align: center;
 }
 
-#castCollapsible .cardPadder .cardImageIcon {
+#castCollapsible .cardPadder .cardImageIcon,
+#guestCastContent .cardPadder .cardImageIcon {
     position: unset;
     transform: translateY(60%) translateX(0);
 }
