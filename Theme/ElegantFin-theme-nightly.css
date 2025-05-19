@@ -939,7 +939,8 @@ html {
     width: calc(100% - 2.5em);
 }
 
-.layout-mobile .backdropCard .itemProgressBar:not(.backgroundProgress, .playbackProgress, .transcodingProgress) {
+.layout-mobile .backdropCard .itemProgressBar:not(.backgroundProgress, .playbackProgress, .transcodingProgress),
+.layout-mobile .portraitCard .itemProgressBar:not(.backgroundProgress, .playbackProgress, .transcodingProgress) {
     width: 100%;
     width: -webkit-fill-available;
 }
