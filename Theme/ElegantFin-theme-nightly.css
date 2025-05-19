@@ -1245,6 +1245,10 @@ progress+span {
     -webkit-line-clamp: 4;
 }
 
+.overview-expand.emby-button {
+    padding: .25em 1em 1em;
+}
+
 .itemMiscInfo {
     align-items: flex-end !important;
 }
