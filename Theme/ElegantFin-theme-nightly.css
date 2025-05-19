@@ -1261,11 +1261,27 @@ progress+span {
 .innerCardFooter,
 .chapterThumbTextContainer {
     background: linear-gradient(0deg, #000000e8, transparent);
-    font-weight: 500;
+    /* font-weight: 500; */
     text-shadow: .1em .1em 0px black;
-    padding: 5em 2em 1.5em 2em;
     width: auto;
     width: -webkit-fill-available;
+    padding: 5em 2em 2em 2em;
+}
+
+.chapterCardImageContainer {
+    background-size: 135%;
+}
+
+.chapterCardImageContainer+.innerCardFooter {
+    padding: 0em 1em 1em 1em;
+}
+
+.layout-mobile .innerCardFooter {
+    padding: 5em 1.5em 1.5em 1.5em;
+}
+
+.layout-mobile .chapterCardImageContainer+.innerCardFooter {
+    padding: 0em .5em .5em .5em;
 }
 
 .centerMessage {
