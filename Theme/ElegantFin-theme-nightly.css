@@ -2351,6 +2351,26 @@ div[data-role=controlgroup] a.ui-btn-active {
     margin-inline-start: 1em;
 }
 
+.headerTabs.sectionTabs {
+    /* margin: 1em; */
+}
+
+.headerTabs.sectionTabs .emby-tab-button {
+    /* margin: 1em; */
+    /* padding: 0; */
+    /* min-width: 15em; */
+    /* height: 3em; */
+    /* color: white; */
+    /* border-radius: 2em; */
+}
+
+.headerTabs.sectionTabs .emby-tab-button-active {
+    /* margin: 1em; */
+    /* width: 50vw; */
+    /* color: black; */
+    /* background-color: white; */
+}
+
 @media (min-width: 62em) {
     .sectionTabs:not(.layout-tv .sectionTabs) {
         -webkit-align-items: center;
@@ -2768,6 +2788,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     background-color: var(--headerColor);
     border: var(--defaultBorder);
     border-width: 0 0 var(--borderWidth) 0;
+    /* border-color: transparent; */
     transition: .5s ease-in-out;
     transition-property: background-color, backdrop-filter, transform, border-width;
 }
@@ -2777,6 +2798,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .layout-mobile .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty) {
     backdrop-filter: none;
     background-color: transparent;
+    background: none;
     border: none;
     transition: .5s ease-in-out;
     transition-property: background-color, backdrop-filter, transform, border-width;
@@ -2797,6 +2819,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .headroom--unpinned {
     -webkit-transform: translateY(-3.7em);
     transform: translateY(-3.7em);
+    /* border-color: var(--borderColor); */
 }
 
 /* .noHomeButtonHeader .emby-tab-button[data-index="1"] .emby-button-foreground{
