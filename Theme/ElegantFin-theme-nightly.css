@@ -295,7 +295,8 @@ html {
 }
 
 .layout-mobile .cardOverlayButton {
-    padding: .75em;
+    padding: 1em;
+    font-size: 75%;
 }
 
 .layout-mobile .portraitCard .cardOverlayButton-br,
