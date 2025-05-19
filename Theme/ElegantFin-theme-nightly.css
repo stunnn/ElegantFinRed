@@ -512,6 +512,13 @@ html {
     font-weight: 400;
     font-size: 1.25rem;
 } */
+.sectionTitleContainer-cards {
+    padding-top: 0;
+}
+
+.sectionTitleContainer+.emby-scrollbuttons {
+    padding-top: 0;
+}
 
 .layout-mobile :not(.sectionTitleContainer-cards)>.sectionTitle-cards {
     text-align: left;
