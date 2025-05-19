@@ -741,8 +741,6 @@ html {
     min-width: 15%;
 }
 
-@media (orientation: landscape) and (min-width: 40em) {}
-
 @media (orientation: portrait) and (max-width: 40em) {
 
     [data-type=Movie] .listItemImage,
@@ -761,27 +759,28 @@ html {
         width: 45vw !important;
     }
 
-    .layout-mobile .overflowPortraitCard {
-        width: 35vw;
-    }
 
     .layout-mobile .overflowSquareCard {
         width: 26vw;
     }
 
+    /* two portrait cards and three backdrop cards in cast page */
+    .layout-mobile .overflowPortraitCard,
     .layout-mobile .overflowBackdropCard,
     .layout-mobile .overflowSmallBackdropCard {
-        width: 40vw;
-    }
-
-    .layout-mobile #homeTab .overflowBackdropCard,
-    .layout-mobile #homeTab .overflowSmallBackdropCard {
         width: 42vw;
     }
 
+    /* two and a quarter portrait cards in home page */
+    .layout-mobile #homeTab .overflowBackdropCard,
+    .layout-mobile #homeTab .overflowSmallBackdropCard {
+        /* width: 38vw; */
+    }
+
+    /* quarter to two backdrop cards in home page */
     .layout-mobile #homeTab .overflowBackdropCard:has(.cardOverlayButtonIcon.play_arrow),
     .layout-mobile #homeTab .overflowSmallBackdropCard:has(.cardOverlayButtonIcon.play_arrow) {
-        width: 60vw;
+        width: 55vw;
     }
 }
 
