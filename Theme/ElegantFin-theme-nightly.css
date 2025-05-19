@@ -2016,6 +2016,11 @@ div[data-role=controlgroup] a.ui-btn-active {
     padding-right: 5% !important;
 }
 
+/* this removes right padding from cast page sections to cards evenly*/
+#itemDetailPage .verticalSection .itemsContainer.padded-right {
+    padding-right: 0 !important;
+}
+
 .paging {
     padding-inline: 1em;
 }
