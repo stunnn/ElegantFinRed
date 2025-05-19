@@ -1411,8 +1411,9 @@ div[data-isfolder="true"] .cardText-first+.itemSelectionPanel>.checkboxContainer
 
 #castCollapsible .cardPadder .cardImageIcon,
 #guestCastContent .cardPadder .cardImageIcon {
-    position: unset;
-    transform: translateY(60%) translateX(0);
+    /* position: unset; */
+    /* transform: translateY(60%) translateX(0); */
+    display: none;
 }
 
 .cardText-secondary+.itemSelectionPanel>.checkboxContainer,
