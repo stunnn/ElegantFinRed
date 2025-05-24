@@ -169,6 +169,16 @@ html {
     margin-right: auto;
 }
 
+.cardBox-bottompadded {
+    margin-bottom: .5em !important;
+}
+
+@media (max-width: 50em) {
+    .cardBox-bottompadded {
+        margin-bottom: .25em !important;
+    }
+}
+
 .vertical-wrap:not(.centered) {
     justify-content: flex-start !important;
 }
