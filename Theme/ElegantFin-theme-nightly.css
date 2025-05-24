@@ -459,6 +459,9 @@ html {
     align-items: stretch;
     justify-content: end;
     flex-direction: column;
+    /* center content on desktop */
+    /* align-items: center; */
+    /* text-align: center; */
 }
 
 [dir=ltr] .detailPagePrimaryContent {
@@ -1269,6 +1272,8 @@ progress+span {
 
 .itemMiscInfo {
     align-items: flex-end !important;
+    /* center content on desktop */
+    /* justify-content: center; */
 }
 
 .innerCardFooter,
@@ -1683,6 +1688,8 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 .layout-mobile [dir=ltr] .mainDetailButtons {
     flex-wrap: wrap;
     padding-inline: 1.25em;
+    /* center content on desktop */
+    /* justify-content: center; */
 }
 
 .localnav>.emby-button {
