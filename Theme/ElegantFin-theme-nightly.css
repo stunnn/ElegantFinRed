@@ -2326,6 +2326,11 @@ div[data-role=controlgroup] a.ui-btn-active {
     word-wrap: break-word;
 }
 
+.itemName.originalTitle {
+    /* font-weight: 400; */
+    color: var(--dimTextColor);
+}
+
 #liveTvSuggestedPage,
 .liveTvContainer {
     background-color: var(--tableBodyColor);
