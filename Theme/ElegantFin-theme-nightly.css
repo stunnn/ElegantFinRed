@@ -771,7 +771,7 @@ html {
 
 
     .layout-mobile .overflowSquareCard {
-        width: 26vw;
+        width: 27vw;
     }
 
     /* two portrait cards and three backdrop cards in cast page */
@@ -781,16 +781,20 @@ html {
         width: 42vw;
     }
 
+    .layout-mobile #homeTab .overflowPortraitCard {
+        width: 40vw;
+    }
+
     /* two and a quarter portrait cards in home page */
     .layout-mobile #homeTab .overflowBackdropCard,
     .layout-mobile #homeTab .overflowSmallBackdropCard {
-        /* width: 38vw; */
+        width: 42vw;
     }
 
     /* quarter to two backdrop cards in home page */
     .layout-mobile #homeTab .overflowBackdropCard:has(.cardOverlayButtonIcon.play_arrow),
     .layout-mobile #homeTab .overflowSmallBackdropCard:has(.cardOverlayButtonIcon.play_arrow) {
-        width: 55vw;
+        width: 52vw;
     }
 }
 
