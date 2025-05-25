@@ -2337,6 +2337,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .itemName.originalTitle {
     /* font-weight: 400; */
+    padding-block: .5em;
     color: var(--dimTextColor);
 }
 
