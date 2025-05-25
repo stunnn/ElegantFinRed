@@ -999,8 +999,9 @@ progress+span {
 }
 
 .mdl-spinner__circle {
-    border-color: var(--dimTextColor);
+    border-color: var(--textColor);
     border-style: inset;
+    border-width: 0.25em;
 }
 
 .mdl-slider-container {
