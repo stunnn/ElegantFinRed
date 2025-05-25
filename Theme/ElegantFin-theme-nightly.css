@@ -2381,53 +2381,6 @@ div[data-role=controlgroup] a.ui-btn-active {
     margin-inline-start: 1em;
 }
 
-.headerTabs.sectionTabs {
-    /* margin: 1em; */
-}
-
-.headerTabs.sectionTabs .emby-tab-button {
-    /* margin: 1em; */
-    /* padding: 0; */
-    /* min-width: 15em; */
-    /* height: 3em; */
-    /* color: white; */
-    /* border-radius: 2em; */
-}
-
-.headerTabs.sectionTabs .emby-tab-button-active {
-    /* margin: 1em; */
-    /* width: 50vw; */
-    /* color: black; */
-    /* background-color: white; */
-}
-
-@media (min-width: 62em) {
-    .sectionTabs:not(.layout-tv .sectionTabs) {
-        -webkit-align-items: center;
-        align-items: center;
-        -webkit-align-self: center;
-        align-self: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        margin-top: -4.3em;
-        position: relative;
-        width: auto;
-    }
-
-    .libraryPage:not(.noSecondaryNavPage):not(.layout-tv .libraryPage) {
-        padding-top: 5.8em !important;
-    }
-}
-
-.libraryPage:not(.noSecondaryNavPage) {
-    padding-top: 8.5em !important;
-}
-
-.layout-tv .headerLeft {
-    overflow: unset;
-    margin: .25em .5em;
-}
-
 .subtitleappearance-preview {
     border-radius: var(--smallRadius);
 }
@@ -2814,18 +2767,47 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 /* this is the default header, visible in home and libraries */
 .skinHeader-blurred:not(.osdHeader) {
-    backdrop-filter: var(--blurDefault);
-    background-color: var(--headerColor);
-    border: var(--defaultBorder);
-    border-width: 0 0 var(--borderWidth) 0;
+    /* backdrop-filter: var(--blurDefault); */
+    /* background-color: var(--headerColor); */
+    /* border: var(--defaultBorder); */
+    /* border-width: 0 0 var(--borderWidth) 0; */
     /* border-color: transparent; */
+    /* transition: .5s ease-in-out; */
+    /* transition-property: background-color, backdrop-filter, transform, border-width; */
+}
+
+.skinHeader-blurred:not(.osdHeader) {
+    backdrop-filter: none;
+    background-color: transparent;
+    border: none;
+    border-width: 0 0 var(--borderWidth) 0;
     transition: .5s ease-in-out;
     transition-property: background-color, backdrop-filter, transform, border-width;
+    background: linear-gradient(180deg, rgba(30, 40, 54, 1), rgba(30, 40, 54, .75) 60%, transparent);
+    padding-top: .75em;
+}
+
+.layout-mobile .skinHeader-blurred:not(.osdHeader) {
+    padding-top: .25em;
+}
+
+.layout-mobile .withSectionTabs .headerTop {
+    padding-bottom: 1.45em;
+}
+
+.skinHeader-blurred:not(.osdHeader, .semiTransparent)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: var(--blurLarge);
+    mask: linear-gradient(180deg, white 40%, transparent);
+    z-index: -1;
 }
 
 /* this is the transparent header, visible in main media page */
 .skinHeader-withBackground.semiTransparent,
-.layout-mobile .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty) {
+.layout-mobile .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty),
+.layout-mobile .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty)::after {
     backdrop-filter: none;
     background-color: transparent;
     background: none;
@@ -2859,3 +2841,71 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .noHomeButtonHeader .emby-tab-button[data-index="1"]:after{
     content: "Watchlist";
 } */
+
+.headerTabs.sectionTabs {
+    margin: 0;
+    height: 6em;
+}
+
+.headerTabs.sectionTabs .emby-tab-button {
+    margin: 0;
+    margin-inline: .5em;
+    margin-block: .25em;
+    padding: 0;
+    padding-inline: 1.25em;
+    /* min-width: 8em; */
+    height: 2.5em;
+    color: var(--textColor);
+    font-weight: 400;
+    border-radius: 2em;
+    background-color: var(--darkerGradientPointAlpha);
+    backdrop-filter: var(--blurLargest);
+    /* border: solid var(--borderWidth) var(--borderColor); */
+    /* text-shadow: 1px 1px 0 black; */
+}
+
+.headerTabs.sectionTabs .emby-tab-button-active {
+    margin: 0;
+    margin-inline: .5em;
+    margin-block: .25em;
+    /* font-weight: 600; */
+    box-shadow: var(--shadow);
+    /* width: 50vw; */
+    color: black;
+    background-color: white;
+}
+
+/* @media (min-width: 62em) { */
+@media (min-width: 75em) {
+    .sectionTabs:not(.layout-tv .sectionTabs) {
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-align-self: center;
+        align-self: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        /* margin-top: -4.3em; */
+        margin-top: -3em;
+        position: relative;
+        width: auto;
+    }
+
+    .libraryPage:not(.noSecondaryNavPage):not(.layout-tv .libraryPage) {
+        padding-top: 6.8em !important;
+    }
+}
+
+@media (max-width: 100em) {
+    .sectionTabs {
+        font-size: 100%;
+    }
+}
+
+.libraryPage:not(.noSecondaryNavPage) {
+    padding-top: 9.5em !important;
+}
+
+.layout-tv .headerLeft {
+    overflow: unset;
+    margin: .25em .5em;
+}
