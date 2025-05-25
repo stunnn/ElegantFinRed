@@ -717,7 +717,9 @@ html {
 .layout-mobile #itemDetailPage:has(.detailLogo.hide) .detailImageContainer .card,
 .layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .detailImageContainer .card,
 .layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .infoWrapper .parentNameLast,
-.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .infoWrapper .parentName {
+.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .infoWrapper .parentName,
+.layout-mobile #itemDetailPage:has(.nameContainer .musicParentName) .infoWrapper .itemName,
+.layout-mobile #itemDetailPage:has(.nameContainer .musicParentName) .infoWrapper .parentName {
     display: block;
 }
 
