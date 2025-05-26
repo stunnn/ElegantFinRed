@@ -2867,6 +2867,10 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     height: 6em;
 }
 
+.layout-tv .sectionTabs .emby-tabs.smoothScrollX {
+    overflow: visible !important;
+}
+
 .headerTabs.sectionTabs .emby-tab-button {
     display: inline-flex;
     margin: 0;
