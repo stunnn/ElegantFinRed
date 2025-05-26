@@ -2834,13 +2834,33 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     /* border-color: var(--borderColor); */
 }
 
-/* .noHomeButtonHeader .emby-tab-button[data-index="1"] .emby-button-foreground{
+/* .noHomeButtonHeader .emby-tab-button[data-index="1"] .emby-button-foreground {
     display: none;
 }
 
-.noHomeButtonHeader .emby-tab-button[data-index="1"]:after{
+.noHomeButtonHeader .emby-tab-button[data-index="1"]:after {
     content: "Watchlist";
 } */
+
+.noHomeButtonHeader .emby-tab-button[data-index="1"]:before {
+    content: "\e87d";
+}
+
+.noHomeButtonHeader .emby-tab-button[data-index="0"]:before {
+    content: "\e88a";
+}
+
+.noHomeButtonHeader .emby-tab-button:before {
+    font-family: 'Material Icons Round';
+    padding-inline-end: .5em;
+    margin-inline-start: -.15em;
+    font-size: 1.2em;
+    font-variation-settings: 'FILL' 0;
+}
+
+.noHomeButtonHeader .emby-tab-button-active:before {
+    /* font-variation-settings: 'FILL' 1; */
+}
 
 .headerTabs.sectionTabs {
     margin: 0;
@@ -2848,6 +2868,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 }
 
 .headerTabs.sectionTabs .emby-tab-button {
+    display: inline-flex;
     margin: 0;
     margin-inline: .5em;
     margin-block: .25em;
@@ -2857,9 +2878,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     height: 2.5em;
     color: var(--textColor);
     font-weight: 400;
-    border-radius: 2em;
+    border-radius: var(--largeRadius);
     background-color: var(--darkerGradientPointAlpha);
-    backdrop-filter: var(--blurLargest);
     /* border: solid var(--borderWidth) var(--borderColor); */
     /* text-shadow: 1px 1px 0 black; */
 }
@@ -2869,7 +2889,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     margin-inline: .5em;
     margin-block: .25em;
     /* font-weight: 600; */
-    box-shadow: var(--shadow);
+    /* box-shadow: var(--shadow); */
     /* width: 50vw; */
     color: black;
     background-color: white;
