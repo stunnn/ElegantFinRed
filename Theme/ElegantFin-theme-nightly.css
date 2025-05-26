@@ -2783,7 +2783,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     border-width: 0 0 var(--borderWidth) 0;
     transition: .5s ease-in-out;
     transition-property: background-color, backdrop-filter, transform, border-width;
-    background: linear-gradient(180deg, rgba(30, 40, 54, 1), rgba(30, 40, 54, .75) 60%, transparent);
+    background: linear-gradient(180deg, rgba(30, 40, 54, .9), rgba(30, 40, 54, .75) 50%, transparent);
     padding-top: .75em;
 }
 
@@ -2799,8 +2799,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     content: "";
     position: absolute;
     inset: 0;
-    backdrop-filter: var(--blurLarge);
-    mask: linear-gradient(180deg, white 40%, transparent);
+    backdrop-filter: var(--blurLargest);
+    mask: linear-gradient(180deg, white 55%, transparent);
     z-index: -1;
 }
 
