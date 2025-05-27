@@ -2968,7 +2968,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     /* box-shadow: var(--shadow); */
     /* width: 50vw; */
     color: black;
-    background-color: white;
+    background-color: var(--textColor);
 }
 
 /* @media (min-width: 62em) { */
