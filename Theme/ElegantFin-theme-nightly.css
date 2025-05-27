@@ -846,7 +846,8 @@ h2 {
 .nowPlayingPlaylist,
 .nowPlayingContextMenu,
 html {
-    background: var(--backgroundGradient)
+    background: var(--backgroundGradient);
+    background-attachment: fixed;
 }
 
 
