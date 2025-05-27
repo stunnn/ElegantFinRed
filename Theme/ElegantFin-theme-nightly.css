@@ -53,8 +53,8 @@
     /* textures */
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
     --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), var(--lighterGradientPoint) 25%);
-    --hoverGradientA: linear-gradient(130deg, rgb(255 255 255 / 35%) 20%, rgb(255 255 255 / 15%) 40%);
-    --hoverGradientB: radial-gradient(100% 250% at 90% 190%, rgba(255, 255, 255, 0.15) 85%, rgba(255, 255, 255, 0.33) 100%);
+    --hoverGradientV: linear-gradient(0deg, transparent, rgb(255 255 255 / 100%) 45%, rgb(255 255 255 / 100%) 55%, transparent);
+    --hoverGradientH: linear-gradient(90deg, transparent, rgb(255 255 255 / 100%) 45%, rgb(255 255 255 / 100%) 55%, transparent);
     --ditheringMask: url(https://grainy-gradients.vercel.app/noise.svg);
 
     /* login page customizations */
@@ -238,7 +238,7 @@ html {
 
 .card.card-hoverable:hover .cardImageContainer {
     transform: scale(1.025);
-    filter: brightness(1.125);
+    filter: brightness(1.025);
 }
 
 .card.card-hoverable .itemSelectionPanel {
@@ -260,16 +260,41 @@ html {
 }
 
 .cardOverlayContainer {
-    transition: .25s;
-    background: rgba(255, 255, 255, 0.1);
-    /* Uncomment the code below to get back the old overlay on hovering over cards*/
-    /* background: var(--hoverGradientA); */
-    background-size: 200%;
-    background-position-x: 100%;
+    transition: .5s;
+    background: rgba(255, 255, 255, 0.05);
 }
 
-.layout-desktop .card.card-hoverable:hover .cardOverlayContainer {
-    background-position-x: 0%;
+.cardOverlayContainer:after {
+    content: "";
+    transition: .5s;
+    position: absolute;
+    inset: 0;
+}
+
+.cardOverlayContainer:after {
+    /* transform: scaleY(.75); */
+    transform: translateY(-50%);
+    background: var(--hoverGradientV);
+}
+
+.layout-desktop .card.card-hoverable:hover .cardOverlayContainer:after {
+    /* transform: scaleY(2); */
+    transform: translateY(50%);
+    opacity: 0;
+}
+
+.backdropCard .cardOverlayContainer:after,
+.overflowBackdropCard .cardOverlayContainer:after {
+    /* transform: scaleX(1); */
+    transform: translateX(-50%);
+    background: var(--hoverGradientH);
+}
+
+.layout-desktop .backdropCard.card-hoverable:hover .cardOverlayContainer:after,
+.layout-desktop .overflowBackdropCard.card-hoverable:hover .cardOverlayContainer:after {
+    /* transform: scaleX(2); */
+    transform: translateX(50%);
+    opacity: 0;
 }
 
 .cardBox:not(.visualCardBox) .cardPadder {
