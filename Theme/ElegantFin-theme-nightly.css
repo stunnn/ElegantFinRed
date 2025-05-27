@@ -264,36 +264,29 @@ html {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.cardOverlayContainer:after {
+.layout-desktop .card.card-hoverable .cardOverlayContainer:after {
     content: "";
     transition: .5s;
     position: absolute;
     inset: 0;
-}
-
-.cardOverlayContainer:after {
-    /* transform: scaleY(.75); */
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(0);
     background: var(--hoverGradientV);
 }
 
 .layout-desktop .card.card-hoverable:hover .cardOverlayContainer:after {
-    /* transform: scaleY(2); */
-    transform: translateY(50%);
+    transform: translateY(50%) translateX(0);
     opacity: 0;
 }
 
-.backdropCard .cardOverlayContainer:after,
-.overflowBackdropCard .cardOverlayContainer:after {
-    /* transform: scaleX(1); */
-    transform: translateX(-50%);
+.layout-desktop .backdropCard.card-hoverable .cardOverlayContainer:after,
+.layout-desktop .overflowBackdropCard.card-hoverable .cardOverlayContainer:after {
+    transform: translateY(0) translateX(-50%);
     background: var(--hoverGradientH);
 }
 
 .layout-desktop .backdropCard.card-hoverable:hover .cardOverlayContainer:after,
 .layout-desktop .overflowBackdropCard.card-hoverable:hover .cardOverlayContainer:after {
-    /* transform: scaleX(2); */
-    transform: translateX(50%);
+    transform: translateY(0) translateX(50%);
     opacity: 0;
 }
 
