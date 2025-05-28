@@ -490,6 +490,11 @@ html {
         width: 29.8% !important;
     }
 
+    /* .layout-mobile .portraitCard:has(.cardFooter), */
+    .layout-mobile .squareCard:has(.cardFooter) {
+        width: 46.5% !important;
+    }
+
     .backdropCard {
         width: 46%;
     }
