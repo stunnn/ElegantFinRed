@@ -305,8 +305,8 @@ html {
     margin-left: unset;
     margin-top: unset;
     top: unset;
-    right: 1.25em;
-    bottom: 1.25em;
+    left: 1.25em;
+    bottom: 1.3em;
 }
 
 .cardOverlayContainer>.cardOverlayFab-primary,
