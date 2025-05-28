@@ -78,6 +78,8 @@
 
     /* to revert to old icons, use 'Material Icons'*/
     --iconPack: 'Material Icons Round';
+
+    --extraCardButtonsVisibility: none;
 }
 
 html {
@@ -322,8 +324,21 @@ html {
     color: white;
 }
 
-.layout-desktop .cardOverlayButton-br {
+.layout-desktop .cardOverlayButton-br button[data-action="menu"] {
     display: none;
+}
+
+.layout-desktop .cardOverlayButton-br,
+[dir=ltr].layout-desktop .cardOverlayButton-br {
+    bottom: .5em;
+    right: .5em;
+    display: var(--extraCardButtonsVisibility);
+    text-shadow: 0 0 4px #000000cf;
+}
+
+.layout-desktop .cardOverlayButton-br button {
+    color: var(--textColor);
+    text-shadow: 0 0 4px #000000cf;
 }
 
 .layout-mobile .cardOverlayButton {

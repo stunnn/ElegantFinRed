@@ -103,6 +103,19 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 
 </details>
 
+<details>
+  <summary><i>4. Enable extra buttons when hovering over cards on desktop</i></summary>
+
+- To enable watched and favorite buttons at the bottom right corner of cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+  ```
+  :root{
+    --extraCardButtonsVisibility: block;
+  }
+  ```
+- To disable them again, simply remove this code block or replace `block` with `none`.
+</details>
+
+
 <hr>
 
 ### 🆗 Tested on 
