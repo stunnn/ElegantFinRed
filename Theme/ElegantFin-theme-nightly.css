@@ -343,13 +343,27 @@ html {
 
 .layout-mobile .cardOverlayButton {
     padding: 1em;
-    font-size: 75%;
+    font-size: 60%;
 }
 
-.layout-mobile .portraitCard .cardOverlayButton-br,
-.layout-mobile .backdropCard .cardOverlayButton-br,
-.layout-mobile .cardOverlayButton-br[data-action="menu"] {
+.layout-mobile .cardOverlayButton-br,
+[dir=ltr] .layout-mobile .cardOverlayButton-br {
+    /* left: .5em; */
+    bottom: .5em;
+    right: .5em;
+}
+
+.layout-mobile .portraitCard .cardOverlayButton-br:not([data-action="menu"]),
+.layout-mobile .backdropCard .cardOverlayButton-br:not([data-action="menu"]) {
     display: none;
+}
+
+.layout-mobile .cardOverlayButton-br[data-action="menu"]>.cardOverlayButtonIcon {
+    background-color: transparent !important;
+    color: white;
+    border: none;
+    text-shadow: 1px 1px .1em black;
+    color: white;
 }
 
 .cardOverlayContainer:has(.cardOverlayButton:hover) {
@@ -992,7 +1006,7 @@ html {
 }
 
 .layout-mobile .itemProgressBar:not(.backgroundProgress, .playbackProgress, .transcodingProgress) {
-    width: calc(100% - 2.5em);
+    width: calc(100% - 2em);
 }
 
 .layout-mobile .backdropCard .itemProgressBar:not(.backgroundProgress, .playbackProgress, .transcodingProgress),
@@ -1325,6 +1339,7 @@ progress+span {
     width: auto;
     width: -webkit-fill-available;
     padding: 5em 2em 2em 2em;
+    /* place-items: end; */
 }
 
 .chapterCardImageContainer {
@@ -2222,7 +2237,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .paper-icon-button-light:hover:not(:disabled, .cardOverlayButton) {
+    .paper-icon-button-light:hover:not(:disabled) {
         color: #fff;
         background-color: rgb(255 255 255 / 5%);
     }
