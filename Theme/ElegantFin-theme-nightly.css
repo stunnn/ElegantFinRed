@@ -2907,7 +2907,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     position: absolute;
     inset: 0;
     backdrop-filter: var(--blurLargest);
-    mask: linear-gradient(180deg, white 55%, transparent);
+    mask: linear-gradient(180deg, white 70%, transparent);
     z-index: -1;
 }
 
