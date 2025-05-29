@@ -642,6 +642,7 @@ html {
 .layout-desktop .detailRibbon {
     height: auto !important;
     margin-top: unset !important;
+    /* padding-left: max(env(safe-area-inset-right), 3.3%) !important; */
 }
 
 @keyframes animMoveDown {
@@ -673,6 +674,19 @@ html {
     }
 }
 
+/* .detailLogo {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 60vh;
+    width: 60vw;
+    margin-inline: 20vw;
+    max-height: 25vh;
+    background-position: bottom;
+    animation: animMoveUp 1s ease-out forwards;
+} */
+
 .layout-mobile .detailLogo {
     display: block;
     z-index: 1;
@@ -695,15 +709,8 @@ html {
     height: 45vh;
 }
 
-/* .layout-mobile .itemBackdrop:before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: inherit;
-    z-index: -1;
-} */
-
 .layout-desktop .itemBackdrop {
+    /* height: 66vh; */
     height: 13em;
 }
 
@@ -716,10 +723,12 @@ html {
     top: unset !important;
     width: 23vw !important;
     /* position: unset !important; */
+    /* display: none; */
 }
 
 .layout-tv .detailImageContainer .card {
     width: 23vw !important;
+    /* display: none; */
 }
 
 .layout-mobile .detailImageContainer .card {
