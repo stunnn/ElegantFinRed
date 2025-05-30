@@ -19,8 +19,9 @@
     --headerColor: rgba(30, 40, 54, 0.8);
     --drawerColor: rgba(30, 40, 54, 0.9);
 
-    --borderColor: rgb(71, 80, 92);
-    --lighterBorderColor: rgb(255 255 255 / 20%);
+    --borderColor: hsl(214, 13%, 32%);
+    --darkerBorderColor: hsl(214, 13%, 22%);
+    --lighterBorderColor: hsla(0, 0%, 100%, 0.2);
 
     --selectorBackgroundColor: rgb(55, 65, 81);
     --selectorBackgroundColorAlpha: rgba(55, 65, 81, 0.5);
@@ -67,7 +68,8 @@
     --largeRadius: 1em;
     --smallRadius: .5em;
     --smallerRadius: .375em;
-    --borderWidth: 0.075em;
+    --borderWidth: .06em;
+    --borderWidthDouble: .12em;
 
     --blurSmallest: blur(2px);
     --blurDefault: blur(5px);
