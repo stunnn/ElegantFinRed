@@ -220,6 +220,25 @@ html {
     border: var(--defaultBorder) !important;
 }
 
+.visualCardBox,
+.paperList {
+    background-color: var(--headerColor) !important;
+    border-radius: var(--largeRadius) !important;
+    border: var(--defaultBorder) !important;
+    box-shadow: unset !important;
+    overflow: hidden;
+}
+
+.layout-desktop .visualCardBox {
+    border-width: var(--borderWidthDouble) !important;
+}
+
+.visualCardBox .cardScalable {
+    border-width: 0 0 var(--borderWidth) 0 !important;
+    border-radius: 0 !important;
+    border-color: var(--borderColor) !important;
+}
+
 .cardImageContainer {
     transition: transform .375s;
 }
@@ -240,8 +259,9 @@ html {
     color: var(--borderColor);
 }
 
-.card.card-hoverable:hover .cardScalable {
-    border-color: var(--textColor) !important;
+.card.card-hoverable:hover .cardScalable,
+.card.card-hoverable:hover .visualCardBox {
+    border-color: white !important;
 }
 
 .card.card-hoverable:hover .cardImageContainer {
@@ -1801,14 +1821,6 @@ div[data-role=controlgroup] a.ui-btn-active {
 .formDialogHeader:not(.formDialogHeader-clear) {
     background-color: var(--headerColor);
     backdrop-filter: var(--blurDefault);
-}
-
-.visualCardBox,
-.paperList {
-    background-color: var(--headerColor) !important;
-    border-radius: var(--largeRadius) !important;
-    border: var(--defaultBorder) !important;
-    box-shadow: unset !important;
 }
 
 .paperList {
