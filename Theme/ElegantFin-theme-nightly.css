@@ -481,10 +481,13 @@ html {
         width: 17.9% !important;
     }
 
+    .squareCard:has(.cardFooter) {
+        width: 23% !important;
+    }
+
     .backdropCard {
         width: 23.3%;
     }
-
 }
 
 /* 4 posters, 3 thumbs */
@@ -493,6 +496,10 @@ html {
     .portraitCard,
     .squareCard {
         width: 22.3% !important;
+    }
+
+    .squareCard:has(.cardFooter) {
+        width: 30.2% !important;
     }
 
     .backdropCard {
@@ -514,7 +521,7 @@ html {
     }
 
     /* .layout-mobile .portraitCard:has(.cardFooter), */
-    .layout-mobile .squareCard:has(.cardFooter) {
+    .squareCard:has(.cardFooter) {
         width: 46.5% !important;
     }
 
