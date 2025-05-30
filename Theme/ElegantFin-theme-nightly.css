@@ -200,7 +200,7 @@ html {
 
 .cardScalable {
     border-radius: var(--largeRadius);
-    border: var(--borderColor) solid calc(2 * var(--borderWidth)) !important;
+    border: var(--darkerBorderColor) solid var(--borderWidthDouble) !important;
     overflow: hidden !important;
     transition: transform 125ms;
 }
@@ -1478,7 +1478,7 @@ progress+span {
     background: transparent;
     border-color: white;
     border-style: solid;
-    border-width: calc(2 * var(--borderWidth));
+    border-width: var(--borderWidthDouble);
     outline: none;
 }
 
@@ -2285,7 +2285,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 
     .checkboxContainer:hover .checkboxOutline:not(.multiSelectCheckboxOutline) {
         border-color: var(--checkboxCheckedBgColor);
-        border-width: calc(2 * var(--borderWidth));
+        border-width: var(--borderWidthDouble);
     }
 
     .raised:hover,
