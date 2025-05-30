@@ -1056,11 +1056,12 @@ html {
 }
 
 .itemProgressBarForeground {
-    border-radius: var(--largeRadius);
+    border-radius: 0 var(--largeRadius) var(--largeRadius) 0;
     background-color: var(--dimTextColor);
 }
 
-.backgroundProgress>div {
+.backgroundProgress>div,
+.backgroundProgress {
     background-color: var(--darkerGradientPoint);
 }
 
