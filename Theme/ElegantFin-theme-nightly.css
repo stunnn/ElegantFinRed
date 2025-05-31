@@ -1468,7 +1468,8 @@ progress+span {
 }
 
 .subtitleEditor-dropZone,
-.imageEditor-dropZone {
+.imageEditor-dropZone,
+.lyricsEditor-dropZone {
     border-radius: var(--largeRadius);
 }
 
