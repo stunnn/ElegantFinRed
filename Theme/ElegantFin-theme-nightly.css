@@ -956,7 +956,8 @@ h2 {
 .nowPlayingContextMenu,
 html {
     background: var(--backgroundGradient);
-    background-attachment: fixed;
+    /* Do not enable it or all hell will break loose. You have been warned. */
+    /* background-attachment: fixed; */
 }
 
 
