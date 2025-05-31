@@ -113,6 +113,8 @@ html {
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
+    line-height: 1;
+    vertical-align: middle;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
