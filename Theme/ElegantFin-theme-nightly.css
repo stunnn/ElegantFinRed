@@ -1671,7 +1671,7 @@ div[data-isfolder="true"] .cardText-first+.itemSelectionPanel>.checkboxContainer
 }
 
 div[data-type="Book"] .play_arrow:before {
-    content: "\f53b";
+    content: "\f1c6";
     font-size: 85%;
 }
 
@@ -1787,6 +1787,14 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     -webkit-justify-content: unset;
     align-content: unset;
     justify-content: flex-start;
+}
+
+.mainDetailButtons:has(.detailButton[data-type="Book"]) .btnPlay[title="Play"]>.detailButton-content::after {
+    content: "Read";
+}
+
+.mainDetailButtons:has(.detailButton[data-type="Book"]) .btnPlay .material-icons.play_arrow:before {
+    content: "\f1c6";
 }
 
 .btnPlay[title="Play"]>.detailButton-content::after {
