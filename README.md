@@ -106,7 +106,7 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 <details>
   <summary><i>4. Enable extra buttons when hovering over cards on desktop</i></summary>
 
-- To enable watched and favorite buttons at the bottom right corner of cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+- To enable 'Mark Played' and 'Add to Favorites' buttons at the bottom right corner of cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
   ```
   :root{
     --extraCardButtonsVisibility: block;
@@ -177,6 +177,10 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 </details>
 
 <hr>
+
+### 📌 Contributing
+
+Please read the [Contributor Guidelines](./CONTRIBUTING.md) before opening pull requests.
 
 
 ## 🙏 FEEDBACK APPRECIATED
