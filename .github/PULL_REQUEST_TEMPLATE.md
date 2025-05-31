@@ -1,6 +1,6 @@
 # Pull Request
 
-Thanks for contributing to ElegantFin! Please review the contributor guidelines before submitting.
+Thanks for contributing to ElegantFin! Please review the **contributor guidelines** before submitting.
 
 ## Type of Change
 
@@ -9,7 +9,7 @@ Thanks for contributing to ElegantFin! Please review the contributor guidelines 
 
 ## Description
 
-Explain what you changed and why. Include reasoning and goals.
+Explain what you changed and why. Include your reasoning and goals.
 
 ## Screenshots
 
@@ -25,6 +25,7 @@ Describe how you verified your changes on different devices (desktop, mobile, TV
 - Jellyfin client:  
 - Client browser name and version:  
 - Device:
+- Other info:
 
 ## Checklist
 
