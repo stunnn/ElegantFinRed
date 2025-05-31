@@ -237,7 +237,7 @@ html {
 .visualCardBox .cardScalable {
     border-width: 0 0 var(--borderWidth) 0 !important;
     border-radius: 0 !important;
-    border-color: var(--borderColor) !important;
+    border-color: var(--darkerBorderColor) !important;
 }
 
 .cardImageContainer {
@@ -263,6 +263,10 @@ html {
 .card.card-hoverable:hover .cardScalable,
 .card.card-hoverable:hover .visualCardBox {
     border-color: white !important;
+}
+
+.card.card-hoverable:hover .visualCardBox .cardScalable {
+    border-color: var(--darkerBorderColor) !important;
 }
 
 .card.card-hoverable:hover .cardImageContainer {
