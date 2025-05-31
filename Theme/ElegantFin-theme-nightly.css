@@ -53,10 +53,18 @@
 
     /* textures */
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
-    --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), var(--lighterGradientPoint) 25%);
+    --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), 25%, var(--lighterGradientPoint));
+    --headerGradient: linear-gradient(180deg, rgba(30, 40, 54, .95), 75%, transparent);
+
+    --cardFooterGradient: linear-gradient(0deg, rgb(0 0 0 / 90%), 45%, transparent);
+    --topOSDGradient: linear-gradient(180deg, hsla(0, 0%, 0%, 0.8), 45%, hsla(0, 0%, 0%, 0));
+    --bottomOSDGradient: linear-gradient(0deg, hsla(0, 0%, 0%, 0.8), 45%, hsla(0, 0%, 0%, 0));
+
     --hoverGradientV: linear-gradient(0deg, transparent, rgb(255 255 255 / 100%) 45%, rgb(255 255 255 / 100%) 55%, transparent);
     --hoverGradientH: linear-gradient(90deg, transparent, rgb(255 255 255 / 100%) 45%, rgb(255 255 255 / 100%) 55%, transparent);
+
     --ditheringMask: url(https://grainy-gradients.vercel.app/noise.svg);
+    --itemBackdropMask: linear-gradient(180deg, rgba(0, 0, 0, .8), 75%, transparent);
 
     /* login page customizations */
     /* --loginPageBgUrl: url("<YOUR-JELLYFIN-SERVER-ADDRESS>/Branding/Splashscreen?format=webp&foregroundLayer=1&quality=33&width=3840&height=2160&blur=2"); */
@@ -747,7 +755,7 @@ html {
     position: sticky;
     top: -30%;
     background-position: 50% 50%;
-    mask: linear-gradient(180deg, rgba(0, 0, 0, .75) 50%, transparent);
+    mask: var(--itemBackdropMask);
     animation: animMoveDown 1s ease-out forwards;
     height: 45vh;
 }
@@ -1395,7 +1403,7 @@ progress+span {
 
 .innerCardFooter,
 .chapterThumbTextContainer {
-    background: linear-gradient(0deg, #000000e8, transparent);
+    background: var(--cardFooterGradient);
     /* font-weight: 500; */
     text-shadow: .1em .1em 0px black;
     width: auto;
@@ -2922,11 +2930,11 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 }
 
 .videoOsdBottom.videoOsdBottom-maincontrols {
-    background: linear-gradient(0deg, hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0));
+    background: var(--bottomOSDGradient);
 }
 
 .skinHeader-withBackground.osdHeader {
-    background: linear-gradient(180deg, hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0));
+    background: var(--topOSDGradient);
 }
 
 /* this is the default header, visible in home and libraries */
@@ -2947,7 +2955,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     border-width: 0 0 var(--borderWidth) 0;
     transition: .5s ease-in-out;
     transition-property: background-color, backdrop-filter, transform, border-width;
-    background: linear-gradient(180deg, rgba(30, 40, 54, .9), rgba(30, 40, 54, .75) 50%, transparent);
+    background: var(--headerGradient);
     padding-top: .75em;
 }
 
@@ -3080,6 +3088,10 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
     .libraryPage:not(.noSecondaryNavPage):not(.layout-tv .libraryPage) {
         padding-top: 6.8em !important;
+    }
+
+    .skinHeader-blurred:not(.osdHeader, .semiTransparent)::after {
+        mask: linear-gradient(180deg, white 55%, transparent);
     }
 }
 
