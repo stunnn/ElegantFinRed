@@ -349,7 +349,7 @@ html {
 
 .cardOverlayContainer>.cardOverlayFab-primary,
 .listItemImageButton,
-.layout-mobile .cardOverlayButton-br>.cardOverlayButtonIcon {
+.layout-mobile .cardOverlayButton-br:not([data-action="menu"])>.cardOverlayButtonIcon {
     background-color: var(--btnMiniPlayColor) !important;
     color: white;
     border: var(--defaultLighterBorder);
