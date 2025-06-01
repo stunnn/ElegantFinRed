@@ -1758,6 +1758,15 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
+.cardScalable .material-icons.check:before {
+    font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 20;
+    transform: scale(1.25);
+}
+
+.emby-button[title="Favorite"] .material-icons.favorite:before {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+}
+
 .detailButton:not(.btnPlay) {
     color: var(--textColor);
     backdrop-filter: none;
