@@ -1409,8 +1409,9 @@ progress+span {
     text-shadow: .1em .1em 0px black;
     width: auto;
     width: -webkit-fill-available;
-    padding: 5em 2em 2em 2em;
-    /* place-items: end; */
+    height: -webkit-fill-available;
+    padding: 0em 2em 2em 2em;
+    align-content: end;
 }
 
 .chapterCardImageContainer {
