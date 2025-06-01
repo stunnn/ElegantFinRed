@@ -356,6 +356,7 @@ html {
     border-color: var(--btnPlayBorderColor);
     font-size: 75%;
     box-shadow: var(--shadow);
+    z-index: 2;
 }
 
 .cardOverlayContainer>.cardOverlayFab-primary:hover,
@@ -373,6 +374,8 @@ html {
     bottom: .75em;
     right: .5em;
     display: var(--extraCardButtonsVisibility);
+    transform: scale(.8);
+    z-index: 1;
 }
 
 .layout-desktop .cardOverlayButton-br button {
