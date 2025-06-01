@@ -2466,31 +2466,46 @@ div[data-role=controlgroup] a.ui-btn-active {
     color: var(--dimTextColor);
 }
 
-#liveTvSuggestedPage,
-.liveTvContainer {
-    background-color: var(--tableBodyColor);
+.channelPrograms+.channelPrograms, .guide-channelHeaderCell+.guide-channelHeaderCell {
+    margin-top: 0;
 }
 
-.programCell-active {
-    background-color: var(--activeColor) !important;
-    border-radius: .5em;
-    margin-block: .5em !important;
+.channelPrograms, .guide-channelHeaderCell, .programCell{
+    border-color: transparent;
+    /* this disables 'color coded backgrounds' */
+    background-color: transparent !important;
+}
+
+.guideProgramName{
+    background-color: rgba(255, 255, 255, .05);
+    height: -webkit-fill-available;
+    margin: .35em 0 .35em .7em;
+    border-radius: var(--smallerRadius);
+}
+
+.guide-programNameCaret{
+    display: none;
+}
+
+.programCell-active .guideProgramName {
+    background-color: rgba(255, 255, 255, .125);
 }
 
 .guideVerticalScroller {
     padding: 0;
 }
 
-.programGrid {
-    background-color: var(--lighterGradientPointAlpha);
+.guideChannelImage {
+    background-color: rgba(255, 255, 255, .05);
+    bottom: .35em;
+    right: .35em;
+    top: .35em;
+    width: calc(100% - .7em);
+    border-radius: var(--smallerRadius);
 }
 
-.channelPrograms>.programCell:nth-child(odd) {
-    background-color: var(--darkerGradientPoint);
-}
-
-.channelPrograms>.programCell:nth-child(even) {
-    /* background-color: #11182700; */
+#guideTab{
+    padding-top: 3em !important;
 }
 
 .guide-channelHeaderCell:focus,
