@@ -363,7 +363,8 @@ html {
     color: white;
 }
 
-.layout-desktop .cardOverlayButton-br button[data-action="menu"] {
+.layout-desktop .cardOverlayButton-br button[data-action="menu"],
+.layout-desktop .listItemButton[data-action="menu"]{
     display: none;
 }
 
