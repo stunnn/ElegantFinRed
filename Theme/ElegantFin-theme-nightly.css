@@ -54,9 +54,10 @@
     /* textures */
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
     --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), 25%, var(--lighterGradientPoint));
-    --headerGradient: linear-gradient(180deg, rgba(30, 40, 54, .95), 75%, transparent);
+    --headerColorGradient: linear-gradient(180deg, rgba(30, 40, 54, .95) 35%, 55%, transparent 90%);
+    --headerBlurMask: linear-gradient(180deg, white 50%, 85%, transparent);
 
-    --cardFooterGradient: linear-gradient(0deg, rgb(0 0 0 / 90%), 45%, transparent);
+    --cardFooterGradient: linear-gradient(0deg, rgb(0 0 0 / 90%), 40%, transparent);
     --topOSDGradient: linear-gradient(180deg, hsla(0, 0%, 0%, 0.8), 45%, hsla(0, 0%, 0%, 0));
     --bottomOSDGradient: linear-gradient(0deg, hsla(0, 0%, 0%, 0.8), 45%, hsla(0, 0%, 0%, 0));
 
@@ -1804,6 +1805,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 
 .mainDetailButtons:has(.detailButton[data-type="Book"]) .btnPlay .material-icons.play_arrow:before {
     content: "\f1c6";
+    padding-inline-end: 1ch;
 }
 
 .btnPlay[title="Play"]>.detailButton-content::after {
@@ -1815,8 +1817,8 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 }
 
 .btnPlay>.detailButton-content::after {
-    padding-left: .25em;
-    padding-right: .5em;
+    padding-inline: 1ch;
+    /* padding-right: .5em; */
     place-content: center;
 }
 
@@ -2971,7 +2973,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     border-width: 0 0 var(--borderWidth) 0;
     transition: .5s ease-in-out;
     transition-property: background-color, backdrop-filter, transform, border-width;
-    background: var(--headerGradient);
+    background: var(--headerColorGradient);
     padding-top: .75em;
 }
 
@@ -2988,7 +2990,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     position: absolute;
     inset: 0;
     backdrop-filter: var(--blurLargest);
-    mask: linear-gradient(180deg, white 70%, transparent);
+    mask: var(--headerBlurMask);
     z-index: -1;
 }
 
@@ -3040,8 +3042,9 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 .noHomeButtonHeader .emby-tab-button:before {
     font-family: 'Material Icons Round';
-    padding-inline-end: .5em;
-    margin-inline-start: -.15em;
+    /* padding-inline-end: .5em; */
+    /* margin-inline-start: -.15em; */
+    padding-inline-end: .5ch;
     font-size: 1.2em;
     font-variation-settings: 'FILL' 0;
 }
@@ -3104,10 +3107,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
     .libraryPage:not(.noSecondaryNavPage):not(.layout-tv .libraryPage) {
         padding-top: 6.8em !important;
-    }
-
-    .skinHeader-blurred:not(.osdHeader, .semiTransparent)::after {
-        mask: linear-gradient(180deg, white 55%, transparent);
     }
 }
 
