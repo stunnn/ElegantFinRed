@@ -1018,13 +1018,13 @@ html {
     }
 
     to {
-        transform: scale(1.075);
+        transform: scale(1.1);
         opacity: 1;
     }
 }
 
 .backdropImageFadeIn {
-    transform-origin: bottom left;
+    transform-origin: bottom center;
     animation: animScaleUp 3s ease-out forwards;
 }
 
