@@ -996,9 +996,29 @@ html {
     mask: var(--ditheringMask);
 } */
 
+.backdropImage {
+    /* mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080' version='1.1'><defs><filter id='filter21' x='-0.097435847' y='-0.19021173' width='1.1948717' height='1.3804235' color-interpolation-filters='sRGB'><feGaussianBlur stdDeviation='69 69' result='blur'/></filter></defs><g><rect width='1699.5798' height='870.60876' x='168.44388' y='41.63781' ry='121.12818' transform='matrix(1.1565711,0,0,1.2110253,-3.2891467,-229.87865)' fill='%23fff' fill-opacity='1' filter='url(%23filter21)'/></g></svg>");
+    mask-repeat: no-repeat;
+    mask-position: top right;
+    mask-size: contain;
+
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080' version='1.1'><defs><filter id='filter21' x='-0.097435847' y='-0.19021173' width='1.1948717' height='1.3804235' color-interpolation-filters='sRGB'><feGaussianBlur stdDeviation='69 69' result='blur'/></filter></defs><g><rect width='1699.5798' height='870.60876' x='168.44388' y='41.63781' ry='121.12818' transform='matrix(1.1565711,0,0,1.2110253,-3.2891467,-229.87865)' fill='%23fff' fill-opacity='1' filter='url(%23filter21)'/></g></svg>");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: top right;
+    -webkit-mask-size: contain; */
+    aspect-ratio: 16 / 9;
+    background-position: top;
+    background-size: 100% auto;
+    mask-size: 100% auto;
+    mask-repeat: no-repeat;
+    mask-position: top;
+    /* mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='3840' height='2160' viewBox='0 0 3840 2160'><defs><filter id='filter1' x='-0.043125' y='-0.11111111' width='1.08625' height='1.2222222' style='color-interpolation-filters:sRGB'><feGaussianBlur stdDeviation='69 100' result='blur'/></filter></defs><g><rect width='3840' height='2160' x='0' y='0' ry='211.97432' style='fill:%23ffffff;stroke-width:0;filter:url(%23filter1)' transform='matrix(0.91126884,0,0,1.0705027,169.64218,-422.16902)'/></g></svg>"); */
+    mask: var(--itemBackdropMask);
+}
+
 .backgroundContainer.withBackdrop {
-    opacity: .98;
-    background: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPointAlpha) 100%);
+    opacity: 1;
+    background: linear-gradient(0deg, var(--darkerGradientPoint), transparent 100%);
 }
 
 /* .backgroundContainer:not(.withBackdrop, .backgroundContainer-transparent):after {
