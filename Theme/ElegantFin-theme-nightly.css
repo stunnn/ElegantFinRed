@@ -982,9 +982,10 @@ html {
 
 
 /* Uncomment to turn dithering back on - START*/
-.backgroundContainer:not(.withBackdrop, .backgroundContainer-transparent) {
-    background: var(--backgroundGradient)
-        /* background: var(--lighterGradientPoint); */
+.backgroundContainer:not(.withBackdrop, .backgroundContainer-transparent),
+.backdropContainer {
+    background: var(--backgroundGradient);
+    /* background: var(--lighterGradientPoint); */
 }
 
 /* .backdropContainer::after {
@@ -2516,7 +2517,35 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .infoWrapper h1.itemName,
 .infoWrapper h1.parentName {
-    font-size: xxx-large;
+    font-size: 4em;
+    white-space: pre-wrap;
+    /* font-family: 'Inter'; */
+    /* text-transform: uppercase; */
+    /* margin-top: -25%; */
+    /* font-weight: 200; */
+    /* letter-spacing: .5em; */
+    /* transform: translateY(-8%); */
+    /* padding-left: 1ch; */
+    padding-bottom: .5ch;
+    color: white;
+}
+
+.infoWrapper h1.itemName,
+.infoWrapper h1.parentName,
+.infoWrapper h1.itemName a,
+.infoWrapper h1.parentName a {
+    font-weight: 200;
+}
+
+.infoWrapper h1.itemName bdi,
+.infoWrapper h1.parentName bdi,
+.infoWrapper h1.itemName a,
+.infoWrapper h1.parentName a {
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .layout-mobile .infoWrapper h1.itemName,
@@ -2524,6 +2553,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 .layout-mobile .infoWrapper h1.parentNameLast {
     font-size: 2em;
     word-wrap: break-word;
+    padding-bottom: 0ch;
 }
 
 .itemName.originalTitle {
@@ -2573,7 +2603,7 @@ div[data-role=controlgroup] a.ui-btn-active {
     border-radius: var(--smallerRadius);
 }
 
-#guideTab{
+#guideTab {
     padding-top: 3em !important;
 }
 
