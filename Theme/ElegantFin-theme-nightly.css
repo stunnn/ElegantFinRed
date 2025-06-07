@@ -1398,11 +1398,47 @@ progress+span {
     text-align: start;
     color: var(--dimTextColor);
     margin-block: 0;
+    -webkit-line-clamp: 2;
+}
+
+.detail-clamp-text p {
+    margin-block: .25em;
+}
+
+.layout-mobile .detail-clamp-text {
     -webkit-line-clamp: 4;
 }
 
 .overview-expand.emby-button {
-    padding: .25em 1em 1em;
+    padding: 0;
+    margin-block: 1.5em;
+    color: transparent;
+}
+
+.overview-expand.emby-button:after {
+    content: "\e313";
+    font-family: 'Material Icons';
+    background: var(--selectorBackgroundColor);
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    align-content: center;
+    line-height: 1.6ch;
+    transition: transform .5s;
+    color: var(--textColor);
+}
+
+.overview.detail-clamp-text~.overview-controls .overview-expand:after {
+    transform: rotateZ(0deg);
+}
+
+.overview:not(.detail-clamp-text)~.overview-controls .overview-expand:after {
+    /* content: "\e316"; */
+    transform: rotateZ(180deg);
+}
+
+.overview-controls {
+    height: 0;
 }
 
 .itemMiscInfo {
