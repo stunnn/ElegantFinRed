@@ -365,7 +365,7 @@ html {
 }
 
 .layout-desktop .cardOverlayButton-br button[data-action="menu"],
-.layout-desktop .listItemButton[data-action="menu"]{
+.layout-desktop .listItemButton[data-action="menu"] {
     display: none;
 }
 
@@ -1845,6 +1845,13 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     /* justify-content: center; */
 }
 
+@media (min-width: 100em) {
+    .mainDetailButtons {
+        font-size: unset;
+        margin: 1em 0;
+    }
+}
+
 .localnav>.emby-button {
     background: var(--lighterGradientPoint) !important;
     color: #fff;
@@ -2484,24 +2491,27 @@ div[data-role=controlgroup] a.ui-btn-active {
     color: var(--dimTextColor);
 }
 
-.channelPrograms+.channelPrograms, .guide-channelHeaderCell+.guide-channelHeaderCell {
+.channelPrograms+.channelPrograms,
+.guide-channelHeaderCell+.guide-channelHeaderCell {
     margin-top: 0;
 }
 
-.channelPrograms, .guide-channelHeaderCell, .programCell{
+.channelPrograms,
+.guide-channelHeaderCell,
+.programCell {
     border-color: transparent;
     /* this disables 'color coded backgrounds' */
     background-color: transparent !important;
 }
 
-.guideProgramName{
+.guideProgramName {
     background-color: rgba(255, 255, 255, .05);
     height: -webkit-fill-available;
     margin: .35em 0 .35em .7em;
     border-radius: var(--smallerRadius);
 }
 
-.guide-programNameCaret{
+.guide-programNameCaret {
     display: none;
 }
 
