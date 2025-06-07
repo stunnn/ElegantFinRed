@@ -591,12 +591,7 @@ html {
     display: block;
 }
 
-/* hides sync button on home screen on phones only in portrait mode */
-@media (orientation: portrait) {
-    .layout-mobile .skinHeader.noHomeButtonHeader .headerSyncButton {
-        display: none;
-    }
-}
+@media (orientation: portrait) {}
 
 .pageTitle {
     height: 1.5em;
@@ -887,6 +882,11 @@ html {
 
 @media (orientation: portrait) {
 
+    /* hides sync button on home screen on phones only in portrait mode */
+    .layout-mobile .skinHeader.noHomeButtonHeader .headerSyncButton {
+        display: none;
+    }
+
     .layout-mobile .detailImageContainer .card.backdropCard {
         width: 65vw !important;
     }
@@ -924,6 +924,11 @@ html {
     .layout-mobile #homeTab .overflowBackdropCard:has(.cardOverlayButtonIcon.play_arrow),
     .layout-mobile #homeTab .overflowSmallBackdropCard:has(.cardOverlayButtonIcon.play_arrow) {
         /* width: 52vw; */
+    }
+
+    .layout-mobile .btnPlay.detailButton {
+        flex: 0 0 100%;
+        margin-right: 0 !important;
     }
 }
 
@@ -1796,10 +1801,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     margin-right: .5em !important;
 }
 
-.layout-mobile .btnPlay.detailButton {
-    flex: 0 0 100%;
-    margin-right: 0 !important;
-}
+@media (orientation: portrait) {}
 
 .btnPlay>.detailButton-content {
     -webkit-align-items: unset;
@@ -2783,11 +2785,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     color: var(--borderColor);
 }
 
-@media (orientation: portrait) and (max-width: 43em) {
-    .nowPlayingPageImageContainerNoAlbum .cardImageContainer .cardImageIcon {
-        font-size: 8em !important;
-    }
-}
+@media (orientation: portrait) and (max-width: 43em) {}
 
 .nowPlayingPageImageContainer {
     /* position: relative; */
@@ -2885,6 +2883,10 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 }
 
 @media (orientation: portrait) and (max-width: 43em) {
+    .nowPlayingPageImageContainerNoAlbum .cardImageContainer .cardImageIcon {
+        font-size: 8em !important;
+    }
+
     .nowPlayingInfoContainer {
         height: calc(95% - 4.2em);
     }
