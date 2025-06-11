@@ -104,15 +104,27 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 </details>
 
 <details>
-  <summary><i>4. Enable extra buttons when hovering over cards on desktop</i></summary>
+  <summary><i>4. Enable extra overlay buttons on cards on desktop</i></summary>
 
-- To enable 'Mark Played' and 'Add to Favorites' buttons at the bottom right corner of cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+- To enable 'Mark Played' and 'Add to Favorites' buttons that show up at the bottom right corner of cards while hovering, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
   ```
   :root{
     --extraCardButtonsVisibility: block;
   }
   ```
-- To disable them again, simply remove this code block or replace `block` with `none`.
+- To hide them again, simply remove this code block or replace `block` with `none`.
+</details>
+
+<details>
+  <summary><i>5. Place the overlay play button at the center of cards on desktop</i></summary>
+
+- To bring the mini play button to the center of cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+  ```
+  :root{
+    --overlayPlayButtonPosition: 50%;
+  }
+  ```
+- To undo this change, simply remove this code block or replace `50%` with `2.8em`.
 </details>
 
 
