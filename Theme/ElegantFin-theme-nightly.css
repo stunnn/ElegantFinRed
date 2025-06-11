@@ -80,6 +80,11 @@
     --borderWidth: .06em;
     --borderWidthDouble: .12em;
 
+    --itemPageNegativeSpace: max(17vh, 10em);
+
+    /* Set to 50% to center the play button in the overlay. */
+    --overlayPlayButtonPosition: 2.8em;
+
     --blurSmallest: blur(2px);
     --blurDefault: blur(5px);
     --blurLarge: blur(10px);
@@ -351,8 +356,8 @@ html {
     margin-left: unset;
     margin-top: unset;
     top: unset;
-    left: 1.25em;
-    bottom: 1.3em;
+    left: calc(var(--overlayPlayButtonPosition) - 1.5em);
+    bottom: calc(var(--overlayPlayButtonPosition) - 1.5em);
 }
 
 .cardOverlayContainer>.cardOverlayFab-primary,
