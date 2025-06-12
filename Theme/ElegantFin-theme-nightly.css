@@ -169,10 +169,6 @@ html {
     transition: width 650ms;
 }
 
-/* .card:hover .cardScalable {
-    box-shadow: 0px 4px 13px 0px black;
-} */
-
 .card:focus .cardBox:not(.visualCardBox) .cardScalable {
     border-color: var(--highlightOutlineColor) !important;
     filter: brightness(1.125);
@@ -403,7 +399,6 @@ html {
 
 .layout-mobile .cardOverlayButton-br,
 [dir=ltr] .layout-mobile .cardOverlayButton-br {
-    /* left: .5em; */
     bottom: .5em;
     right: .5em;
 }
@@ -552,7 +547,6 @@ html {
         width: 29.8% !important;
     }
 
-    /* .layout-mobile .portraitCard:has(.cardFooter), */
     .squareCard:has(.cardFooter) {
         width: 46.5% !important;
     }
@@ -604,8 +598,6 @@ html {
     display: block;
 }
 
-@media (orientation: portrait) {}
-
 .pageTitle {
     height: 1.5em;
 }
@@ -632,17 +624,10 @@ html {
     padding-inline: 5%;
 }
 
-/* .sectionTitleContainer-cards,
-.sectionTitle-cards,
-.sectionTitleTextButton {
-    font-weight: 400;
-    font-size: 1.25rem;
-} */
-
 .layout-desktop .sectionTitle,
 .layout-tv .sectionTitle {
     font-size: 1.5rem !important;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .sectionTitleContainer-cards {
@@ -767,7 +752,6 @@ html {
     margin-top: 0;
     position: sticky;
     top: -30%;
-    background-position: 50% 50%;
     mask: var(--itemBackdropMask);
     animation: animMoveDown 1s ease-out forwards;
     height: 45vh;
@@ -792,7 +776,6 @@ html {
 
 .layout-tv .detailImageContainer .card {
     width: 23vw !important;
-    /* display: none; */
 }
 
 .layout-mobile .detailImageContainer .card {
@@ -865,10 +848,6 @@ html {
 }
 
 @media (max-width: 62.5em) {
-    .layout-desktop .itemBackdrop {
-        height: 7em !important;
-    }
-
     .layout-desktop .detailPageWrapperContainer {
         min-height: calc(100vh - 7em);
     }
@@ -923,21 +902,21 @@ html {
         width: 42vw;
     }
 
-    .layout-mobile #homeTab .overflowPortraitCard {
-        /* width: 40vw; */
-    }
+    /* .layout-mobile #homeTab .overflowPortraitCard {
+        width: 40vw;
+    } */
 
     /* two and a quarter portrait cards in home page */
-    .layout-mobile #homeTab .overflowBackdropCard,
+    /* .layout-mobile #homeTab .overflowBackdropCard,
     .layout-mobile #homeTab .overflowSmallBackdropCard {
-        /* width: 42vw; */
-    }
+        width: 42vw;
+    } */
 
     /* quarter to two backdrop cards in home page */
-    .layout-mobile #homeTab .overflowBackdropCard:has(.cardOverlayButtonIcon.play_arrow),
+    /* .layout-mobile #homeTab .overflowBackdropCard:has(.cardOverlayButtonIcon.play_arrow),
     .layout-mobile #homeTab .overflowSmallBackdropCard:has(.cardOverlayButtonIcon.play_arrow) {
-        /* width: 52vw; */
-    }
+        width: 52vw;
+    } */
 
     .layout-mobile .btnPlay.detailButton {
         flex: 0 0 100%;
@@ -994,11 +973,9 @@ html {
 }
 
 
-/* Uncomment to turn dithering back on - START*/
 .backgroundContainer:not(.withBackdrop, .backgroundContainer-transparent),
 .backdropContainer {
     background: var(--backgroundGradient);
-    /* background: var(--lighterGradientPoint); */
 }
 
 /* .backdropContainer::after {
@@ -1033,17 +1010,6 @@ html {
     opacity: 1;
     background: linear-gradient(0deg, var(--darkerGradientPoint), transparent 100%);
 }
-
-/* .backgroundContainer:not(.withBackdrop, .backgroundContainer-transparent):after {
-    content: '';
-    background: linear-gradient(0deg, var(--darkerGradientPoint) 35%, transparent 100%);
-    position: absolute;
-    inset: 0%;
-    filter: contrast(1.25);
-    mask: var(--ditheringMask);
-} */
-
-/* Uncomment to turn dithering back on - END*/
 
 @keyframes animScaleUp {
     from {
@@ -1482,14 +1448,11 @@ progress+span {
 
 .itemMiscInfo {
     align-items: flex-end !important;
-    /* center content on desktop */
-    /* justify-content: center; */
 }
 
 .innerCardFooter,
 .chapterThumbTextContainer {
     background: var(--cardFooterGradient);
-    /* font-weight: 500; */
     text-shadow: .1em .1em 0px black;
     width: auto;
     width: -webkit-fill-available;
@@ -1643,8 +1606,6 @@ div[data-isfolder="true"] .cardText-first+.itemSelectionPanel>.checkboxContainer
 
 #castCollapsible .cardPadder .cardImageIcon,
 #guestCastContent .cardPadder .cardImageIcon {
-    /* position: unset; */
-    /* transform: translateY(60%) translateX(0); */
     display: none;
 }
 
@@ -1778,13 +1739,6 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     content: "\e8eb";
 }
 
-.card-withuserdata[data-isfolder="true"] .cardImageContainer.defaultCardBackground {
-    filter: contrast(0.85);
-    background-size: cover !important;
-    background-position: 50% !important;
-    background-blend-mode: multiply;
-}
-
 .emby-button.block,
 .button-alt,
 .raised,
@@ -1875,8 +1829,6 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     width: 10em;
     margin-right: .5em !important;
 }
-
-@media (orientation: portrait) {}
 
 .btnPlay>.detailButton-content {
     -webkit-align-items: unset;
@@ -2264,7 +2216,7 @@ div[data-role=controlgroup] a.ui-btn-active {
     padding-right: 5% !important;
 }
 
-/* this removes right padding from cast page sections to cards evenly*/
+/* this removes right padding from cast page sections to place cards evenly*/
 #itemDetailPage .verticalSection .itemsContainer.padded-right {
     padding-right: 0 !important;
 }
@@ -2880,8 +2832,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     color: var(--borderColor);
 }
 
-@media (orientation: portrait) and (max-width: 43em) {}
-
 .nowPlayingPageImageContainer {
     /* position: relative; */
     /* z-index: 0; */
@@ -3153,15 +3103,9 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 .noHomeButtonHeader .emby-tab-button:before {
     font-family: 'Material Icons Round';
-    /* padding-inline-end: .5em; */
-    /* margin-inline-start: -.15em; */
     padding-inline-end: .5ch;
     font-size: 1.2em;
     font-variation-settings: 'FILL' 0;
-}
-
-.noHomeButtonHeader .emby-tab-button-active:before {
-    /* font-variation-settings: 'FILL' 1; */
 }
 
 .headerTabs.sectionTabs {
@@ -3180,28 +3124,21 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     margin-block: .25em;
     padding: 0;
     padding-inline: 1.25em;
-    /* min-width: 8em; */
     height: 2.5em;
     color: var(--textColor);
     font-weight: 400;
     border-radius: var(--largeRadius);
     background-color: var(--darkerGradientPointAlpha);
-    /* border: solid var(--borderWidth) var(--borderColor); */
-    /* text-shadow: 1px 1px 0 black; */
 }
 
 .headerTabs.sectionTabs .emby-tab-button-active {
     margin: 0;
     margin-inline: .5em;
     margin-block: .25em;
-    /* font-weight: 600; */
-    /* box-shadow: var(--shadow); */
-    /* width: 50vw; */
     color: black;
     background-color: var(--textColor);
 }
 
-/* @media (min-width: 62em) { */
 @media (min-width: 75em) {
     .sectionTabs:not(.layout-tv .sectionTabs) {
         -webkit-align-items: center;
