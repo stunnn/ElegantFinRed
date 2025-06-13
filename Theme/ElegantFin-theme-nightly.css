@@ -80,6 +80,8 @@
     --borderWidth: .06em;
     --borderWidthDouble: .12em;
 
+    --sidePadding: 3.3%;
+    --itemColumnGap: 1em;
     --itemPageNegativeSpace: max(17vh, 10em);
 
     /* Set to 50% to center the play button in the overlay. */
@@ -106,6 +108,11 @@ html {
     font-weight: 425;
     font-style: normal;
     -webkit-tap-highlight-color: transparent !important;
+}
+
+.layout-mobile {
+    --itemColumnGap: 0em;
+    --sidePadding: 5%;
 }
 
 /* Material Icons Round */
@@ -435,15 +442,12 @@ html {
     font-size: small;
 }
 
-.smallBackdropCard,
-.squareCard,
-.backdropCard,
-.bannerCard {
-    width: 46%;
-}
-
 .portraitCard {
     min-width: 5em;
+}
+
+.bannerCard {
+    --cardCount: 2;
 }
 
 /* if the window width is equal to or more than (at minimum) 150em then the code in the query will trigger */
@@ -452,11 +456,21 @@ html {
 
     .portraitCard,
     .squareCard {
-        width: 6.6% !important;
+        --cardCount: 14;
     }
 
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 13;
+    }
+
+    .squareCard:has(.cardFooter),
     .backdropCard {
-        width: 9.5%;
+        --cardCount: 10;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 9;
     }
 }
 
@@ -466,11 +480,21 @@ html {
 
     .portraitCard,
     .squareCard {
-        width: 10.4% !important;
+        --cardCount: 9;
     }
 
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 8;
+    }
+
+    .squareCard:has(.cardFooter),
     .backdropCard {
-        width: 13.6%;
+        --cardCount: 7;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 6;
     }
 }
 
@@ -479,11 +503,18 @@ html {
 
     .portraitCard,
     .squareCard {
-        width: 13.5% !important;
+        --cardCount: 7;
     }
 
+    .overflowPortraitCard,
+    .overflowSquareCard,
+    .squareCard:has(.cardFooter),
     .backdropCard {
-        width: 15.8%;
+        --cardCount: 6;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 5;
     }
 }
 
@@ -492,11 +523,18 @@ html {
 
     .portraitCard,
     .squareCard {
-        width: 15.2% !important;
+        --cardCount: 6;
     }
 
+    .overflowPortraitCard,
+    .overflowSquareCard,
+    .squareCard:has(.cardFooter),
     .backdropCard {
-        width: 18.4%;
+        --cardCount: 5;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 4;
     }
 }
 
@@ -505,15 +543,18 @@ html {
 
     .portraitCard,
     .squareCard {
-        width: 17.9% !important;
+        --cardCount: 5;
     }
 
-    .squareCard:has(.cardFooter) {
-        width: 23% !important;
-    }
-
+    .overflowPortraitCard,
+    .overflowSquareCard,
+    .squareCard:has(.cardFooter),
     .backdropCard {
-        width: 23.3%;
+        --cardCount: 4;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 3;
     }
 }
 
@@ -522,15 +563,18 @@ html {
 
     .portraitCard,
     .squareCard {
-        width: 22.3% !important;
+        --cardCount: 4;
     }
 
-    .squareCard:has(.cardFooter) {
-        width: 30.2% !important;
-    }
-
+    .overflowPortraitCard,
+    .overflowSquareCard,
+    .squareCard:has(.cardFooter),
     .backdropCard {
-        width: 30.7%;
+        --cardCount: 3;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 2;
     }
 }
 
@@ -538,22 +582,30 @@ html {
 @media (max-width: 30em) {
 
     .portraitCard,
-    .squareCard {
-        width: 28.8% !important;
+    .squareCard,
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 3;
     }
 
     .layout-mobile .portraitCard,
-    .layout-mobile .squareCard {
-        width: 29.8% !important;
+    .layout-mobile .squareCard,
+    .layout-mobile .overflowPortraitCard,
+    .layout-mobile .overflowSquareCard {
+        --cardCount: 3;
     }
 
-    .squareCard:has(.cardFooter) {
-        width: 46.5% !important;
+    .squareCard:has(.cardFooter),
+    .backdropCard,
+    .overflowBackdropCard {
+        --cardCount: 2;
     }
+}
 
-    .backdropCard {
-        width: 46%;
-    }
+.card {
+    box-sizing: border-box;
+    width: var(--cardWidth) !important;
+    --cardWidth: calc((99vw - (var(--sidePadding) * 2)) / var(--cardCount) - var(--itemColumnGap));
 }
 
 .detailPageWrapperContainer {
@@ -624,6 +676,16 @@ html {
     padding-inline: 5%;
 }
 
+.layout-desktop .emby-scroller-container,
+.layout-desktop .emby-scroller,
+.layout-desktop .scrollX {
+    --itemColumnGap: 0.5em;
+}
+
+.itemsContainer {
+    column-gap: var(--itemColumnGap);
+}
+
 .layout-desktop .sectionTitle,
 .layout-tv .sectionTitle {
     font-size: 1.5rem !important;
@@ -691,7 +753,11 @@ html {
 .layout-desktop .detailRibbon {
     height: auto !important;
     margin-top: unset !important;
-    /* padding-left: max(env(safe-area-inset-right), 3.3%) !important; */
+}
+
+.layout-desktop [dir=ltr] .detailPagePrimaryContainer,
+.layout-tv [dir=ltr] .detailPagePrimaryContainer {
+    padding-left: var(--sidePadding);
 }
 
 @keyframes animMoveDown {
@@ -888,19 +954,19 @@ html {
     }
 
 
-    .layout-mobile .overflowSquareCard {
+    /* .layout-mobile .overflowSquareCard {
         width: 27vw;
-    }
+    } */
 
     /* two portrait cards and three backdrop cards in cast page */
-    .layout-mobile .overflowPortraitCard {
+    /* .layout-mobile .overflowPortraitCard {
         width: 27vw;
-    }
+    } */
 
-    .layout-mobile .overflowBackdropCard,
+    /* .layout-mobile .overflowBackdropCard,
     .layout-mobile .overflowSmallBackdropCard {
         width: 42vw;
-    }
+    } */
 
     /* .layout-mobile #homeTab .overflowPortraitCard {
         width: 40vw;
@@ -926,7 +992,12 @@ html {
 
 @media (orientation: landscape) and (max-height: 40em) {
 
-    .overflowPortraitCard,
+    .card {
+        --cardWidth: calc((60vw - (var(--sidePadding) * 2)) / var(--cardCount) - var(--itemColumnGap));
+    }
+
+
+    /* .overflowPortraitCard,
     .overflowSquareCard {
         width: 13vw;
     }
@@ -944,7 +1015,7 @@ html {
 
     .backdropCard {
         width: 23%;
-    }
+    } */
 }
 
 h2 {
@@ -2216,11 +2287,17 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 [dir=ltr] .padded-left.vertical-wrap:not(div:has(.homeLibraryButton)) {
-    padding-left: 5% !important;
+    padding-left: var(--sidePadding) !important;
 }
 
 [dir=ltr] .padded-right.vertical-wrap:not(div:has(.homeLibraryButton)) {
-    padding-right: 5% !important;
+    padding-right: var(--sidePadding) !important;
+}
+
+[dir=ltr] .detailPageContent,
+.content-primary {
+    padding-left: var(--sidePadding) !important;
+    padding-right: var(--sidePadding) !important;
 }
 
 /* this removes right padding from cast page sections to place cards evenly*/
