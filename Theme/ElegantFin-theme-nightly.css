@@ -201,6 +201,11 @@ html {
     background-color: var(--highlightOutlineColor) !important;
 }
 
+.card.show-animation:focus>.cardBox {
+    -webkit-transform: scale(1.125);
+    transform: scale(1.125);
+}
+
 [dir=ltr] .itemsContainer>.card>.cardBox {
     margin-left: auto;
     margin-right: auto;
