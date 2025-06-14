@@ -190,15 +190,14 @@ html {
 }
 
 .emby-button.show-focus:focus,
-.paper-icon-button-light.show-focus:focus {
+.paper-icon-button-light.show-focus:focus,
+.emby-tabs .emby-button.show-focus:focus {
     background-color: var(--highlightOutlineColor) !important;
-    color: #fff;
+    color: #fff !important;
 }
 
 .emby-tabs .emby-button.show-focus:focus {
     outline: none !important;
-    color: #fff;
-    background-color: var(--highlightOutlineColor) !important;
 }
 
 .card.show-animation:focus>.cardBox {
