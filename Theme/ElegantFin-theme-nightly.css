@@ -174,12 +174,12 @@ html {
 
 .card {
     padding: .375em;
-    transition: width 650ms;
+    transition: width .5s;
 }
 
 .card:focus .cardBox:not(.visualCardBox) .cardScalable {
     border-color: var(--highlightOutlineColor) !important;
-    filter: brightness(1.125);
+    /* filter: brightness(1.125); */
 }
 
 .mdl-radio__focus-circle,
@@ -236,6 +236,7 @@ html {
     border-radius: var(--largeRadius);
     border: var(--darkerBorderColor) solid var(--borderWidthDouble) !important;
     overflow: hidden !important;
+    box-shadow: 0 0 .25em 0 rgba(0, 0, 0, .4);
     transition: transform 125ms;
 }
 
@@ -304,7 +305,7 @@ html {
 
 .card.card-hoverable:hover .cardImageContainer {
     transform: scale(1.025);
-    filter: brightness(1.025);
+    /* filter: brightness(1.025); */
 }
 
 .card.card-hoverable .itemSelectionPanel {
@@ -1855,12 +1856,12 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 
 .fab:focus {
     background: var(--lighterGradientPoint) !important;
-    filter: brightness(1.35);
+    filter: brightness(1.2);
 }
 
 .raised:focus {
     background: inherit;
-    filter: brightness(1.35);
+    filter: brightness(1.2);
 }
 
 .raised:active,
