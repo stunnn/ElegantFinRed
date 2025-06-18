@@ -179,7 +179,6 @@ html {
 
 .card:focus .cardBox:not(.visualCardBox) .cardScalable {
     border-color: var(--highlightOutlineColor) !important;
-    /* filter: brightness(1.125); */
 }
 
 .mdl-radio__focus-circle,
@@ -304,7 +303,6 @@ html {
 
 .card.card-hoverable:hover .cardImageContainer {
     transform: scale(1.025);
-    /* filter: brightness(1.025); */
 }
 
 .card.card-hoverable .itemSelectionPanel {
@@ -327,7 +325,7 @@ html {
 
 .cardOverlayContainer {
     transition: .5s;
-    background: transparent;
+    background: rgba(255, 255, 255, .05);
 }
 
 .card.card-hoverable .cardOverlayContainer:after {
@@ -992,32 +990,11 @@ html {
     }
 }
 
+/* this makes the card sizes smaller when phone is in landscape mode */
 @media (orientation: landscape) and (max-height: 40em) {
-
-    .card {
-        --cardWidth: calc((60vw - (var(--sidePadding) * 2)) / var(--cardCount) - var(--itemColumnGap));
+    .layout-mobile .card {
+        --cardWidth: calc((65vw - (var(--sidePadding) * 2)) / var(--cardCount) - var(--itemColumnGap));
     }
-
-
-    /* .overflowPortraitCard,
-    .overflowSquareCard {
-        width: 13vw;
-    }
-
-    .overflowBackdropCard,
-    .overflowSmallBackdropCard {
-        width: 20vw;
-    }
-
-    .portraitCard {
-        min-width: 2em;
-        width: 8.5%;
-        max-width: 6.5em;
-    }
-
-    .backdropCard {
-        width: 23%;
-    } */
 }
 
 h2 {
@@ -1037,15 +1014,9 @@ h2 {
     color: var(--textColor);
 }
 
+html,
 .nowPlayingPlaylist,
 .nowPlayingContextMenu,
-html {
-    background: var(--backgroundGradient);
-    /* Do not enable it or all hell will break loose. You have been warned. */
-    /* background-attachment: fixed; */
-}
-
-
 .backgroundContainer:not(.withBackdrop, .backgroundContainer-transparent),
 .backdropContainer {
     background: var(--backgroundGradient);
@@ -1113,11 +1084,11 @@ html {
 }
 
 .lyricPage {
-    padding-inline: .5em;
+    padding-inline: var(--sidePadding);
 }
 
 .lyricsLine {
-    font-size: 2.5em;
+    font-size: 2em;
     color: var(--textColor);
     text-align: center;
     align-self: center;
@@ -1127,13 +1098,13 @@ html {
 
 .pastLyric,
 .futureLyric {
-    transform: scale(.75);
+    transform: scale(.85);
     font-weight: 400;
     text-align: center;
 }
 
 .pastLyric {
-    opacity: .65;
+    opacity: .45;
 }
 
 .buttonActive {
@@ -1495,7 +1466,7 @@ progress+span {
 
 .overview-expand.emby-button {
     padding: 0;
-    margin-block: 1.3em;
+    margin-block: 1.4em;
     color: transparent;
 }
 
@@ -2188,7 +2159,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 [dir=ltr] .navMenuOption {
-    padding: 0.75em 1em !important;
+    padding: .75em 1em !important;
     margin-bottom: unset;
 }
 
@@ -3207,6 +3178,12 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 .layout-tv .sectionTabs .emby-tabs.smoothScrollX {
     overflow: visible !important;
+}
+
+.layout-tv .sectionTabs {
+    /* this prevents the section tabs from being off-center in the music library
+     after I set the overflow to visible to fix visual glitches */
+    width: 100%;
 }
 
 .headerTabs.sectionTabs .emby-tab-button {
