@@ -454,9 +454,81 @@ html {
     --cardCount: 2;
 }
 
-/* if the window width is equal to or more than (at minimum) 150em then the code in the query will trigger */
+/* if the window width is equal to or more than (at minimum) 220em then the code in the query will trigger */
+/* 25 posters, 22 thumbs */
+@media (min-width: 220em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 25;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 24;
+    }
+
+    .squareCard:has(.cardFooter),
+    .backdropCard {
+        --cardCount: 22;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 21;
+    }
+}
+
+/* if the window width is equal to or less than (at maximum) 220em then the code in the query will trigger */
+/* 21 posters, 18 thumbs */
+@media (max-width: 220em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 21;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 20;
+    }
+
+    .squareCard:has(.cardFooter),
+    .backdropCard {
+        --cardCount: 18;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 17;
+    }
+}
+
+/* if the window width is equal to or less than (at maximum) 200em then the code in the query will trigger */
+/* 17 posters, 14 thumbs */
+@media (max-width: 200em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 17;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 16;
+    }
+
+    .squareCard:has(.cardFooter),
+    .backdropCard {
+        --cardCount: 14;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 13;
+    }
+}
+
+/* if the window width is equal to or less than (at maximum) 170em then the code in the query will trigger */
 /* 14 posters, 10 thumbs */
-@media (min-width: 150em) {
+@media (max-width: 170em) {
 
     .portraitCard,
     .squareCard {
@@ -479,39 +551,64 @@ html {
 }
 
 /* if the window width is equal to or less than (at maximum) 150em then the code in the query will trigger */
-/* 9 posters, 7 thumbs */
+/* 10 posters, 7 thumbs */
 @media (max-width: 150em) {
 
     .portraitCard,
     .squareCard {
-        --cardCount: 9;
+        --cardCount: 10;
     }
 
     .overflowPortraitCard,
     .overflowSquareCard {
+        --cardCount: 9;
+    }
+
+    .squareCard:has(.cardFooter),
+    .backdropCard {
         --cardCount: 8;
     }
 
+    .overflowBackdropCard {
+        --cardCount: 7;
+    }
+}
+
+/* 8 posters, 7 thumbs */
+@media (max-width: 120em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 8;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 7;
+    }
+
+    .squareCard:has(.cardFooter),
+    .backdropCard {
+        --cardCount: 6;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 5;
+    }
+}
+
+/* 7 posters, 6 thumbs */
+@media (max-width: 100em) {
+
+    .portraitCard,
+    .squareCard,
+    .overflowPortraitCard,
+    .overflowSquareCard,
     .squareCard:has(.cardFooter),
     .backdropCard {
         --cardCount: 7;
     }
 
-    .overflowBackdropCard {
-        --cardCount: 6;
-    }
-}
-
-/* 7 posters, 6 thumbs */
-@media (max-width: 120em) {
-
-    .portraitCard,
-    .squareCard {
-        --cardCount: 7;
-    }
-
-    .overflowPortraitCard,
-    .overflowSquareCard,
     .squareCard:has(.cardFooter),
     .backdropCard {
         --cardCount: 6;
@@ -523,22 +620,19 @@ html {
 }
 
 /* 6 posters, 5 thumbs */
-@media (max-width: 100em) {
+@media (max-width: 80em) {
 
     .portraitCard,
-    .squareCard {
+    .squareCard,
+    .overflowPortraitCard,
+    .overflowSquareCard {
         --cardCount: 6;
     }
 
-    .overflowPortraitCard,
-    .overflowSquareCard,
+    .overflowBackdropCard,
     .squareCard:has(.cardFooter),
     .backdropCard {
         --cardCount: 5;
-    }
-
-    .overflowBackdropCard {
-        --cardCount: 4;
     }
 }
 
@@ -546,19 +640,16 @@ html {
 @media (max-width: 62em) {
 
     .portraitCard,
-    .squareCard {
+    .squareCard,
+    .overflowPortraitCard,
+    .overflowSquareCard {
         --cardCount: 5;
     }
 
-    .overflowPortraitCard,
-    .overflowSquareCard,
     .squareCard:has(.cardFooter),
-    .backdropCard {
-        --cardCount: 4;
-    }
-
+    .backdropCard,
     .overflowBackdropCard {
-        --cardCount: 3;
+        --cardCount: 4;
     }
 }
 
@@ -566,19 +657,16 @@ html {
 @media (max-width: 48.125em) {
 
     .portraitCard,
-    .squareCard {
+    .squareCard,
+    .overflowPortraitCard,
+    .overflowSquareCard {
         --cardCount: 4;
     }
 
-    .overflowPortraitCard,
-    .overflowSquareCard,
     .squareCard:has(.cardFooter),
-    .backdropCard {
-        --cardCount: 3;
-    }
-
+    .backdropCard,
     .overflowBackdropCard {
-        --cardCount: 2;
+        --cardCount: 3;
     }
 }
 
@@ -588,10 +676,7 @@ html {
     .portraitCard,
     .squareCard,
     .overflowPortraitCard,
-    .overflowSquareCard {
-        --cardCount: 3;
-    }
-
+    .overflowSquareCard,
     .layout-mobile .portraitCard,
     .layout-mobile .squareCard,
     .layout-mobile .overflowPortraitCard,
