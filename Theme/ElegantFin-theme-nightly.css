@@ -2410,12 +2410,25 @@ div[data-role=controlgroup] a.ui-btn-active {
     background-color: var(--highlightOutlineColor);
 }
 
-[dir=ltr] .padded-left.vertical-wrap:not(div:has(.homeLibraryButton)) {
+/* [dir=ltr] .padded-left.vertical-wrap:not(div:has(.homeLibraryButton)) {
     padding-left: var(--sidePadding) !important;
 }
 
 [dir=ltr] .padded-right.vertical-wrap:not(div:has(.homeLibraryButton)) {
     padding-right: var(--sidePadding) !important;
+} */
+
+.padded-right {
+    padding-right: var(--sidePadding) !important;
+}
+
+.paddded-left {
+    padding-left: var(--sidePadding) !important;
+}
+
+.layout-mobile .padded-right-withalphapicker {
+    padding-left: 3.5% !important;
+    padding-right: 6.5% !important;
 }
 
 [dir=ltr] .detailPageContent,
