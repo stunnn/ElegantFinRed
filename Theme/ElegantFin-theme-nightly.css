@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --elegantFinFooterText: "ElegantFin-Next Nightly";
+    --elegantFinFooterText: "ElegantFin Nightly";
 
     /* Base theme colors */
     color-scheme: dark;
@@ -82,7 +82,7 @@
 
     --sidePadding: 3.3%;
     --itemColumnGap: 1em;
-    --itemPageNegativeSpace: max(17vh, 10em);
+    --itemPageNegativeSpace: max(15vh, 8em);
 
     /* Set to 50% to center the play button in the overlay. */
     --overlayPlayButtonPosition: 2.8em;
@@ -221,6 +221,11 @@ html {
 
 .vertical-wrap:not(.centered) {
     justify-content: flex-start !important;
+}
+
+.layout-tv .vertical-wrap:not(.centered) {
+    /* this looks odd, but it is needed for proper navigation with remote controls on TVs*/
+    justify-content: flex-end !important;
 }
 
 .countIndicator,
@@ -704,7 +709,8 @@ html {
 
 .layout-desktop .detailPageWrapperContainer {
     background: transparent;
-    min-height: calc(100vh - 13em);
+    min-height: 28.5em;
+    background: linear-gradient(0deg, var(--darkerGradientPointAlpha) 70%, 85%, transparent);
 }
 
 .detailPagePrimaryContainer {
@@ -713,8 +719,9 @@ html {
     justify-content: end;
     flex-direction: column;
     /* center content on desktop */
-    /* align-items: center; */
-    /* text-align: center; */
+    align-items: center;
+    text-align: center;
+    margin-bottom: -1.5em;
 }
 
 [dir=ltr] .detailPagePrimaryContent {
@@ -727,6 +734,10 @@ html {
 
 .layout-desktop .detailPageSecondaryContainer {
     background-color: transparent;
+}
+
+.detailPageSecondaryContainer {
+    padding-top: 0;
 }
 
 /* this hides the header home button everywhere except the main media page */
@@ -840,7 +851,7 @@ html {
 }
 
 .layout-desktop .detailRibbon {
-    height: auto !important;
+    height: 19em !important;
     margin-top: unset !important;
 }
 
@@ -861,11 +872,6 @@ html {
     }
 }
 
-
-.detailLogo {
-    display: none;
-}
-
 @keyframes animMoveUp {
     from {
         transform: translateY(-90%);
@@ -878,18 +884,16 @@ html {
     }
 }
 
-/* .detailLogo {
+.detailLogo {
     display: block;
-    z-index: 1;
-    position: absolute;
+    top: calc(100vh - 9.5em - var(--itemPageNegativeSpace));
     left: 0;
-    top: 60vh;
-    width: 60vw;
-    margin-inline: 20vw;
-    max-height: 25vh;
+    width: 40%;
+    transform: translateY(-100%);
+    margin-inline: 30%;
+    height: 15em;
     background-position: bottom;
-    animation: animMoveUp 1s ease-out forwards;
-} */
+}
 
 .layout-mobile .detailLogo {
     display: block;
@@ -897,10 +901,18 @@ html {
     position: absolute;
     left: 1em;
     top: 45vh;
+    margin-inline: 0%;
     width: calc(100vw - 2em);
     max-height: 20vh;
-    background-position: bottom;
     animation: animMoveUp 1s ease-out forwards;
+}
+
+.itemBackdrop {
+    display: block !important;
+}
+
+.layout-desktop .itemBackdrop {
+    height: calc(100vh - 18em - var(--itemPageNegativeSpace)) !important;
 }
 
 .layout-mobile .itemBackdrop {
@@ -912,21 +924,38 @@ html {
     height: 45vh;
 }
 
-.layout-desktop .itemBackdrop {
-    /* height: 66vh; */
-    height: 13em;
+.layout-mobile #itemDetailPage:has(.detailLogo.hide) .itemBackdrop {
+    margin-bottom: -10vh;
+}
+
+.layout-tv .detailLogo {
+    display: block;
+    height: 30vh;
+    top: 40vh;
+    width: 60%;
+    margin-inline: 20%;
 }
 
 .layout-tv .itemBackdrop {
-    display: block;
-    height: 13vh;
+    height: 33vh;
+}
+
+.detailImageContainer.padded-left {
+    padding-left: 0;
 }
 
 .layout-desktop .detailImageContainer .card {
     top: unset !important;
-    width: 23vw !important;
-    /* position: unset !important; */
-    /* display: none; */
+    width: 22vh !important;
+}
+
+.detailImageContainer .card.backdropCard {
+    width: 40vh !important;
+    max-width: 50vw;
+}
+
+.detailImageContainer .card:not(.backdropCard, .squareCard) {
+    display: none;
 }
 
 .layout-tv .detailImageContainer .card {
@@ -944,6 +973,11 @@ html {
     padding-left: 0;
 }
 
+.infoWrapper {
+    align-content: end;
+    place-items: center
+}
+
 /* Both the blocks below position the poster in main media page in the center */
 .layout-mobile .detailImageContainer {
     display: flex;
@@ -955,15 +989,9 @@ html {
 .layout-mobile .detailImageContainer .card {
     position: inherit !important;
     margin-top: -70%;
-    max-width: 75vw;
-    display: none;
+    max-width: 60vw;
+    /* width: 40vw !important; */
 }
-
-/* .layout-mobile .detailImageContainer .card.backdropCard {
-}
-
-.layout-mobile .detailImageContainer .card.portraitCard {
-} */
 
 .layout-mobile .detailPageWrapperContainer {
     padding-top: 0;
@@ -971,28 +999,57 @@ html {
 }
 
 /* this hides the main media title when the clear logo is available*/
-.layout-mobile #itemDetailPage:has(.detailLogo:not(.hide)) .infoWrapper .parentNameLast,
-.layout-mobile #itemDetailPage:has(.detailLogo:not(.hide)) .infoWrapper .parentName,
-.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .detailLogo {
+.detailLogo:not(.hide)~.detailPageWrapperContainer .parentNameLast,
+.detailLogo:not(.hide)~.detailPageWrapperContainer .parentName,
+#itemDetailPage:has(.detailImageContainer .card.backdropCard) .detailLogo,
+#itemDetailPage:has(.listItem[data-type="Audio"]) .detailLogo,
+#itemDetailPage:has(.verticalSection[data-type="MusicAlbum"]) .detailImageContainer .card {
     z-index: 2;
     display: none;
 }
 
 /* this shows the main media title and the poster when the clear logo is unavailable*/
-.layout-mobile #itemDetailPage:has(.detailLogo.hide) .infoWrapper .parentNameLast,
-.layout-mobile #itemDetailPage:has(.detailLogo.hide) .infoWrapper .parentName,
-.layout-mobile #itemDetailPage:has(.detailLogo.hide) .detailImageContainer .card,
-.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .detailImageContainer .card,
-.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .infoWrapper .parentNameLast,
-.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .infoWrapper .parentName,
-.layout-mobile #itemDetailPage:has(.nameContainer .musicParentName) .infoWrapper .itemName,
-.layout-mobile #itemDetailPage:has(.nameContainer .musicParentName) .infoWrapper .parentName {
+.detailLogo.hide~.detailPageWrapperContainer .parentNameLast,
+.detailLogo.hide~.detailPageWrapperContainer .parentName,
+#itemDetailPage:has(.detailImageContainer .card.backdropCard) .parentNameLast,
+#itemDetailPage:has(.detailImageContainer .card.backdropCard) .parentName,
+.nameContainer:has(.musicParentName) .itemName,
+.nameContainer:has(.musicParentName) .parentName {
+    display: block !important;
+}
+
+#itemDetailPage:has(.listItem[data-type="Audio"]) .detailImageContainer .cardScalable {
+    aspect-ratio: 1 / 1;
+}
+
+#itemDetailPage:has(.listItem[data-type="Audio"]) .detailImageContainer .card.backdropCard {
+    width: 20vh !important;
+}
+
+#childrenContent:has(.listItem[data-type="Audio"]) {
+    border: var(--defaultBorder);
+    border-radius: var(--largeRadius);
+    padding: .5em;
+    background-color: var(--lighterGradientPointAlpha);
+}
+
+/* this shows the poster in the cast page */
+#itemDetailPage:has(.btnPlay.hide) .detailImageContainer .card.portraitCard {
     display: block;
 }
 
-#itemDetailPage:has(.detailImageContainer .card.backdropCard) .itemBackdrop {
+/* This reduces the top padding in the cast page */
+#itemDetailPage:has(.btnPlay.hide) .itemBackdrop {
+    height: calc(100vh - 25em - var(--itemPageNegativeSpace)) !important;
+}
+
+.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard, .detailImageContainer .card.squareCard) .itemBackdrop {
     filter: brightness(.5);
 }
+
+/* .layout-desktop:has(#itemDetailPage .detailImageContainer .card.backdropCard, .detailImageContainer .card.squareCard) .backgroundContainer {
+    background: #000000d4;
+} */
 
 .layout-mobile .cardImageIcon {
     font-size: 3.5em;
@@ -1030,46 +1087,7 @@ html {
         display: none;
     }
 
-    .layout-mobile .detailImageContainer .card.backdropCard {
-        width: 65vw !important;
-    }
-
-    .layout-mobile .detailImageContainer .card.portraitCard {
-        width: 45vw !important;
-    }
-
-
-    /* .layout-mobile .overflowSquareCard {
-        width: 27vw;
-    } */
-
-    /* two portrait cards and three backdrop cards in cast page */
-    /* .layout-mobile .overflowPortraitCard {
-        width: 27vw;
-    } */
-
-    /* .layout-mobile .overflowBackdropCard,
-    .layout-mobile .overflowSmallBackdropCard {
-        width: 42vw;
-    } */
-
-    /* .layout-mobile #homeTab .overflowPortraitCard {
-        width: 40vw;
-    } */
-
-    /* two and a quarter portrait cards in home page */
-    /* .layout-mobile #homeTab .overflowBackdropCard,
-    .layout-mobile #homeTab .overflowSmallBackdropCard {
-        width: 42vw;
-    } */
-
-    /* quarter to two backdrop cards in home page */
-    /* .layout-mobile #homeTab .overflowBackdropCard:has(.cardOverlayButtonIcon.play_arrow),
-    .layout-mobile #homeTab .overflowSmallBackdropCard:has(.cardOverlayButtonIcon.play_arrow) {
-        width: 52vw;
-    } */
-
-    .layout-mobile .btnPlay.detailButton {
+    .layout-mobile .btnPlay.detailButton:not(.play-button) {
         flex: 0 0 100%;
         margin-right: 0 !important;
     }
@@ -1104,35 +1122,39 @@ html,
 .nowPlayingContextMenu,
 .backgroundContainer:not(.withBackdrop, .backgroundContainer-transparent),
 .backdropContainer {
+    background-color: var(--darkerGradientPoint);
     background: var(--backgroundGradient);
+
+    /* background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1799 1799' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), var(--backgroundGradient);
+    background-blend-mode: overlay, darken; */
+
+    /* background-color: hsla(220, 50%, 10%, 1);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1799 1799' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), radial-gradient(circle at 85% 65%, hsla(230, 60%, 14%, 1) 10%, transparent 70%), radial-gradient(circle at 45% 40%, hsla(210, 40%, 10%, 1) 8%, transparent 75%), radial-gradient(circle at 20% 20%, hsla(240, 30%, 25%, 1) 6%, transparent 65%);
+    background-blend-mode: overlay, normal, normal, normal; */
+
+    /* background-color: hsla(0, 0%, 8%, 1);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1799 1799' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), radial-gradient(circle at 85% 75%, hsla(0, 0%, 18%, 1) 8%, transparent 65%), radial-gradient(circle at 20% 40%, hsla(0, 0%, 15%, 1) 6%, transparent 70%), radial-gradient(circle at 60% 30%, hsla(0, 0%, 10%, 1) 10%, transparent 75%);
+    background-blend-mode: overlay, normal, normal, normal; */
 }
 
-/* .backdropContainer::after {
-    content: '';
+.backdropImage:after,
+.backdropImage:before {
+    content: "";
     position: absolute;
-    inset: 0%;
-    background: var(--darkerGradientPointAlpha);
-    mask: var(--ditheringMask);
-} */
+    inset: 0;
+    background: inherit;
+}
 
-.backdropImage {
-    /* mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080' version='1.1'><defs><filter id='filter21' x='-0.097435847' y='-0.19021173' width='1.1948717' height='1.3804235' color-interpolation-filters='sRGB'><feGaussianBlur stdDeviation='69 69' result='blur'/></filter></defs><g><rect width='1699.5798' height='870.60876' x='168.44388' y='41.63781' ry='121.12818' transform='matrix(1.1565711,0,0,1.2110253,-3.2891467,-229.87865)' fill='%23fff' fill-opacity='1' filter='url(%23filter21)'/></g></svg>");
-    mask-repeat: no-repeat;
-    mask-position: top right;
-    mask-size: contain;
+.backdropImage:after {
+    z-index: 0;
+    height: 80vh;
+    mask: linear-gradient(180deg, rgba(0, 0, 0, 1) 75%, transparent);
+}
 
-    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080' version='1.1'><defs><filter id='filter21' x='-0.097435847' y='-0.19021173' width='1.1948717' height='1.3804235' color-interpolation-filters='sRGB'><feGaussianBlur stdDeviation='69 69' result='blur'/></filter></defs><g><rect width='1699.5798' height='870.60876' x='168.44388' y='41.63781' ry='121.12818' transform='matrix(1.1565711,0,0,1.2110253,-3.2891467,-229.87865)' fill='%23fff' fill-opacity='1' filter='url(%23filter21)'/></g></svg>");
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: top right;
-    -webkit-mask-size: contain; */
-    aspect-ratio: 16 / 9;
-    background-position: top;
-    background-size: 100% auto;
-    mask-size: 100% auto;
-    mask-repeat: no-repeat;
-    mask-position: top;
-    /* mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='3840' height='2160' viewBox='0 0 3840 2160'><defs><filter id='filter1' x='-0.043125' y='-0.11111111' width='1.08625' height='1.2222222' style='color-interpolation-filters:sRGB'><feGaussianBlur stdDeviation='69 100' result='blur'/></filter></defs><g><rect width='3840' height='2160' x='0' y='0' ry='211.97432' style='fill:%23ffffff;stroke-width:0;filter:url(%23filter1)' transform='matrix(0.91126884,0,0,1.0705027,169.64218,-422.16902)'/></g></svg>"); */
-    mask: var(--itemBackdropMask);
+.backdropImage:before {
+    transform: scale(1.1);
+    height: -webkit-fill-available;
+    filter: var(--blurLargest);
 }
 
 .backgroundContainer.withBackdrop {
@@ -1951,6 +1973,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     margin: .5em !important;
     border-radius: 50%;
     padding: .6em !important;
+    background: transparent;
 }
 
 .layout-desktop .detailButton:not(.btnPlay):hover {
@@ -2005,6 +2028,10 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 .btnPlay>.detailButton-content::after {
     padding-inline: 1ch;
     place-content: center;
+}
+
+.mainDetailButtons {
+    justify-content: center;
 }
 
 .layout-mobile [dir=ltr] .mainDetailButtons {
@@ -2130,7 +2157,8 @@ div[data-role=controlgroup] a.ui-btn-active {
     margin-bottom: .5em;
 }
 
-.listItem[data-type="Audio"] {
+.layout-mobile #songsTab .listItem[data-type="Audio"],
+.layout-mobile #playlist .listItem[data-type="Audio"] {
     margin-inline: 1em;
 }
 
@@ -2235,7 +2263,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 .actionSheetMenuItem.emby-button:has(.listItemIcon.material-icons.check[style*="hidden"]):active {
-    background-color: rgba(255, 255, 255, 0.125);
+    background-color: rgba(255, 255, 255, .125);
 }
 
 .navMenuOption {
@@ -2256,21 +2284,35 @@ div[data-role=controlgroup] a.ui-btn-active {
     background-color: var(--activeColor) !important;
 }
 
-.detailSection {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+#itemDetailPage .detailSection {
+    display: grid;
+    row-gap: 1em;
+    column-gap: 3em;
     max-width: unset !important;
+    grid-template-columns: 1fr 1fr;
+}
+
+.layout-mobile .detailSection {
+    grid-template-columns: 1fr;
 }
 
 .detailPageContent {
     gap: 1em;
 }
 
+.detailImageContainer .card {
+    position: inherit !important;
+}
+
 .trackSelections {
     order: 3;
     max-width: unset !important;
-    margin-block: 1em;
+    margin-top: 1em;
+    border: var(--defaultBorder);
+    border-radius: var(--smallRadius);
+    padding: 1em;
+    grid-column: 2;
+    background-color: var(--lighterGradientPointAlpha);
 }
 
 .detailsGroupItem,
@@ -2313,10 +2355,30 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .detailSectionContent {
     order: 1;
+    grid-column: 1 / -1;
+}
+
+.layout-desktop .detailSectionContent {
+    align-content: end;
+    min-height: 8em;
 }
 
 .itemDetailsGroup {
     order: 2;
+    grid-column: 1;
+}
+
+.trackSelections.hide~.itemDetailsGroup {
+    grid-column: 1 / -1;
+}
+
+.layout-mobile .trackSelections,
+.layout-mobile .detailSectionContent,
+.layout-mobile .itemDetailsGroup,
+.layout-tv .trackSelections,
+.layout-tv .detailSectionContent,
+.layout-tv .itemDetailsGroup {
+    grid-column: 1 / -1;
 }
 
 .sliderBubble {
@@ -2673,7 +2735,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 .infoWrapper h1.parentName bdi,
 .infoWrapper h1.itemName a,
 .infoWrapper h1.parentName a {
-    overflow: hidden;
+    /* overflow: hidden; */
     display: -webkit-box !important;
     -webkit-line-clamp: 3;
     line-clamp: 3;
@@ -3207,8 +3269,10 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 /* this is the transparent header, visible in main media page */
 .skinHeader-withBackground.semiTransparent,
-.layout-mobile .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty),
-.layout-mobile .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty)::after {
+.skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty),
+.skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty)::after,
+.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader),
+.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader, .semiTransparent)::after {
     backdrop-filter: none;
     background-color: transparent;
     background: none;
