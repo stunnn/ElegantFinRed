@@ -34,6 +34,7 @@
     --tableBodyColor: rgb(31 41 55 / 1);
     --uiAccentColor: rgb(117 111 226);
     --btnMiniPlayColor: rgb(41 154 93);
+    --btnMiniPlayBorderColor: rgb(50, 167, 105);
 
     /* Base component colors */
     --btnDeleteColor: rgb(169, 29, 29);
@@ -43,7 +44,6 @@
     --checkboxCheckedBgColor: rgb(79, 70, 229);
     --highlightOutlineColor: rgb(37, 99, 235);
 
-    --btnPlayBorderColor: color-mix(in srgb, var(--btnMiniPlayColor), rgb(255, 255, 255) 5%);
     --defaultBorder: var(--borderWidth) solid var(--borderColor);
     --defaultLighterBorder: var(--borderWidth) solid var(--lighterBorderColor);
 
@@ -243,10 +243,13 @@ html {
     transition: transform 125ms;
 }
 
-#castCollapsible .cardScalable,
-#guestCastContent .cardScalable {
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
+@supports (aspect-ratio: 1 / 1) {
+
+    #castCollapsible .cardScalable,
+    #guestCastContent .cardScalable {
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+    }
 }
 
 #castCollapsible .cardContent.cardImageContainer,
@@ -337,7 +340,10 @@ html {
     content: "";
     transition: .5s;
     position: absolute;
-    inset: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     transform: translateY(-50%) translateX(0);
     background: var(--hoverGradientV);
 }
@@ -378,7 +384,7 @@ html {
     background-color: var(--btnMiniPlayColor) !important;
     color: white;
     border: var(--defaultLighterBorder);
-    border-color: var(--btnPlayBorderColor);
+    border-color: var(--btnMiniPlayBorderColor);
     font-size: 75%;
     box-shadow: var(--shadow);
     z-index: 2;
@@ -473,7 +479,10 @@ html {
         --cardCount: 24;
     }
 
-    .squareCard:has(.cardFooter),
+    .squareCard:has(.cardFooter) {
+        --cardCount: 22;
+    }
+
     .backdropCard {
         --cardCount: 22;
     }
@@ -497,7 +506,10 @@ html {
         --cardCount: 20;
     }
 
-    .squareCard:has(.cardFooter),
+    .squareCard:has(.cardFooter) {
+        --cardCount: 18;
+    }
+
     .backdropCard {
         --cardCount: 18;
     }
@@ -521,7 +533,10 @@ html {
         --cardCount: 16;
     }
 
-    .squareCard:has(.cardFooter),
+    .squareCard:has(.cardFooter) {
+        --cardCount: 14;
+    }
+
     .backdropCard {
         --cardCount: 14;
     }
@@ -545,7 +560,10 @@ html {
         --cardCount: 13;
     }
 
-    .squareCard:has(.cardFooter),
+    .squareCard:has(.cardFooter) {
+        --cardCount: 10;
+    }
+
     .backdropCard {
         --cardCount: 10;
     }
@@ -569,7 +587,10 @@ html {
         --cardCount: 9;
     }
 
-    .squareCard:has(.cardFooter),
+    .squareCard:has(.cardFooter) {
+        --cardCount: 8;
+    }
+
     .backdropCard {
         --cardCount: 8;
     }
@@ -592,7 +613,10 @@ html {
         --cardCount: 7;
     }
 
-    .squareCard:has(.cardFooter),
+    .squareCard:has(.cardFooter) {
+        --cardCount: 6;
+    }
+
     .backdropCard {
         --cardCount: 6;
     }
@@ -614,7 +638,10 @@ html {
         --cardCount: 7;
     }
 
-    .squareCard:has(.cardFooter),
+    .squareCard:has(.cardFooter) {
+        --cardCount: 6;
+    }
+
     .backdropCard {
         --cardCount: 6;
     }
@@ -634,8 +661,11 @@ html {
         --cardCount: 6;
     }
 
+    .squareCard:has(.cardFooter) {
+        --cardCount: 5;
+    }
+
     .overflowBackdropCard,
-    .squareCard:has(.cardFooter),
     .backdropCard {
         --cardCount: 5;
     }
@@ -651,7 +681,10 @@ html {
         --cardCount: 5;
     }
 
-    .squareCard:has(.cardFooter),
+    .squareCard:has(.cardFooter) {
+        --cardCount: 4;
+    }
+
     .backdropCard,
     .overflowBackdropCard {
         --cardCount: 4;
@@ -668,7 +701,10 @@ html {
         --cardCount: 4;
     }
 
-    .squareCard:has(.cardFooter),
+    .squareCard:has(.cardFooter) {
+        --cardCount: 3;
+    }
+
     .backdropCard,
     .overflowBackdropCard {
         --cardCount: 3;
@@ -689,7 +725,10 @@ html {
         --cardCount: 3;
     }
 
-    .squareCard:has(.cardFooter),
+    .squareCard:has(.cardFooter) {
+        --cardCount: 2;
+    }
+
     .backdropCard,
     .overflowBackdropCard {
         --cardCount: 2;
@@ -772,8 +811,8 @@ html {
 #itemDetailPage .emby-scroller-container,
 #itemDetailPage .emby-scroller,
 #itemDetailPage .scrollX {
-    margin-inline: calc(-1 * var(--sidePadding));
-    padding-inline: var(--sidePadding);
+    margin: 0 calc(-1 * var(--sidePadding));
+    padding: 0 var(--sidePadding);
 }
 
 .layout-desktop .emby-scroller-container,
@@ -816,7 +855,8 @@ html {
 .mediaInfoItem {
     border-radius: var(--smallRadius);
     font-weight: 500;
-    padding-block: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .itemMiscInfo-primary {
@@ -885,14 +925,20 @@ html {
 }
 
 .detailLogo {
-    display: block;
-    top: calc(100vh - 15vh - var(--itemPageNegativeSpace));
-    left: 0;
-    width: 40%;
-    transform: translateY(-100%);
-    margin-inline: 30%;
-    height: 15em;
-    background-position: bottom;
+    display: none;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+    .detailLogo {
+        display: block;
+        top: calc(100vh - 20vh - var(--itemPageNegativeSpace));
+        left: 0;
+        width: 40%;
+        transform: translateY(-100%);
+        margin: auto 30%;
+        height: 30vh;
+        background-position: bottom;
+    }
 }
 
 .layout-mobile .detailLogo {
@@ -901,7 +947,7 @@ html {
     position: absolute;
     left: 1em;
     top: 45vh;
-    margin-inline: 0%;
+    margin: auto 0%;
     width: calc(100vw - 2em);
     max-height: 20vh;
     animation: animMoveUp 1s ease-out forwards;
@@ -919,6 +965,7 @@ html {
     margin-top: 0;
     position: sticky;
     top: -30%;
+    -webkit-mask: var(--itemBackdropMask);
     mask: var(--itemBackdropMask);
     animation: animMoveDown 1s ease-out forwards;
     height: 45vh;
@@ -933,7 +980,7 @@ html {
     height: 30vh;
     top: 40vh;
     width: 60%;
-    margin-inline: 20%;
+    margin: auto 20%;
 }
 
 .layout-tv .itemBackdrop {
@@ -1120,7 +1167,8 @@ h2 {
 html,
 .nowPlayingPlaylist,
 .nowPlayingContextMenu,
-.backgroundContainer:not(.withBackdrop, .backgroundContainer-transparent),
+.backgroundContainer:not(.withBackdrop),
+.backgroundContainer:not(.backgroundContainer-transparent),
 .backdropContainer {
     background-color: var(--darkerGradientPoint);
     background: var(--backgroundGradient);
@@ -1141,13 +1189,17 @@ html,
 .backdropImage:before {
     content: "";
     position: absolute;
-    inset: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: inherit;
 }
 
 .backdropImage:after {
     z-index: 0;
     height: 80vh;
+    -webkit-mask: linear-gradient(180deg, rgba(0, 0, 0, 1) 75%, transparent);
     mask: linear-gradient(180deg, rgba(0, 0, 0, 1) 75%, transparent);
 }
 
@@ -1191,7 +1243,7 @@ html,
 }
 
 .lyricPage {
-    padding-inline: var(--sidePadding);
+    padding: 0 var(--sidePadding);
 }
 
 .lyricsLine {
@@ -1559,12 +1611,14 @@ progress+span {
 .detail-clamp-text {
     text-align: start;
     color: var(--dimTextColor);
-    margin-block: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     -webkit-line-clamp: 2;
 }
 
 .detail-clamp-text p {
-    margin-block: .25em;
+    margin-top: .25em;
+    margin-bottom: .25em;
 }
 
 .layout-mobile .detail-clamp-text {
@@ -1573,7 +1627,8 @@ progress+span {
 
 .overview-expand.emby-button {
     padding: 0;
-    margin-block: 1.4em;
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
     color: transparent;
 }
 
@@ -1613,6 +1668,7 @@ progress+span {
 
 .itemMiscInfo {
     align-items: flex-end !important;
+    justify-content: center;
 }
 
 .innerCardFooter,
@@ -1688,7 +1744,8 @@ progress+span {
 }
 
 .formDialogHeaderTitle {
-    margin-inline: 0 !important;
+    margin-inline-start: 0 !important;
+    margin-inline-end: 0 !important;
     text-align: center;
     padding: 0 .5em !important;
 }
@@ -2026,7 +2083,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 }
 
 .btnPlay>.detailButton-content::after {
-    padding-inline: 1ch;
+    padding: 0 1ch;
     place-content: center;
 }
 
@@ -2036,7 +2093,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 
 .layout-mobile [dir=ltr] .mainDetailButtons {
     flex-wrap: wrap;
-    padding-inline: 1.25em;
+    padding: 0 1.25em;
 }
 
 @media (min-width: 100em) {
@@ -2159,7 +2216,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .layout-mobile #songsTab .listItem[data-type="Audio"],
 .layout-mobile #playlist .listItem[data-type="Audio"] {
-    margin-inline: 1em;
+    margin: auto 1em;
 }
 
 .listItem[data-type="Audio"]:has(.playlistIndexIndicatorImage) .listItemBodyText {
@@ -2226,8 +2283,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 .MuiListItem-root>div {
     border: solid transparent var(--borderWidth);
     border-radius: .7em;
-    margin-inline: .5em !important;
-    margin-block: .25em !important;
+    margin: .25 .5em !important;
 }
 
 .Mui-selected {
@@ -2277,7 +2333,8 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 #myPreferencesMenuPage .listItemIcon {
-    margin-inline: .5em .25em;
+    margin-left: .5em;
+    margin-right: .25em;
 }
 
 .navMenuOption-selected {
@@ -2443,7 +2500,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 .paging {
-    padding-inline: 1em;
+    padding: 0 1em;
 }
 
 .layout-mobile #myPreferencesMenuPage {
@@ -2481,7 +2538,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 .sectionTitleTextButton {
-    padding-inline: .5em;
+    padding: 0 .5em;
 }
 
 .sectionTitleTextButton:hover {
@@ -2764,7 +2821,8 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 .itemName.originalTitle {
-    padding-block: .25em;
+    padding-top: .25em;
+    padding-bottom: .25em;
     color: var(--dimTextColor);
 }
 
@@ -3106,7 +3164,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     padding: 4.3em 0;
     top: 0;
     bottom: 4.3em;
-    background: color-mix(in srgb, var(--headerColor), var(--darkerGradientPoint) 50%);
+    background: var(--headerColor);
+    /* background: color-mix(in srgb, var(--headerColor), var(--darkerGradientPoint) 50%); */
     backdrop-filter: var(--blurLargest);
     z-index: 0;
 }
@@ -3271,11 +3330,16 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     padding-bottom: 1.45em;
 }
 
-.skinHeader-blurred:not(.osdHeader, .semiTransparent)::after {
+.skinHeader-blurred:not(.osdHeader)::after,
+.skinHeader-blurred:not(.semiTransparent)::after {
     content: "";
     position: absolute;
-    inset: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     backdrop-filter: var(--blurLargest);
+    -webkit-mask: var(--headerBlurMask);
     mask: var(--headerBlurMask);
     z-index: -1;
 }
@@ -3350,11 +3414,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 .headerTabs.sectionTabs .emby-tab-button {
     display: inline-flex;
-    margin: 0;
-    margin-inline: .5em;
-    margin-block: .25em;
-    padding: 0;
-    padding-inline: 1.25em;
+    margin: .25em .5em;
+    padding: 0 1.25em;
     height: 2.5em;
     color: var(--textColor);
     font-weight: 400;
@@ -3363,9 +3424,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 }
 
 .headerTabs.sectionTabs .emby-tab-button-active {
-    margin: 0;
-    margin-inline: .5em;
-    margin-block: .25em;
+    margin: .25em .5em;
     color: black;
     background-color: var(--textColor);
 }
