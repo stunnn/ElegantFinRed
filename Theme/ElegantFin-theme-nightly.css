@@ -851,7 +851,7 @@ html {
 }
 
 .layout-desktop .detailRibbon {
-    height: 19em !important;
+    height: 32vh !important;
     margin-top: unset !important;
 }
 
@@ -886,7 +886,7 @@ html {
 
 .detailLogo {
     display: block;
-    top: calc(100vh - 9.5em - var(--itemPageNegativeSpace));
+    top: calc(100vh - 15vh - var(--itemPageNegativeSpace));
     left: 0;
     width: 40%;
     transform: translateY(-100%);
@@ -912,7 +912,7 @@ html {
 }
 
 .layout-desktop .itemBackdrop {
-    height: calc(100vh - 18em - var(--itemPageNegativeSpace)) !important;
+    height: calc(100vh - 31vh - var(--itemPageNegativeSpace)) !important;
 }
 
 .layout-mobile .itemBackdrop {
@@ -2360,7 +2360,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .layout-desktop .detailSectionContent {
     align-content: end;
-    min-height: 8em;
+    min-height: 15vh;
 }
 
 .itemDetailsGroup {
