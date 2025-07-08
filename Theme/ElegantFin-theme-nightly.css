@@ -1001,7 +1001,7 @@ html {
     max-width: 50vw;
 }
 
-.detailImageContainer .card:not(.backdropCard, .squareCard) {
+.detailImageContainer .card {
     display: none;
 }
 
@@ -1080,8 +1080,9 @@ html {
     background-color: var(--lighterGradientPointAlpha);
 }
 
-/* this shows the poster in the cast page */
-#itemDetailPage:has(.btnPlay.hide) .detailImageContainer .card.portraitCard {
+/* this shows the poster in the cast, book and music pages */
+.detailImageContainer .card:has(.book, .person, .album),
+.detailImageContainer .card.backdropCard:has(.tv) {
     display: block;
 }
 
