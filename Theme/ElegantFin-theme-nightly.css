@@ -54,7 +54,7 @@
     /* textures */
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
     --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), 25%, var(--lighterGradientPoint));
-    --headerColorGradient: linear-gradient(180deg, rgba(30, 40, 54, .95) 35%, 55%, transparent 90%);
+    --headerColorGradient: linear-gradient(180deg, rgba(30, 40, 54, .95) 30%, 55%, transparent 90%);
     --headerBlurMask: linear-gradient(180deg, white 50%, 85%, transparent);
 
     --cardFooterGradient: linear-gradient(0deg, rgb(0 0 0 / 90%), 40%, transparent);
@@ -931,7 +931,7 @@ html {
 @supports (aspect-ratio: 1 / 1) {
     .detailLogo {
         display: block;
-        top: calc(100vh - 9em - var(--itemPageNegativeSpace));
+        top: calc(100vh - 10em - var(--itemPageNegativeSpace));
         left: 0;
         width: 40%;
         transform: translateY(-100%);
@@ -958,7 +958,7 @@ html {
 }
 
 .layout-desktop .itemBackdrop {
-    height: calc(100vh - 31vh - var(--itemPageNegativeSpace)) !important;
+    height: calc(100vh - 32vh - var(--itemPageNegativeSpace)) !important;
 }
 
 .layout-mobile .itemBackdrop {
@@ -999,6 +999,7 @@ html {
 .detailImageContainer .card.backdropCard {
     width: 40vh !important;
     max-width: 50vw;
+    margin-bottom: 2em;
 }
 
 .detailImageContainer .card {
@@ -1033,9 +1034,13 @@ html {
     padding-left: 0 !important;
 }
 
+.layout-mobile .detailImageContainer:has(.card:not(.portraitCard)) {
+    height: 0;
+}
+
 .layout-mobile .detailImageContainer .card {
     position: inherit !important;
-    margin-top: -70%;
+    margin-top: -150%;
     max-width: 60vw;
     /* width: 40vw !important; */
 }
@@ -1087,8 +1092,12 @@ html {
 }
 
 /* This reduces the top padding in the cast page */
-#itemDetailPage:has(.btnPlay.hide) .itemBackdrop {
-    height: calc(100vh - 25em - var(--itemPageNegativeSpace)) !important;
+#itemDetailPage:has(.detailImageContainer .cardImageIcon.person, .detailImageContainer .cardImageIcon.book) .itemBackdrop {
+    height: calc(100vh - 50vh - var(--itemPageNegativeSpace)) !important;
+}
+
+#itemDetailPage:has(.detailImageContainer .cardImageIcon.album) .itemBackdrop {
+    height: calc(100vh - 45vh - var(--itemPageNegativeSpace)) !important;
 }
 
 .layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard, .detailImageContainer .card.squareCard) .itemBackdrop {
