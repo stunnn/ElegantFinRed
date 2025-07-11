@@ -2417,6 +2417,10 @@ div[data-role=controlgroup] a.ui-btn-active {
     grid-column: 1 / -1;
 }
 
+.detailSectionContent a:not(.overview-expand) {
+    text-align: start;
+}
+
 .layout-desktop .detailSectionContent {
     align-content: end;
     min-height: 15vh;
