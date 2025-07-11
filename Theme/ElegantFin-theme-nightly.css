@@ -1023,7 +1023,8 @@ html {
 
 .infoWrapper {
     align-content: end;
-    place-items: center
+    place-items: center;
+    display: grid;
 }
 
 /* Both the blocks below position the poster in main media page in the center */
@@ -1051,22 +1052,22 @@ html {
 }
 
 /* this hides the main media title when the clear logo is available*/
-.detailLogo:not(.hide)~.detailPageWrapperContainer .parentNameLast,
-.detailLogo:not(.hide)~.detailPageWrapperContainer .parentName,
+.detailLogo:not(.hide)~.detailPageWrapperContainer .nameContainer h1,
 #itemDetailPage:has(.detailImageContainer .card.backdropCard) .detailLogo,
 #itemDetailPage:has(.listItem[data-type="Audio"]) .detailLogo,
+#itemDetailPage:has(.verticalSection[data-type="MusicAlbum"]) .detailLogo,
 #itemDetailPage:has(.verticalSection[data-type="MusicAlbum"]) .detailImageContainer .card {
     z-index: 2;
     display: none;
 }
 
 /* this shows the main media title and the poster when the clear logo is unavailable*/
-.detailLogo.hide~.detailPageWrapperContainer .parentNameLast,
-.detailLogo.hide~.detailPageWrapperContainer .parentName,
-#itemDetailPage:has(.detailImageContainer .card.backdropCard) .parentNameLast,
-#itemDetailPage:has(.detailImageContainer .card.backdropCard) .parentName,
-.nameContainer:has(.musicParentName) .itemName,
-.nameContainer:has(.musicParentName) .parentName {
+.detailLogo.hide~.detailPageWrapperContainer .nameContainer h1 {
+    display: block !important;
+}
+
+.detailImageContainer:has(.backdropCard, .squareCard)~.nameContainer h1,
+.detailImageContainer:has(.cardImageIcon.person)~.nameContainer h1 {
     display: block !important;
 }
 
@@ -1295,7 +1296,7 @@ html,
     margin-bottom: 5%;
 }
 
-.itemProgressBar:not(.backgroundProgress, .playbackProgress, .transcodingProgress) {
+.itemProgressBar:not(.backgroundProgress):not(.playbackProgress):not(.transcodingProgress) {
     backdrop-filter: var(--blurLarge);
     background-color: var(--osdSeekBarBufferedColorAlpha) !important;
     height: .35em;
@@ -1690,6 +1691,7 @@ progress+span {
     height: -webkit-fill-available;
     padding: 0em 2em 2em 2em;
     align-content: end;
+    display: grid;
 }
 
 .chapterCardImageContainer {
@@ -3353,8 +3355,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     padding-bottom: 1.45em;
 }
 
-.skinHeader-blurred:not(.osdHeader)::after,
-.skinHeader-blurred:not(.semiTransparent)::after {
+.skinHeader-blurred:not(.osdHeader):not(.semiTransparent)::after {
     content: "";
     position: absolute;
     top: 0;
@@ -3369,10 +3370,17 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 /* this is the transparent header, visible in main media page */
 .skinHeader-withBackground.semiTransparent,
-.skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty),
-.skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty)::after,
 .backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader),
-.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader, .semiTransparent)::after {
+.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.semiTransparent)::after,
+.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader)::after {
+    backdrop-filter: none;
+    background-color: transparent;
+    background: none;
+    border: none;
+}
+
+.skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty)::after,
+.skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty) {
     backdrop-filter: none;
     background-color: transparent;
     background: none;
