@@ -2490,8 +2490,12 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 .layout-mobile .padded-right-withalphapicker {
-    padding-left: 3.5% !important;
-    padding-right: 6.5% !important;
+    padding-left: 3.5%;
+    padding-right: 6.5%;
+}
+
+.detailPagePrimaryContent.padded-right {
+    padding-right: 0 !important;
 }
 
 [dir=ltr] .detailPageContent,
@@ -2503,6 +2507,10 @@ div[data-role=controlgroup] a.ui-btn-active {
 /* this removes right padding from cast page sections to place cards evenly*/
 #itemDetailPage .verticalSection .itemsContainer.padded-right {
     padding-right: 0 !important;
+}
+
+.remoteControlContent.paddded-left.padded-right {
+    padding: 0 var(--sidePadding) !important;
 }
 
 .paging {
