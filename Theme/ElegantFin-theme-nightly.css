@@ -82,7 +82,7 @@
 
     --sidePadding: 3.3%;
     --itemColumnGap: 1em;
-    --itemPageNegativeSpace: max(15vh, 8em);
+    --itemPageNegativeSpace: 15vh;
 
     /* Set to 50% to center the play button in the overlay. */
     --overlayPlayButtonPosition: 2.8em;
@@ -748,7 +748,7 @@ html {
 
 .layout-desktop .detailPageWrapperContainer {
     background: transparent;
-    min-height: 28.5em;
+    min-height: 46vh;
     background: linear-gradient(0deg, var(--darkerGradientPointAlpha) 70%, 85%, transparent);
 }
 
@@ -931,7 +931,7 @@ html {
 @supports (aspect-ratio: 1 / 1) {
     .detailLogo {
         display: block;
-        top: calc(100vh - 20vh - var(--itemPageNegativeSpace));
+        top: calc(100vh - 9em - var(--itemPageNegativeSpace));
         left: 0;
         width: 40%;
         transform: translateY(-100%);
@@ -977,7 +977,7 @@ html {
 
 .layout-tv .detailLogo {
     display: block;
-    height: 30vh;
+    height: 25vh;
     top: 40vh;
     width: 60%;
     margin: auto 20%;
@@ -1103,11 +1103,11 @@ html {
     font-size: 3.5em;
 }
 
-@media (max-width: 62.5em) {
+/* @media (max-width: 62.5em) {
     .layout-desktop .detailPageWrapperContainer {
         min-height: calc(100vh - 7em);
     }
-}
+} */
 
 @media (max-width: 50em) {
     .homeLibraryButton {
@@ -2090,6 +2090,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 
 .mainDetailButtons {
     justify-content: center;
+    margin: 0 0 1em 0;
 }
 
 .layout-mobile [dir=ltr] .mainDetailButtons {
