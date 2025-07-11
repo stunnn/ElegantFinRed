@@ -1105,9 +1105,9 @@ html {
     filter: brightness(.5);
 }
 
-/* .layout-desktop:has(#itemDetailPage .detailImageContainer .card.backdropCard, .detailImageContainer .card.squareCard) .backgroundContainer {
-    background: #000000d4;
-} */
+#itemDetailPage:has(.detailImageContainer .card.backdropCard, .detailImageContainer .card.squareCard:has(.cardImageIcon:not(.person))) {
+    background: linear-gradient(180deg, var(--lighterGradientPointAlpha), var(--darkerGradientPointAlpha))
+}
 
 .layout-mobile .cardImageIcon {
     font-size: 3.5em;
