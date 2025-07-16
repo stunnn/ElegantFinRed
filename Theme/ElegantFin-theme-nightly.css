@@ -1088,11 +1088,12 @@ html {
 
 /* this shows the poster in the cast, book and music pages */
 .detailImageContainer .card:has(.book, .person, .album),
-.detailImageContainer .card.backdropCard:has(.tv) {
+.detailImageContainer .card.backdropCard:has(.tv),
+.detailImageContainer .card.backdropCard:has(.live_tv) {
     display: block;
 }
 
-/* This reduces the top padding in the cast page */
+/* This reduces the top padding in the cast page i.e. shifts up page content */
 #itemDetailPage:has(.detailImageContainer .cardImageIcon.person, .detailImageContainer .cardImageIcon.book) .itemBackdrop {
     height: calc(100vh - 50vh - var(--itemPageNegativeSpace)) !important;
 }
