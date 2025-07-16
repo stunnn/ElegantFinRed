@@ -82,7 +82,9 @@
 
     --sidePadding: 3.3%;
     --itemColumnGap: 1em;
-    --itemPageNegativeSpace: 15vh;
+    --primaryItemPageNegativeSpace: 15vh;
+    --secondaryItemPageNegativeSpace: 35vh;
+
 
     /* Set to 50% to center the play button in the overlay. */
     --overlayPlayButtonPosition: 2.8em;
@@ -931,7 +933,7 @@ html {
 @supports (aspect-ratio: 1 / 1) {
     .detailLogo {
         display: block;
-        top: calc(100vh - 10em - var(--itemPageNegativeSpace));
+        top: calc(100vh - 10em - var(--primaryItemPageNegativeSpace));
         left: 0;
         width: 40%;
         transform: translateY(-100%);
@@ -958,7 +960,7 @@ html {
 }
 
 .layout-desktop .itemBackdrop {
-    height: calc(100vh - 32vh - var(--itemPageNegativeSpace)) !important;
+    height: calc(100vh - 32vh - var(--primaryItemPageNegativeSpace)) !important;
 }
 
 .layout-mobile .itemBackdrop {
@@ -1093,20 +1095,23 @@ html {
     display: block;
 }
 
-/* This reduces the top padding in the cast page i.e. shifts up page content */
-#itemDetailPage:has(.detailImageContainer .cardImageIcon.person, .detailImageContainer .cardImageIcon.book) .itemBackdrop {
-    height: calc(100vh - 50vh - var(--itemPageNegativeSpace)) !important;
-}
-
-#itemDetailPage:has(.detailImageContainer .cardImageIcon.album) .itemBackdrop {
-    height: calc(100vh - 45vh - var(--itemPageNegativeSpace)) !important;
+/* This reduces the top padding in the cast, live tv, episode, song, album and artist pages i.e. shifts up page content */
+#itemDetailPage:has(.detailImageContainer .cardImageIcon.person, .detailImageContainer .cardImageIcon.book) .itemBackdrop,
+#itemDetailPage:has(.detailImageContainer .cardImageIcon.album) .itemBackdrop,
+#itemDetailPage:has(.detailImageContainer .backdropCard .cardImageIcon.tv) .itemBackdrop,
+#itemDetailPage:has(.detailImageContainer .cardImageIcon.live_tv) .itemBackdrop {
+    height: calc(100vh - 32vh - var(--secondaryItemPageNegativeSpace)) !important;
 }
 
 .layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard, .detailImageContainer .card.squareCard) .itemBackdrop {
     filter: brightness(.5);
 }
 
-#itemDetailPage:has(.detailImageContainer .card.backdropCard, .detailImageContainer .card.squareCard:has(.cardImageIcon:not(.person))) {
+#itemDetailPage:has(.detailImageContainer .card.squareCard:has(.cardImageIcon:not(.person))) {
+    background: linear-gradient(180deg, var(--lighterGradientPointAlpha), var(--darkerGradientPointAlpha))
+}
+
+#itemDetailPage:has(.detailImageContainer .card.backdropCard) {
     background: linear-gradient(180deg, var(--lighterGradientPointAlpha), var(--darkerGradientPointAlpha))
 }
 
