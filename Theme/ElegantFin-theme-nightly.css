@@ -1013,7 +1013,7 @@ html {
 .detailImageContainer .card.backdropCard {
     width: 40vh !important;
     max-width: 50vw;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .detailImageContainer .card {
@@ -1994,6 +1994,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 .button-alt,
 .raised,
 #btnDeleteImage,
+.manageRecordingButton,
 .dashboardActionsContainer>.emby-button {
     color: #fff;
     border-radius: var(--smallRadius);
@@ -2267,11 +2268,12 @@ div[data-role=controlgroup] a.ui-btn-active {
     background: var(--drawerColor);
     backdrop-filter: var(--blurLarge);
     border-right: var(--defaultBorder);
+    padding: .25em;
 }
 
-.MuiDrawer-paper:first-child {
+/* .MuiDrawer-paper:first-child {
     margin-block-start: .25em;
-}
+} */
 
 .listItemImage {
     border-radius: var(--smallRadius);
@@ -2450,6 +2452,10 @@ div[data-role=controlgroup] a.ui-btn-active {
     background-color: var(--lighterGradientPointAlpha);
 }
 
+.recordingFields {
+    order: 4;
+}
+
 .detailsGroupItem,
 .trackSelections .selectContainer {
     max-width: unset !important;
@@ -2507,7 +2513,7 @@ div[data-role=controlgroup] a.ui-btn-active {
     grid-column: 1;
 }
 
-.trackSelections.hide~.itemDetailsGroup {
+.trackSelections.hide~.recordingFields.hide~.itemDetailsGroup {
     grid-column: 1 / -1;
 }
 
@@ -2764,10 +2770,13 @@ div[data-role=controlgroup] a.ui-btn-active {
         color: rgba(255, 255, 255, 1);
     }
 
-    .listItem:hover,
-    .navMenuOption:hover {
+    .listItem:hover {
         background: rgba(255, 255, 255, .125);
         backdrop-filter: var(--blurLargest);
+    }
+
+    .navMenuOption:hover {
+        background: rgba(255, 255, 255, .125);
     }
 
     .searchfields-icon:hover,
