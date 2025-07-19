@@ -1068,9 +1068,9 @@ html {
 /* this hides the main media title when the clear logo is available*/
 .detailLogo:not(.hide)~.detailPageWrapperContainer .nameContainer h1,
 #itemDetailPage:has(.detailImageContainer .card.backdropCard) .detailLogo,
-#itemDetailPage:has(.listItem[data-type="Audio"]) .detailLogo,
-#itemDetailPage:has(.verticalSection[data-type="MusicAlbum"]) .detailLogo,
-#itemDetailPage:has(.verticalSection[data-type="MusicAlbum"]) .detailImageContainer .card {
+#itemDetailPage:has(.detailImageContainer .cardImageIcon.album) .detailLogo,
+#itemDetailPage:has(.detailImageContainer .cardImageIcon.person) .detailLogo,
+.detailImageContainer .card:not(.portraitCard):has(.cardImageIcon.person) {
     z-index: 2;
     display: none;
 }
@@ -1085,12 +1085,12 @@ html {
     display: block !important;
 }
 
-#itemDetailPage:has(.listItem[data-type="Audio"]) .detailImageContainer .cardScalable {
-    aspect-ratio: 1 / 1;
+.detailImageContainer .card.backdropCard:has(.cardImageIcon.album) {
+    max-width: 20vh;
 }
 
-#itemDetailPage:has(.listItem[data-type="Audio"]) .detailImageContainer .card.backdropCard {
-    width: 20vh !important;
+.detailImageContainer .card.backdropCard:has(.cardImageIcon.album) .cardScalable {
+    aspect-ratio: 1 / 1;
 }
 
 #childrenContent:has(.listItem[data-type="Audio"]) {
@@ -1111,6 +1111,7 @@ html {
 #itemDetailPage:has(.detailImageContainer .cardImageIcon.person, .detailImageContainer .cardImageIcon.book) .itemBackdrop,
 #itemDetailPage:has(.detailImageContainer .cardImageIcon.album) .itemBackdrop,
 #itemDetailPage:has(.detailImageContainer .backdropCard .cardImageIcon.tv) .itemBackdrop,
+#itemDetailPage:has(.detailImageContainer .squareCard) .itemBackdrop,
 #itemDetailPage:has(.detailImageContainer .cardImageIcon.live_tv) .itemBackdrop {
     height: calc(100vh - 32vh - var(--secondaryItemPageNegativeSpace)) !important;
 }
