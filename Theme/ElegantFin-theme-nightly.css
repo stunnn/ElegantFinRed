@@ -914,6 +914,18 @@ html {
     }
 }
 
+@keyframes animMoveDownSecondaryPage {
+    from {
+        transform: translateY(-2em);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: .3;
+    }
+}
+
 @keyframes animMoveUp {
     from {
         transform: translateY(-90%);
@@ -1103,16 +1115,14 @@ html {
     height: calc(100vh - 32vh - var(--secondaryItemPageNegativeSpace)) !important;
 }
 
-.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard, .detailImageContainer .card.squareCard) .itemBackdrop {
-    filter: brightness(.5);
-}
-
-#itemDetailPage:has(.detailImageContainer .card.squareCard:has(.cardImageIcon:not(.person))) {
+#itemDetailPage:has(.detailImageContainer .card.backdropCard),
+#itemDetailPage:has(.detailImageContainer .card .cardImageIcon.album) {
     background: linear-gradient(180deg, var(--lighterGradientPointAlpha), var(--darkerGradientPointAlpha))
 }
 
-#itemDetailPage:has(.detailImageContainer .card.backdropCard) {
-    background: linear-gradient(180deg, var(--lighterGradientPointAlpha), var(--darkerGradientPointAlpha))
+.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .itemBackdrop,
+.layout-mobile #itemDetailPage:has(.detailImageContainer .card .cardImageIcon.album) .itemBackdrop {
+    animation: animMoveDownSecondaryPage 1s ease-out forwards;
 }
 
 .layout-mobile .cardImageIcon {
