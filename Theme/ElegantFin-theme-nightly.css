@@ -1267,7 +1267,7 @@ html,
 
 .appfooter {
     background-color: var(--headerColor) !important;
-    backdrop-filter: var(--blurDefault) !important;
+    backdrop-filter: var(--blurLargest) !important;
 }
 
 .lyricPage {
@@ -2585,10 +2585,6 @@ div[data-role=controlgroup] a.ui-btn-active {
     padding-right: 0 !important;
 }
 
-.remoteControlContent.paddded-left.padded-right {
-    padding: 0 var(--sidePadding) !important;
-}
-
 .paging {
     padding: 0 1em;
 }
@@ -3295,6 +3291,20 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .nowPlayingPageImage {
     box-shadow: var(--shadow);
     border-radius: var(--smallRadius);
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.nowPlayingBar .nowPlayingImage {
+    background-size: cover;
+    border-radius: var(--smallerRadius);
+    height: 3.5em;
+    margin: .25em;
+    width: 3.5em;
+}
+
+.nowPlayingBarPositionContainer {
+    top: -0.7em;
 }
 
 @media (orientation: portrait) and (max-width: 43em) {
@@ -3556,4 +3566,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .layout-tv .headerLeft {
     overflow: unset;
     margin: .25em .5em;
+}
+
+.remoteControlContent {
+    padding: 0 var(--sidePadding) !important;
 }
