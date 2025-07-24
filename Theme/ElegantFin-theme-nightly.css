@@ -2318,6 +2318,10 @@ div[data-role=controlgroup] a.ui-btn-active {
     font-weight: 600;
 }
 
+.listItem[data-type="Audio"]:has(.playlistIndexIndicatorImage):not(:hover) {
+    background-color: rgba(255, 255, 255, .07);
+}
+
 [dir="ltr"] .listItem:not(.actionSheetMenuItem)[data-type="Episode"] .listItemBodyText:not(.secondary) {
     font-size: 1.17em;
     font-weight: 600;
