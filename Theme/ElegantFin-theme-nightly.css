@@ -242,11 +242,6 @@ html {
     justify-content: flex-start !important;
 }
 
-.layout-tv .vertical-wrap:not(.centered) {
-    /* this looks odd, but it is needed for proper navigation with remote controls on TVs*/
-    justify-content: flex-end !important;
-}
-
 .countIndicator,
 .fullSyncIndicator,
 .mediaSourceIndicator {
@@ -770,6 +765,13 @@ html {
     background: linear-gradient(0deg, var(--darkerGradientPointAlpha) 70%, 85%, transparent);
 }
 
+.layout-tv .detailPageWrapperContainer {
+    padding-left: 30vw;
+    background: transparent;
+    min-height: 46vh;
+    background: linear-gradient(0deg, var(--darkerGradientPointAlpha) 70%, 85%, transparent);
+}
+
 .detailPagePrimaryContainer {
     align-content: space-between;
     align-items: stretch;
@@ -1009,8 +1011,9 @@ html {
     display: block;
     height: 25vh;
     top: 40vh;
-    width: 60%;
-    margin: auto 20%;
+    left: 30vw;
+    width: 60vw;
+    margin: auto 5vw;
 }
 
 .layout-tv .itemBackdrop {
@@ -1019,6 +1022,12 @@ html {
 
 .detailImageContainer.padded-left {
     padding-left: 0;
+}
+
+.layout-tv .detailImageContainer.padded-left {
+    padding-left: 0;
+    height: 0;
+    position: fixed;
 }
 
 .layout-desktop .detailImageContainer .card {
@@ -1038,6 +1047,7 @@ html {
 
 .layout-tv .detailImageContainer .card {
     width: 23vw !important;
+    display: block !important;
 }
 
 .layout-mobile .detailImageContainer .card {
