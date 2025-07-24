@@ -2952,8 +2952,9 @@ div[data-role=controlgroup] a.ui-btn-active {
 .guide-channelHeaderCell,
 .programCell {
     border-color: transparent;
-    /* this disables 'color coded backgrounds' */
+    /* this disables the 'color coded backgrounds' */
     background-color: transparent !important;
+    border-radius: var(--smallRadius);
 }
 
 .guideProgramName {
