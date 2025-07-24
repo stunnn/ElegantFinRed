@@ -2609,8 +2609,12 @@ div[data-role=controlgroup] a.ui-btn-active {
     padding-right: 0 !important;
 }
 
-.paging {
-    padding: 0 1em;
+.listPaging>span {
+    padding: 0 .5em;
+}
+
+.paper-icon-button-light {
+    margin: 0 .2em;
 }
 
 .layout-mobile #myPreferencesMenuPage {
