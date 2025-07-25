@@ -783,6 +783,10 @@ html {
     margin-bottom: -1.5em;
 }
 
+.layout-mobile .detailPagePrimaryContainer {
+    padding: .5em var(--sidePadding);
+}
+
 [dir=ltr] .detailPagePrimaryContent {
     padding-right: 0;
 }
