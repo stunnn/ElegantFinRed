@@ -197,7 +197,7 @@ html {
 }
 
 .card:focus .cardBox:not(.visualCardBox) .cardScalable {
-    border-color: var(--highlightOutlineColor) !important;
+    border-color: white !important;
 }
 
 .mdl-radio__focus-circle,
