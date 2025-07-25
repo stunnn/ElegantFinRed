@@ -960,19 +960,14 @@ html {
     }
 }
 
-.detailLogo {
-    display: none;
-}
-
 @supports (aspect-ratio: 1 / 1) {
     .detailLogo {
-        display: block;
         top: calc(100vh - 10em - var(--primaryItemPageNegativeSpace));
         left: 0;
         width: 40%;
         transform: translateY(-100%);
         margin: auto 30%;
-        height: 30vh;
+        height: 25vh;
         background-position: bottom;
     }
 }
@@ -985,7 +980,7 @@ html {
     top: 45vh;
     margin: auto 0%;
     width: calc(100vw - 2em);
-    max-height: 20vh;
+    max-height: 17vh;
     animation: animMoveUp 1s ease-out forwards;
 }
 
@@ -1013,7 +1008,7 @@ html {
 
 .layout-tv .detailLogo {
     display: block;
-    height: 25vh;
+    height: 20vh;
     top: 40vh;
     left: 30vw;
     width: 60vw;
