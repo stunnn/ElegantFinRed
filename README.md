@@ -16,28 +16,81 @@ This is a Jellyfin theme inspired from Jellyseerr to improve the overall look an
 
 <hr>
 
-### ▶️ Demo
-
-https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
-
-<hr>
-
-### 🖼️ Previews
+### 🖼️ Screenshots 
+Captured on ElegantFin v25.07.27
 
 <details>
-  <summary><i>Click here to reveal (last updated: 2025-01-19)</i></summary>
-  
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/1.%20Homepage.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/2.%20Movies%20Library.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/3.%20Sidebar.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/4.%20Movie%20Page.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/5.%20Extra%20Dialog.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/6.%20Settings%20Page.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/7.%20Metadata%20Menu.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/8.%20Dashboard%20Settings.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/9.%20Web%20Player.png" style="width:360px;height:auto;"></img>
+  <summary> 💻 <i>Click here to reveal Desktop previews</i></summary>
+
+| Title              | Desktop                                                                                                                                                         |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Homepage           | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/1.%20Homepage.webp?raw=true)             |
+| Movies Library     | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/2.%20Movies%20Library.webp?raw=true)     |
+| Sidebar            | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/3.%20Sidebar.webp?raw=true)              |
+| Movie Page         | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/4.%20Movie%20Page.webp?raw=true)         |
+| Extra Dialog       | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/5.%20Extra%20Dialog.webp?raw=true)       |
+| Settings Page      | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/6.%20Settings%20Page.webp?raw=true)      |
+| Metadata Menu      | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/7.%20Metadata%20Menu.webp?raw=true)      |
+| Dashboard Settings | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/8.%20Dashboard%20Settings.webp?raw=true) |
+| Web Player         | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/9.%20Web%20Player.webp?raw=true)         |
+| TV Show Page       | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/11.%20TV%20Show%20Page.webp?raw=true)    |
+| Movie Details      | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/12.%20Movie%20Details.webp?raw=true)     |
+| Book Page          | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/13.%20Book%20Page.webp?raw=true)         |
+| Artist Page        | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/14.%20Artist%20Page.webp?raw=true)       |
+| Music Player       | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/15.%20Music%20Player.webp?raw=true)      |
+| TV Show Seasons    | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/16.%20TV%20Show%20Seasons.webp?raw=true) |
+| Cast Page          | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/17.%20Cast%20Page.webp?raw=true)         |
+| TV Episode Page    | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/18.%20TV%20Episode%20Page.webp?raw=true) |
+| Live TV Page       | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/19.%20Live%20TV%20Page.webp?raw=true)    |
+| Live TV Guide      | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/20.%20Live%20TV%20Guide.webp?raw=true)   |
+| Login Page         | ![Desktop](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/desktop/21.%20Login%20Page.webp?raw=true)        |
 
 </details>
+
+<details>
+  <summary> 📱 <i>Click here to reveal Mobile previews</i></summary>
+
+|                                                                                                                                                              |                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/1.%20Homepage.webp?raw=true)           | ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/2.%20Movies%20Library.webp?raw=true)   |
+| ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/4.%20Movie%20Page.webp?raw=true)       | ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/5.%20Extra%20Dialog.webp?raw=true)     |
+| ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/6.%20Settings%20Page.webp?raw=true)    | ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/7.%20Metadata%20Menu.webp?raw=true)    |
+| ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/8.%20Dashboard%20Settings.webp?raw=true) | ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/11.%20TV%20Show%20Page.webp?raw=true)  |
+| ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/12.%20Movie%20Details.webp?raw=true)   | ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/13.%20Book%20Page.webp?raw=true)       |
+| ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/14.%20Artist%20Page.webp?raw=true)     | ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/15.%20Music%20Player.webp?raw=true)    |
+| ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/16.%20TV%20Show%20Seasons.webp?raw=true) | ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/17.%20Cast%20Page.webp?raw=true)       |
+| ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/18.%20TV%20Episode%20Page.webp?raw=true) | ![Mobile](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/mobile/21.%20Login%20Page.webp?raw=true)      |
+
+</details>
+
+<details>
+  <summary> 📺 <i>Click here to reveal TV previews</i></summary>
+
+| Title               | TV                                                                                                                                                    |
+| ------------------  | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Homepage            | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/1.%20Homepage.webp?raw=true)             |
+| Movies Library      | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/2.%20Movies%20Library.webp?raw=true)     |
+| Sidebar             | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/3.%20Sidebar.webp?raw=true)              |
+| Movie Page          | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/4.%20Movie%20Page.webp?raw=true)         |
+| Extra Dialog        | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/5.%20Extra%20Dialog.webp?raw=true)       |
+| Settings Page       | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/6.%20Settings%20Page.webp?raw=true)      |
+| Metadata Menu       | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/7.%20Metadata%20Menu.webp?raw=true)      |
+| Dashboard Settings  | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/8.%20Dashboard%20Settings.webp?raw=true) |
+| Web Player          | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/9.%20Web%20Player.webp?raw=true)         |
+| TV Show Page        | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/11.%20TV%20Show%20Page.webp?raw=true)    |
+| Movie Details       | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/12.%20Movie%20Details.webp?raw=true)     |
+| Book Page           | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/13.%20Book%20Page.webp?raw=true)         |
+| Artist Page         | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/14.%20Artist%20Page.webp?raw=true)       |
+| Music Player        | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/15.%20Music%20Player.webp?raw=true)      |
+| TV Show Seasons     | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/16.%20TV%20Show%20Seasons.webp?raw=true) |
+| Cast Page           | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/17.%20Cast%20Page.webp?raw=true)         |
+| TV Episode Page     | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/18.%20TV%20Episode%20Page.webp?raw=true) |
+| Live TV Page        | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/19.%20Live%20TV%20Page.webp?raw=true)    |
+| Live TV Guide       | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/20.%20Live%20TV%20Guide.webp?raw=true)   |
+| Login Page          | ![TV](https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Previews/preview-v25.07.27/optimized/tv/21.%20Login%20Page.webp?raw=true)        |
+
+</details>
+
 
 <hr>
 
@@ -127,7 +180,6 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 - To undo this change, simply remove this code block or replace `50%` with `2.8em`.
 </details>
 
-
 <hr>
 
 ### 🆗 Tested on 
@@ -141,7 +193,7 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
   <summary>1️⃣ - <i>How do I check if I am using the latest version on ElegantFin?</i></summary>
 
 - To make sure that you are using the latest version of ElegantFin, check the version number at the bottom in the Dashboard screen. 
-- It should be something like ElegantFin v25.03.XX
+- It should be something like ElegantFin v25.07.XX
 </details>
 
 <details>
@@ -157,7 +209,7 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 <details>
   <summary>3️⃣ - <i>Why do I notice visual bugs and inconsistencies on Jellyfin Media Player?</i></summary>
 
-- Currently JMP uses Qt 5.x which uses an outdated web engine, so many new CSS features do not work on it. Once a new version based on Qt 6.x is released, most issues should automatically be resolved. Until then, I advise using the web app instead, and JMP is unsupported.
+- As of version 1.12.0, JMP is based on Qt 5.x which uses a very outdated web engine, so it does not support many new CSS features. Once a new version based on Qt 6.x is released, most issues should automatically be resolved. Until then, JMP is unsupported and I recommend using the web app instead.
 </details>
 
 <details>
