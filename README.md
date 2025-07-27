@@ -1,5 +1,8 @@
-# ElegantFin Theme
-This is a Jellyfin theme inspired from Jellyseerr to improve the overall look and experience with various fixes to the UI/UX.
+<!-- Banner Image -->
+<img src="https://github.com/lscambo13/ElegantFin-Next/blob/version-next/Theme/assets/img/banner.png?raw=true" alt="ElegantFin Theme for Jellyfin - Banner">
+
+# ⭐ ElegantFin Theme
+This is a Jellyfin theme inspired from Jellyseerr to improve the overall look and experience with various fixes to the UI/UX. It gives Jellyfin a fresh, modern look, and it aims to work on TV, desktop, and mobile, with just one import.
 
 
 #### **Author:** [lscambo13](https://github.com/lscambo13)
@@ -7,11 +10,13 @@ This is a Jellyfin theme inspired from Jellyseerr to improve the overall look an
 <hr>
 
 ### ✨ Key Features  
-- modern layouts and colors
-- new animations on some elements
-- reduced clutter by hiding unimportant buttons and elements
-- overall rounded design
+- modern layouts and color tones
+- same clean design across phone, desktop, and TV
+- new and improved animations on most elements
+- rounded corners and even spacing everywhere
 - stylish borders, hover effects and shadows
+- neat layout that puts important stuff up front
+- reduced unnecessary clutter
 - various fixes to the user experience
 
 <hr>
@@ -20,7 +25,7 @@ This is a Jellyfin theme inspired from Jellyseerr to improve the overall look an
 Captured on ElegantFin v25.07.27
 
 <details>
-  <summary> 💻 📱<i>Click here to reveal desktop and mobile previews</i></summary>
+  <summary> 💻 <i>Desktop and </i>📱 <i>Mobile previews</i></summary>
 
 | Desktop                                                                                                          | Mobile                                                                                                         |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -48,7 +53,7 @@ Captured on ElegantFin v25.07.27
 </details>
 
 <details>
-  <summary> 📺 <i>Click here to reveal TV previews</i></summary>
+  <summary> 📺 <i>TV previews</i></summary>
 
 | TV View                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------- |
@@ -131,14 +136,7 @@ Captured on ElegantFin v25.07.27
 </details>
 
 <details>
-  <summary><i>3. Bring back the home button in the app header</i></summary>
-
-- Read more about steps [here](https://github.com/lscambo13/ElegantFin/issues/51)
-
-</details>
-
-<details>
-  <summary><i>4. Enable extra overlay buttons on cards on desktop</i></summary>
+  <summary><i>3. Enable extra overlay buttons on cards on desktop</i></summary>
 
 - To enable 'Mark Played' and 'Add to Favorites' buttons that show up at the bottom right corner of cards while hovering, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
   ```
@@ -150,7 +148,7 @@ Captured on ElegantFin v25.07.27
 </details>
 
 <details>
-  <summary><i>5. Place the overlay play button at the center of cards on desktop</i></summary>
+  <summary><i>4. Place the overlay play button at the center of cards on desktop</i></summary>
 
 - To bring the mini play button to the center of cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
   ```
@@ -159,6 +157,30 @@ Captured on ElegantFin v25.07.27
   }
   ```
 - To undo this change, simply remove this code block or replace `50%` with `2.8em`.
+</details>
+
+<details>
+  <summary><i>5. Disable the card hover effect on desktop</i></summary>
+
+- To disable the reflection on cards that shows when hovering over them on desktop, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+```
+  :root{
+    --cardHoverEffect: none;
+  }
+```
+- To undo this change, simply remove this code block or replace `none` with `""`.
+</details>
+
+<details>
+  <summary><i>6. Enable labels below library cards</i></summary>
+
+- To enable text labels under the media library cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+```
+  :root{
+    --libraryLabelVisibility: block;
+  }
+```
+- To undo this change, simply remove this code block or replace `block` with `none`.
 </details>
 
 <hr>
@@ -171,7 +193,7 @@ Captured on ElegantFin v25.07.27
 
 ### 🛠️ Troubleshooting 
 <details>
-  <summary>1️⃣ - <i>How do I check if I am using the latest version on ElegantFin?</i></summary>
+  <summary>1️⃣ - <i>How do I check if I am using the latest version of ElegantFin?</i></summary>
 
 - To make sure that you are using the latest version of ElegantFin, check the version number at the bottom in the Dashboard screen. 
 - It should be something like ElegantFin v25.07.XX
@@ -194,7 +216,13 @@ Captured on ElegantFin v25.07.27
 </details>
 
 <details>
-  <summary>4️⃣ - <i>All the icons on my LG TV seem to be broken. How to fix them?</i></summary>
+  <summary>4️⃣ - <i>Does it work on the AndroidTV version of the Jellyfin app?</i></summary>
+
+- As of version 0.18.11, the official Jellyfin app on the AndroidTVs does not support css themes, but the Android mobile phone app supports them. The WebOS version of the app seems to be based on the mobile phone version, so it supports the theme just fine.
+</details>
+
+<details>
+  <summary>5️⃣ - <i>All the icons on my LG TV seem to be broken. How to fix them?</i></summary>
 
 - It seems that modern Material Icons which this theme uses are [not compatible on some WebOS TVs](https://github.com/lscambo13/ElegantFin/issues/39). There is a [huge similar thread](https://www.reddit.com/r/youtubetv/comments/e27go3/chinese_symbols_instead_of_icons_on_lg_tv/) about this.
 - This bug can be fixed by using the older icons, so I have implemented the following workaround to bring back older, supported icons.
@@ -208,7 +236,7 @@ Captured on ElegantFin v25.07.27
 </details>
 
 <details>
-  <summary>5️⃣ - <i>How do I report bugs/issues?</i></summary>
+  <summary>6️⃣ - <i>How do I report bugs/issues?</i></summary>
 
 - First check [here](https://github.com/lscambo13/ElegantFin/issues?q=) whether a similar issue has been reported already. If it exists, upvote and comment there to let me know. 
 - Alternatively, create a new issue [here](https://github.com/lscambo13/ElegantFin/issues/new/choose).
@@ -216,7 +244,7 @@ Captured on ElegantFin v25.07.27
 
 </details>
 <details>
-  <summary>6️⃣ - <i>When can I expect another update?</i></summary>
+  <summary>7️⃣ - <i>When can I expect another update?</i></summary>
 
 - 🤷
 </details>
@@ -228,4 +256,4 @@ Captured on ElegantFin v25.07.27
 Please read the [Contributor Guidelines](./CONTRIBUTING.md) before opening pull requests.
 
 
-## 🙏 FEEDBACK APPRECIATED
+### 🙏 Feedback Appreciated
