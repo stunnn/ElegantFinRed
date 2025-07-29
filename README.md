@@ -183,6 +183,16 @@ Captured on ElegantFin v25.07.27
 - To undo this change, simply remove this code block or replace `block` with `none`.
 </details>
 
+<details>
+  <summary><i>7. Enable support for the [Media Bar plugin](https://github.com/IAmParadox27/jellyfin-plugin-media-bar/)</i></summary>
+
+- TBD
+```
+	@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/media-bar-plugin-support-latest-min.css");
+```
+- TBD
+</details>
+
 <hr>
 
 ### 🆗 Tested on 
