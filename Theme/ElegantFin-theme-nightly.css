@@ -1839,9 +1839,7 @@ progress+span {
     height: 1.3em;
     width: 1.3em;
     border-radius: var(--smallerRadius);
-    transition: all .125s;
 }
-
 
 .itemSelectionPanel .material-icons.check:before {
     font-size: 4em;
@@ -1900,6 +1898,7 @@ progress+span {
 .checkboxOutline:not(.multiSelectCheckboxOutline) {
     border: solid gray var(--borderWidth);
     background-color: white;
+    transition: all .125s;
 }
 
 .emby-checkbox:checked+span+.checkboxOutline:not(.multiSelectCheckboxOutline) {
