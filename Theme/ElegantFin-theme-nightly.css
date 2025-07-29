@@ -55,7 +55,7 @@
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
     --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), 25%, var(--lighterGradientPoint));
     --headerColorGradient: linear-gradient(180deg, rgba(30, 40, 54, .95) 30%, 55%, transparent 90%);
-    --headerColorGradientAlt: linear-gradient(180deg, rgba(30, 40, 54, .95) 30%, 55%, transparent 90%);
+    --headerColorGradientAlt: linear-gradient(180deg, rgba(30, 40, 54, .95), 70%, transparent);
     --headerBlurMask: linear-gradient(180deg, white 50%, 85%, transparent);
 
     --cardFooterGradient: linear-gradient(0deg, rgb(0 0 0 / 90%), 40%, transparent);
@@ -93,7 +93,7 @@
 
     /* use --headerColorGradient if the above is enabled [default]; 
        use --headerColorGradientAlt otherwise */
-    --headerColorBase: var(--headerColorGradient);
+    --headerBackground: var(--headerColorGradient);
 
     /* fill out YOUR-JELLYFIN-SERVER-ADDRESS with a relevant host address;
        url("<YOUR-JELLYFIN-SERVER-ADDRESS>/Branding/Splashscreen?format=webp&foregroundLayer=1&quality=33&width=3840&height=2160&blur=2"); */
@@ -2329,12 +2329,12 @@ div[data-role=controlgroup] a.ui-btn-active {
     background-color: var(--activeColor) !important;
 }
 
-.actionsheetDivider{
+.actionsheetDivider {
     height: 2px;
     background: rgb(255, 255, 255, 0.05);
 }
 
-.actionsheet-xlargeFont{
+.actionsheet-xlargeFont {
     line-height: normal;
 }
 
@@ -2519,7 +2519,7 @@ div[data-role=controlgroup] a.ui-btn-active {
     justify-content: center;
 }
 
-.alphaPickerButton-tv{
+.alphaPickerButton-tv {
     transition: transform .2s;
 }
 
@@ -3318,7 +3318,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     background-color: transparent;
     border: none;
     border-width: 0 0 var(--borderWidth) 0;
-    background: var(--headerColorBase);
+    background: var(--headerBackground);
     padding-top: .75em;
 }
 
@@ -3348,9 +3348,9 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader),
 .backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.semiTransparent)::after,
 .backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader)::after {
+    --headerBackground: none;
     backdrop-filter: none;
     background-color: transparent;
-    background: none;
     border: none;
 }
 
