@@ -456,7 +456,6 @@ html {
 }
 
 .listViewUserDataButtons {
-    /* flex-direction: column; */
     font-size: small;
 }
 
@@ -852,7 +851,6 @@ html {
 .layout-desktop .sectionTitle,
 .layout-tv .sectionTitle {
     font-size: 1.5rem !important;
-    /* box-sizing: border-box; */
 }
 
 .sectionTitleContainer-cards {
@@ -1093,7 +1091,6 @@ html {
     position: inherit !important;
     margin-top: -150%;
     max-width: 60vw;
-    /* width: 40vw !important; */
 }
 
 .layout-mobile .detailPageWrapperContainer {
@@ -1165,12 +1162,6 @@ html {
 .layout-mobile .cardImageIcon {
     font-size: 3.5em;
 }
-
-/* @media (max-width: 62.5em) {
-    .layout-desktop .detailPageWrapperContainer {
-        min-height: calc(100vh - 7em);
-    }
-} */
 
 @media (max-width: 50em) {
     .homeLibraryButton {
@@ -1702,7 +1693,6 @@ progress+span {
 }
 
 .overview:not(.detail-clamp-text)~.overview-controls .overview-expand:after {
-    /* content: "\e316"; */
     transform: rotateZ(180deg);
 }
 
@@ -1788,10 +1778,6 @@ progress+span {
 
 .dialogBackdropOpened {
     opacity: .66;
-}
-
-.dialogContainer:has([data-id="editlyrics"]) {
-    /* top: -1.75em; */
 }
 
 .subtitleEditor-dropZone,
@@ -2088,7 +2074,6 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 }
 
 /* this styles the media bar plugin - start */
-
 .button-container {
     align-items: center;
 }
@@ -2132,7 +2117,6 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 .backdrop {
     transform-origin: center left;
 }
-
 /* this styles the media bar plugin - end */
 
 .layout-desktop .detailButton:not(.btnPlay):hover {
@@ -2294,10 +2278,6 @@ div[data-role=controlgroup] a.ui-btn-active {
     border-right: var(--defaultBorder);
     padding: .25em;
 }
-
-/* .MuiDrawer-paper:first-child {
-    margin-block-start: .25em;
-} */
 
 .listItemImage {
     border-radius: var(--smallRadius);
@@ -2597,14 +2577,6 @@ div[data-role=controlgroup] a.ui-btn-active {
     transform: scale(1.75);
 }
 
-/* [dir=ltr] .padded-left.vertical-wrap:not(div:has(.homeLibraryButton)) {
-    padding-left: var(--sidePadding) !important;
-}
-
-[dir=ltr] .padded-right.vertical-wrap:not(div:has(.homeLibraryButton)) {
-    padding-right: var(--sidePadding) !important;
-} */
-
 .padded-right {
     padding-right: var(--sidePadding) !important;
 }
@@ -2792,12 +2764,6 @@ div[data-role=controlgroup] a.ui-btn-active {
         border-width: var(--borderWidthDouble);
     }
 
-    .raised:hover,
-    .fab:hover,
-    .emby-button:hover {
-        filter: brightness(1.2) !important;
-    }
-
     .button-flat:hover {
         background-color: rgba(255, 255, 255, .2);
         color: white;
@@ -2920,13 +2886,6 @@ div[data-role=controlgroup] a.ui-btn-active {
 .infoWrapper h1.parentName {
     font-size: 4em;
     white-space: pre-wrap;
-    /* font-family: 'Inter'; */
-    /* text-transform: uppercase; */
-    /* margin-top: -25%; */
-    /* font-weight: 200; */
-    /* letter-spacing: .5em; */
-    /* transform: translateY(-8%); */
-    /* padding-left: 1ch; */
     padding-bottom: .5ch;
     color: white;
 }
@@ -3249,61 +3208,11 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     color: var(--borderColor);
 }
 
-.nowPlayingPageImageContainer {
-    /* position: relative; */
-    /* z-index: 0; */
-    /* keep image above the glow */
-    /* display: inline-block; */
-    /* or block, depending on your layout */
-}
-
-.nowPlayingPageImageContainer::before {
-    /* content: ""; */
-    /* position: absolute; */
-    /* top: -10px; */
-    /* expand beyond edges for glow */
-    /* left: -10px; */
-    /* right: -10px; */
-    /* bottom: -10px; */
-    /* border-radius: 12px; */
-    /* round corners like image (adjust if needed) */
-    /* background: linear-gradient(270deg,red, orange, yellow, green, blue, indigo, violet, red); */
-    /* background-size: 1400% 1400%; */
-    /* filter: blur(10px); */
-    /* animation: rainbowGlow 8s linear infinite; */
-    /* z-index: -1; */
-    /* behind the image */
-    /* opacity: .8; */
-}
-
-/* Make sure the container is positioned relative so ::before works */
-.nowPlayingPageImageContainer {
-    /* position: relative; */
-    /* border-radius: 12px; */
-    /* match the glow rounding */
-}
-
-/* Rainbow animation */
-@keyframes rainbowGlow {
-    /*  0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }*/
-}
-
 .layout-mobile .playlistSection .playlist {
     padding: 4.3em 0;
     top: 0;
     bottom: 4.3em;
     background: var(--headerColor);
-    /* background: color-mix(in srgb, var(--headerColor), var(--darkerGradientPoint) 50%); */
     backdrop-filter: var(--blurLargest);
     z-index: 0;
 }
@@ -3517,16 +3426,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .headroom--unpinned {
     -webkit-transform: translateY(-3.7em);
     transform: translateY(-3.7em);
-    /* border-color: var(--borderColor); */
 }
-
-/* .noHomeButtonHeader .emby-tab-button[data-index="1"] .emby-button-foreground {
-    display: none;
-}
-
-.noHomeButtonHeader .emby-tab-button[data-index="1"]:after {
-    content: "Watchlist";
-} */
 
 .noHomeButtonHeader .emby-tab-button[data-index="1"]:before {
     content: "\e87d";
