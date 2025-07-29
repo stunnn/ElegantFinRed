@@ -1839,6 +1839,7 @@ progress+span {
     height: 1.3em;
     width: 1.3em;
     border-radius: var(--smallerRadius);
+    transition: all .125s;
 }
 
 
