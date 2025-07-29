@@ -2387,6 +2387,15 @@ div[data-role=controlgroup] a.ui-btn-active {
     background-color: var(--activeColor) !important;
 }
 
+.actionsheetDivider{
+    height: 2px;
+    background: rgb(255, 255, 255, 0.05);
+}
+
+.actionsheet-xlargeFont{
+    line-height: normal;
+}
+
 .actionSheetContent {
     padding: .4em !important;
 }
