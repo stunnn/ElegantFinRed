@@ -1852,7 +1852,7 @@ progress+span {
     height: calc(100% - 1.75em);
 }
 
-div[data-isfolder="true"] .cardText-first+.itemSelectionPanel>.checkboxContainer {
+.overflowBackdropCard .cardText-first+.itemSelectionPanel>.checkboxContainer {
     height: calc(100% - 0em);
 }
 
@@ -1879,10 +1879,7 @@ div[data-isfolder="true"] .cardText-first+.itemSelectionPanel>.checkboxContainer
     height: calc(100% - 3em);
 }
 
-.cardFooter+.itemSelectionPanel>.checkboxContainer {
-    height: calc(100% - 3.75em);
-}
-
+.cardFooter+.itemSelectionPanel>.checkboxContainer,
 .cardScalable+.itemSelectionPanel>.checkboxContainer {
     height: calc(100% - 0em);
 }
