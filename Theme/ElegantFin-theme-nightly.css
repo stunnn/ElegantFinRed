@@ -1931,12 +1931,8 @@ div[data-isfolder="true"] .cardText-first+.itemSelectionPanel>.checkboxContainer
     }
 }
 
-.layout-tv .emby-checkbox:focus:not(:checked)+span+.checkboxOutline {
-    outline: none;
-}
-
 .layout-tv .emby-checkbox:focus+span+.checkboxOutline {
-    outline: none;
+    transform: scale(1.75);
 }
 
 .cardIndicators {
@@ -2579,6 +2575,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .alphaPickerButton-tv:focus {
     background-color: var(--highlightOutlineColor);
+    transform: scale(1.75);
 }
 
 /* [dir=ltr] .padded-left.vertical-wrap:not(div:has(.homeLibraryButton)) {
