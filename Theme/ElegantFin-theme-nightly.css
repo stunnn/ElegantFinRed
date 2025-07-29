@@ -1761,6 +1761,10 @@ progress+span {
     min-width: 11em;
 }
 
+[dir=ltr] .emby-collapsible-button {
+    padding-left: 1em;
+}
+
 .dialog:not(.dialog-fullscreen) {
     border-radius: var(--largeRadius) !important;
     border: var(--defaultBorder);
@@ -2582,6 +2586,10 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .alphaPicker {
     justify-content: center;
+}
+
+.alphaPickerButton-tv{
+    transition: transform .2s;
 }
 
 .alphaPickerButton-tv:focus {
