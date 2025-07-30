@@ -1151,7 +1151,7 @@ html {
 
 #itemDetailPage:has(.detailImageContainer .card.backdropCard),
 #itemDetailPage:has(.detailImageContainer .card .cardImageIcon.album) {
-    background: linear-gradient(180deg, var(--lighterGradientPointAlpha), var(--darkerGradientPointAlpha))
+    background: linear-gradient(180deg, var(--darkerGradientPointAlpha) 80%, transparent)
 }
 
 .layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .itemBackdrop,
