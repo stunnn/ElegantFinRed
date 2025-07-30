@@ -1261,6 +1261,10 @@ html,
     background: var(--darkerGradientPoint);
 }
 
+.withSectionTabs .backdropImage:after {
+    display: none;
+}
+
 @keyframes animScaleUp {
     from {
         transform: scale(1) translateY(-2.5%);
@@ -3344,21 +3348,28 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 }
 
 /* this is the transparent header, visible in main media page */
-.skinHeader-withBackground.semiTransparent,
-.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader),
-.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.semiTransparent)::after,
-.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader)::after {
+.skinHeader-withBackground.semiTransparent {
     --headerBackground: none;
     backdrop-filter: none;
     background-color: transparent;
     border: none;
 }
 
-.skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty)::after,
-.skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty) {
+/* this is the semi transparent header without, visible when backdrops setting is on */
+/* .backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader):not(.semiTransparent),
+.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.semiTransparent)::after,
+.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader)::after {
+    --headerBackground: var(--headerColorGradientAlt);
     backdrop-filter: none;
     background-color: transparent;
-    background: none;
+    border: none;
+} */
+
+.skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty)::after,
+.skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty) {
+    --headerBackground: none;
+    backdrop-filter: none;
+    background-color: transparent;
     border: none;
 }
 
