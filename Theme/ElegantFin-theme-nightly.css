@@ -1180,6 +1180,10 @@ html {
     [data-type=Series] .listItemImage {
         display: unset;
     }
+
+    .dashboardActionsContainer {
+        font-size: min(3.6vw, 98%);
+    }
 }
 
 @media (orientation: portrait) {
