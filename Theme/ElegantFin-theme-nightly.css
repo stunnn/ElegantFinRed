@@ -2358,23 +2358,23 @@ div[data-role=controlgroup] a.ui-btn-active {
     margin: 0 .45em 0 .45em !important;
 }
 
-.actionSheetMenuItem.emby-button:has(.listItemIcon.material-icons.check) {
+.actionSheetMenuItem:has(.listItemIcon.check) {
     background-color: var(--activeColor);
 }
 
-.actionSheetMenuItem.emby-button:has(.listItemIcon.material-icons.check) .listItemBodyText {
+.actionSheetMenuItem:has(.listItemIcon.check) .listItemBodyText {
     color: white;
 }
 
-.actionSheetMenuItem.emby-button:has(.listItemIcon.material-icons.check) .listItemIcon.material-icons.check {
+.actionSheetMenuItem:has(.listItemIcon.check) .listItemIcon.check {
     display: none;
 }
 
-.actionSheetMenuItem.emby-button:has(.listItemIcon.material-icons.check[style*="hidden"]) {
+.actionSheetMenuItem:has(.listItemIcon.check[style*="hidden"]) {
     background-color: transparent;
 }
 
-.actionSheetMenuItem.emby-button:has(.listItemIcon.material-icons.check[style*="hidden"]):active {
+.actionSheetMenuItem:has(.listItemIcon.check[style*="hidden"]):active {
     background-color: rgba(255, 255, 255, .125);
 }
 
