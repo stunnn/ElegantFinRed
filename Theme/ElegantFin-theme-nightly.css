@@ -130,7 +130,7 @@ html {
 }
 
 .layout-mobile {
-    --itemColumnGap: 0em;
+    --itemColumnGap: 0;
     --sidePadding: 5%;
 }
 
@@ -748,9 +748,21 @@ html {
 }
 
 .card {
+    --effectiveWidth: calc((99vw - (var(--sidePadding) * 2)));
+    --cardWidth: calc(var(--effectiveWidth) / var(--cardCount) - var(--itemColumnGap));
     box-sizing: border-box;
     width: var(--cardWidth) !important;
-    --cardWidth: calc((99vw - (var(--sidePadding) * 2)) / var(--cardCount) - var(--itemColumnGap));
+}
+
+.layout-mobile .card {
+    --cardWidth: calc(var(--effectiveWidth) / var(--cardCount));
+}
+
+/* this makes the card sizes smaller when phone is in landscape mode */
+@media (orientation: landscape) and (max-height: 40em) {
+    .layout-mobile .card {
+        --effectiveWidth: calc((65vw - (var(--sidePadding) * 2)));
+    }
 }
 
 .detailPageWrapperContainer {
@@ -1196,13 +1208,6 @@ html {
     .layout-mobile .btnPlay.detailButton:not(.play-button) {
         flex: 0 0 100%;
         margin-right: 0 !important;
-    }
-}
-
-/* this makes the card sizes smaller when phone is in landscape mode */
-@media (orientation: landscape) and (max-height: 40em) {
-    .layout-mobile .card {
-        --cardWidth: calc((65vw - (var(--sidePadding) * 2)) / var(--cardCount) - var(--itemColumnGap));
     }
 }
 
