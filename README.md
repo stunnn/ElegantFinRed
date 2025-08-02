@@ -78,6 +78,11 @@ Captured on ElegantFin v25.08.02
 </details>
 
 
+
+
+https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
+
+
 <hr>
 
 ### 👇 How to install/setup this theme? 
@@ -184,9 +189,9 @@ Captured on ElegantFin v25.08.02
 </details>
 
 <details>
-  <summary><i>7. Enable support for the [Media Bar plugin](https://github.com/IAmParadox27/jellyfin-plugin-media-bar/)</i></summary>
+  <summary><i>7. Enable experimental support for the Media Bar plugin</i></summary>
 
-- ElegantFin does not support any plugins by default, so to to add external support for this plugin, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+- ElegantFin does not support any plugins by default, so to to add external support for [this plugin](https://github.com/IAmParadox27/jellyfin-plugin-media-bar), copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
 ```
 	@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/media-bar-plugin-support-latest-min.css");
 ```
