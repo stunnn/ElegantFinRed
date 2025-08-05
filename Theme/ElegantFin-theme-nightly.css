@@ -532,7 +532,6 @@ html {
     }
 }
 
-/* if the window width is equal to or less than (at maximum) 270em then the code in the query will trigger */
 /* 17 posters, 15 thumbs */
 @media (max-width: 270em) {
 
@@ -559,7 +558,6 @@ html {
     }
 }
 
-/* if the window width is equal to or less than (at maximum) 240em then the code in the query will trigger */
 /* 15 posters, 13 thumbs */
 @media (max-width: 240em) {
 
@@ -586,8 +584,7 @@ html {
     }
 }
 
-/* if the window width is equal to or less than (at maximum) 220em then the code in the query will trigger */
-/* 13 posters, 11 thumbs */
+/* 13 posters, 11 thumbs, 4K*/
 @media (max-width: 220em) {
 
     .portraitCard,
@@ -613,7 +610,6 @@ html {
     }
 }
 
-/* if the window width is equal to or less than (at maximum) 200em then the code in the query will trigger */
 /* 12 posters, 10 thumbs */
 @media (max-width: 200em) {
 
@@ -640,7 +636,6 @@ html {
     }
 }
 
-/* if the window width is equal to or less than (at maximum) 170em then the code in the query will trigger */
 /* 10 posters, 8 thumbs */
 @media (max-width: 170em) {
 
@@ -667,7 +662,6 @@ html {
     }
 }
 
-/* if the window width is equal to or less than (at maximum) 150em then the code in the query will trigger */
 /* 9 posters, 7 thumbs */
 @media (max-width: 140em) {
 
@@ -694,7 +688,7 @@ html {
     }
 }
 
-/* 8 posters, 7 thumbs */
+/* 8 posters, 7 thumbs, 1080p */
 @media (max-width: 120em) {
 
     .portraitCard,
