@@ -478,36 +478,9 @@ html {
     --cardCount: 2;
 }
 
-/* if the window width is equal to or more than (at minimum) 220em then the code in the query will trigger */
-/* 25 posters, 22 thumbs */
-@media (min-width: 220em) {
-
-    .portraitCard,
-    .squareCard {
-        --cardCount: 25;
-    }
-
-    .overflowPortraitCard,
-    .overflowSquareCard {
-        --cardCount: 24;
-    }
-
-    .squareCard:has(.cardFooter) {
-        --cardCount: 22;
-    }
-
-    .backdropCard {
-        --cardCount: 22;
-    }
-
-    .overflowBackdropCard {
-        --cardCount: 21;
-    }
-}
-
-/* if the window width is equal to or less than (at maximum) 220em then the code in the query will trigger */
-/* 21 posters, 18 thumbs */
-@media (max-width: 220em) {
+/* if the window width is equal to or more than (at minimum) 300em then the code in the query will trigger */
+/* 21 posters, 19 thumbs */
+@media (min-width: 300em) {
 
     .portraitCard,
     .squareCard {
@@ -520,21 +493,48 @@ html {
     }
 
     .squareCard:has(.cardFooter) {
-        --cardCount: 18;
+        --cardCount: 19;
     }
 
     .backdropCard {
-        --cardCount: 18;
+        --cardCount: 19;
     }
 
     .overflowBackdropCard {
-        --cardCount: 17;
+        --cardCount: 18;
     }
 }
 
-/* if the window width is equal to or less than (at maximum) 200em then the code in the query will trigger */
-/* 17 posters, 14 thumbs */
-@media (max-width: 200em) {
+/* if the window width is equal to or less than (at maximum) 300em then the code in the query will trigger */
+/* 19 posters, 17 thumbs */
+@media (max-width: 300em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 19;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 18;
+    }
+
+    .squareCard:has(.cardFooter) {
+        --cardCount: 17;
+    }
+
+    .backdropCard {
+        --cardCount: 17;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 16;
+    }
+}
+
+/* if the window width is equal to or less than (at maximum) 270em then the code in the query will trigger */
+/* 17 posters, 15 thumbs */
+@media (max-width: 270em) {
 
     .portraitCard,
     .squareCard {
@@ -547,51 +547,105 @@ html {
     }
 
     .squareCard:has(.cardFooter) {
-        --cardCount: 14;
+        --cardCount: 15;
     }
 
     .backdropCard {
-        --cardCount: 14;
+        --cardCount: 15;
     }
 
     .overflowBackdropCard {
+        --cardCount: 14;
+    }
+}
+
+/* if the window width is equal to or less than (at maximum) 240em then the code in the query will trigger */
+/* 15 posters, 13 thumbs */
+@media (max-width: 240em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 15;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 14;
+    }
+
+    .squareCard:has(.cardFooter) {
         --cardCount: 13;
+    }
+
+    .backdropCard {
+        --cardCount: 13;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 12;
+    }
+}
+
+/* if the window width is equal to or less than (at maximum) 220em then the code in the query will trigger */
+/* 13 posters, 11 thumbs */
+@media (max-width: 220em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 13;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 12;
+    }
+
+    .squareCard:has(.cardFooter) {
+        --cardCount: 11;
+    }
+
+    .backdropCard {
+        --cardCount: 11;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 10;
+    }
+}
+
+/* if the window width is equal to or less than (at maximum) 200em then the code in the query will trigger */
+/* 12 posters, 10 thumbs */
+@media (max-width: 200em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 12;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 11;
+    }
+
+    .squareCard:has(.cardFooter) {
+        --cardCount: 10;
+    }
+
+    .backdropCard {
+        --cardCount: 10;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 9;
     }
 }
 
 /* if the window width is equal to or less than (at maximum) 170em then the code in the query will trigger */
-/* 14 posters, 10 thumbs */
+/* 10 posters, 8 thumbs */
 @media (max-width: 170em) {
 
     .portraitCard,
     .squareCard {
-        --cardCount: 14;
-    }
-
-    .overflowPortraitCard,
-    .overflowSquareCard {
-        --cardCount: 13;
-    }
-
-    .squareCard:has(.cardFooter) {
-        --cardCount: 10;
-    }
-
-    .backdropCard {
-        --cardCount: 10;
-    }
-
-    .overflowBackdropCard {
-        --cardCount: 9;
-    }
-}
-
-/* if the window width is equal to or less than (at maximum) 150em then the code in the query will trigger */
-/* 10 posters, 7 thumbs */
-@media (max-width: 150em) {
-
-    .portraitCard,
-    .squareCard {
         --cardCount: 10;
     }
 
@@ -601,7 +655,7 @@ html {
     }
 
     .squareCard:has(.cardFooter) {
-        --cardCount: 8;
+        --cardCount: 9;
     }
 
     .backdropCard {
@@ -610,6 +664,33 @@ html {
 
     .overflowBackdropCard {
         --cardCount: 7;
+    }
+}
+
+/* if the window width is equal to or less than (at maximum) 150em then the code in the query will trigger */
+/* 9 posters, 7 thumbs */
+@media (max-width: 140em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 9;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 8;
+    }
+
+    .squareCard:has(.cardFooter) {
+        --cardCount: 7;
+    }
+
+    .backdropCard {
+        --cardCount: 7;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 6;
     }
 }
 
