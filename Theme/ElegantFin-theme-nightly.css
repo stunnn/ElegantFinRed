@@ -2781,7 +2781,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 .upNextDialog-title {
-    white-space: wrap;
+    white-space: pre-wrap;
     width: unset;
 }
 
