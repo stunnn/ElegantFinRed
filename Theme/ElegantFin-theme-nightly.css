@@ -66,6 +66,7 @@
     --hoverGradientH: linear-gradient(90deg, transparent, rgb(255 255 255 / 100%) 45%, rgb(255 255 255 / 100%) 55%, transparent);
 
     --itemBackdropMask: linear-gradient(180deg, rgba(0, 0, 0, .8), 75%, transparent);
+    --themeVideoPlayerMask: linear-gradient(180deg, rgba(0, 0, 0, 1), 85%, transparent);
 
     /* standard component sizes */
     --largerRadius: 1.25em;
@@ -1008,6 +1009,23 @@ html {
 
 .itemBackdrop {
     display: block !important;
+}
+
+.videoPlayerContainer {
+    position: relative !important;
+    -webkit-mask: var(--themeVideoPlayerMask);
+    mask: var(--themeVideoPlayerMask);
+    height: 90vh;
+}
+
+.layout-mobile .videoPlayerContainer {
+    z-index: 1;
+    height: 35vh;
+}
+
+.videoPlayerContainer>.htmlvideoplayer {
+    width: -webkit-fill-available;
+    object-fit: cover;
 }
 
 .layout-desktop .itemBackdrop {
