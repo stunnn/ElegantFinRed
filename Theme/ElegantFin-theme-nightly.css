@@ -66,7 +66,7 @@
     --hoverGradientH: linear-gradient(90deg, transparent, rgb(255 255 255 / 100%) 45%, rgb(255 255 255 / 100%) 55%, transparent);
 
     --itemBackdropMask: linear-gradient(180deg, rgba(0, 0, 0, .8), 75%, transparent);
-    --themeVideoPlayerMask: linear-gradient(180deg, rgba(0, 0, 0, 1), 85%, transparent);
+    /* --themeVideoPlayerMask: linear-gradient(180deg, rgba(0, 0, 0, 1), 85%, transparent); */
 
     /* standard component sizes */
     --largerRadius: 1.25em;
@@ -1092,7 +1092,8 @@ html {
     display: block !important;
 }
 
-.videoPlayerContainer {
+/* Theme video styling rolled back because jellyfin does not differentiate between the main video player and theme video playback nicely*/
+/* .videoPlayerContainer {
     position: relative !important;
     -webkit-mask: var(--themeVideoPlayerMask);
     mask: var(--themeVideoPlayerMask);
@@ -1107,7 +1108,7 @@ html {
 .videoPlayerContainer>.htmlvideoplayer {
     width: -webkit-fill-available;
     object-fit: cover;
-}
+} */
 
 .layout-desktop .itemBackdrop {
     height: calc(100vh - 32vh - var(--primaryItemPageNegativeSpace)) !important;
