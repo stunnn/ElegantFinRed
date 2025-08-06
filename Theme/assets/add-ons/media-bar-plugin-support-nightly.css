@@ -41,7 +41,8 @@
 }
 
 /* this is my own take */
-.layout-desktop #slides-container {
+.layout-desktop #slides-container,
+.layout-tv #slides-container {
     width: calc(100vw - (2 * var(--sidePadding)));
     height: 60%;
     top: 8em;
@@ -51,18 +52,27 @@
     user-select: none;
 }
 
-.layout-desktop .logo-container {
+.layout-tv #slides-container {
+    top: 0em;
+}
+
+.layout-desktop .logo-container,
+.layout-tv .logo-container {
     top: 10vh;
 }
 
 .layout-desktop .backdrop,
 .layout-desktop .backdrop-container,
-.layout-desktop .backdrop-overlay {
+.layout-desktop .backdrop-overlay,
+.layout-tv .backdrop,
+.layout-tv .backdrop-container,
+.layout-tv .backdrop-overlay {
     mask-image: none;
     -webkit-mask-image: none;
 }
 
-.layout-desktop .backdrop-overlay {
+.layout-desktop .backdrop-overlay,
+.layout-tv .backdrop-overlay {
     background: linear-gradient(0deg, rgba(0, 0, 0, .85), 40%, transparent);
 }
 
