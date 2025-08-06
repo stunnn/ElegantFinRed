@@ -41,8 +41,16 @@
 }
 
 /* this is my own take */
-.layout-desktop #slides-container,
-.layout-tv #slides-container {
+.rating-value {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.age-rating {
+    font-size: 0.8em;
+}
+
+#slides-container {
     width: calc(100vw - (2 * var(--sidePadding)));
     height: 60%;
     top: 8em;
@@ -56,24 +64,46 @@
     top: 0em;
 }
 
-.layout-desktop .logo-container,
-.layout-tv .logo-container {
+.layout-mobile #slides-container {
+    top: 10em;
+}
+
+.logo-container {
     top: 10vh;
 }
 
-.layout-desktop .backdrop,
-.layout-desktop .backdrop-container,
-.layout-desktop .backdrop-overlay,
-.layout-tv .backdrop,
-.layout-tv .backdrop-container,
-.layout-tv .backdrop-overlay {
+.backdrop,
+.backdrop-container,
+.backdrop-overlay {
     mask-image: none;
     -webkit-mask-image: none;
 }
 
-.layout-desktop .backdrop-overlay,
-.layout-tv .backdrop-overlay {
+.backdrop-overlay {
     background: linear-gradient(0deg, rgba(0, 0, 0, .85), 40%, transparent);
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    .button-container {
+        top: calc(50% + 20vh);
+        transform: translateX(-50%) scale(0.8);
+    }
+
+    .info-container {
+        /* top: calc(50% + 6vh); */
+    }
+
+    .tomato-rating {
+        display: none;
+    }
+
+    .dots-container {
+        top: calc(50% + 19vh);
+    }
+
+    .backdrop {
+        transform-origin: center;
+    }
 }
 
 /* this styles the media bar plugin - end */
