@@ -3575,7 +3575,9 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 }
 
 @media (min-width: 75em) {
-    .sectionTabs:not(.layout-tv .sectionTabs) {
+
+    .layout-desktop .sectionTabs,
+    .layout-mobile .sectionTabs {
         -webkit-align-items: center;
         align-items: center;
         -webkit-align-self: center;
