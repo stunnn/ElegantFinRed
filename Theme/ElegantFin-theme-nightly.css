@@ -2793,6 +2793,15 @@ div[data-role=controlgroup] a.ui-btn-active {
     box-shadow: var(--shadow);
 }
 
+/* this workaround allows the skip button get focused correctly on TVs using remote navigation*/
+/* issue: back button can no longer be focused correctly when this button is focused, 
+but that is a non-issue because users can use the back button on their remotes */
+.layout-tv .skip-button {
+    right: unset;
+    left: var(--sidePadding);
+    bottom: 25%;
+}
+
 .skip-button:hover {
     background-color: white;
 }
