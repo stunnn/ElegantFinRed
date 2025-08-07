@@ -2210,7 +2210,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     border-radius: 3em;
     border-color: var(--borderColor);
     height: 3em;
-    width: 10em;
+    min-width: 10em;
     margin-right: .5em !important;
 }
 
