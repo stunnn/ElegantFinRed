@@ -1112,7 +1112,7 @@ html {
     top: -30%;
     -webkit-mask: var(--itemBackdropMask);
     mask: var(--itemBackdropMask);
-    animation: animMoveDown 1s ease-out forwards;
+    animation: animMoveDown .5s ease-out forwards;
     height: 45vh;
 }
 
@@ -1260,7 +1260,7 @@ html {
 
 .layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .itemBackdrop,
 .layout-mobile #itemDetailPage:has(.detailImageContainer .card .cardImageIcon.album) .itemBackdrop {
-    animation: animMoveDownSecondaryPage 1s ease-out forwards;
+    animation: animMoveDownSecondaryPage .5s ease-out forwards;
 }
 
 .layout-mobile .cardImageIcon {
@@ -1385,21 +1385,19 @@ html,
 
 @keyframes animScaleUp {
     from {
-        transform: scale(1) translateY(-2.5%);
+        transform: translateY(-2.5%);
         opacity: 0;
-        filter: var(--blurLarge);
     }
 
     to {
-        transform: scale(1) translateY(0%);
+        transform: translateY(0%);
         opacity: 1;
-        filter: blur(0);
     }
 }
 
 .backdropImageFadeIn {
     transform-origin: bottom center;
-    animation: animScaleUp 1s ease-out forwards;
+    animation: animScaleUp .5s ease-out forwards;
 }
 
 .appfooter {
