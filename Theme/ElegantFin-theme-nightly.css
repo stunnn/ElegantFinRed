@@ -3451,7 +3451,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     backdrop-filter: none;
     background-color: transparent;
     border: none;
-    border-width: 0 0 var(--borderWidth) 0;
     background: var(--headerBackground);
     padding-top: .75em;
 }
@@ -3477,6 +3476,11 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     z-index: -1;
 }
 
+.headerTabs.sectionTabs {
+    margin: 0;
+    height: 6em;
+}
+
 /* this is the transparent header, visible in main media page */
 .skinHeader-withBackground.semiTransparent {
     --headerBackground: none;
@@ -3484,16 +3488,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     background-color: transparent;
     border: none;
 }
-
-/* this is the semi transparent header without, visible when backdrops setting is on */
-/* .backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader):not(.semiTransparent),
-.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.semiTransparent)::after,
-.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader)::after {
-    --headerBackground: var(--headerColorGradientAlt);
-    backdrop-filter: none;
-    background-color: transparent;
-    border: none;
-} */
 
 .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty)::after,
 .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty) {
@@ -3533,11 +3527,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     padding-inline-end: .5ch;
     font-size: 1.2em;
     font-variation-settings: 'FILL' 0;
-}
-
-.headerTabs.sectionTabs {
-    margin: 0;
-    height: 6em;
 }
 
 .layout-tv .sectionTabs .emby-tabs.smoothScrollX {
@@ -3613,3 +3602,22 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .remoteControlContent {
     padding: 0 var(--sidePadding) !important;
 }
+
+/* Uncomment this to bring back the original ElegantFin header design - start */
+
+/* .skinHeader-blurred:not(.osdHeader):not(.semiTransparent) {
+    backdrop-filter: var(--blurLarge);
+    background: var(--headerColor);
+    border: var(--defaultBorder);
+    border-width: 0 0 var(--borderWidth) 0;
+}
+
+.skinHeader-blurred:not(.osdHeader):not(.semiTransparent)::after {
+    content: none;
+}
+
+.headerTabs.sectionTabs {
+    height: 4em;
+} */
+
+/* Uncomment this to bring back the original ElegantFin header design - end */
