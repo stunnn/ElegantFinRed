@@ -479,122 +479,44 @@ html {
 }
 
 /* if the window width is equal to or more than (at minimum) 300em then the code in the query will trigger */
-/* 21 posters, 19 thumbs */
+/* 16 posters, 12 thumbs */
 @media (min-width: 300em) {
 
     .portraitCard,
     .squareCard {
-        --cardCount: 21;
+        --cardCount: 16;
     }
 
     .overflowPortraitCard,
     .overflowSquareCard {
-        --cardCount: 20;
+        --cardCount: 15;
     }
 
     .squareCard:has(.cardFooter) {
-        --cardCount: 19;
+        --cardCount: 12;
     }
 
     .backdropCard {
-        --cardCount: 19;
+        --cardCount: 12;
     }
 
     .overflowBackdropCard {
-        --cardCount: 18;
+        --cardCount: 11;
     }
 }
 
 /* if the window width is equal to or less than (at maximum) 300em then the code in the query will trigger */
-/* 19 posters, 17 thumbs */
+/* 15 posters, 11 thumbs */
 @media (max-width: 300em) {
 
     .portraitCard,
     .squareCard {
-        --cardCount: 19;
-    }
-
-    .overflowPortraitCard,
-    .overflowSquareCard {
-        --cardCount: 18;
-    }
-
-    .squareCard:has(.cardFooter) {
-        --cardCount: 17;
-    }
-
-    .backdropCard {
-        --cardCount: 17;
-    }
-
-    .overflowBackdropCard {
-        --cardCount: 16;
-    }
-}
-
-/* 17 posters, 15 thumbs */
-@media (max-width: 270em) {
-
-    .portraitCard,
-    .squareCard {
-        --cardCount: 17;
-    }
-
-    .overflowPortraitCard,
-    .overflowSquareCard {
-        --cardCount: 16;
-    }
-
-    .squareCard:has(.cardFooter) {
-        --cardCount: 15;
-    }
-
-    .backdropCard {
-        --cardCount: 15;
-    }
-
-    .overflowBackdropCard {
-        --cardCount: 14;
-    }
-}
-
-/* 15 posters, 13 thumbs */
-@media (max-width: 240em) {
-
-    .portraitCard,
-    .squareCard {
         --cardCount: 15;
     }
 
     .overflowPortraitCard,
     .overflowSquareCard {
         --cardCount: 14;
-    }
-
-    .squareCard:has(.cardFooter) {
-        --cardCount: 13;
-    }
-
-    .backdropCard {
-        --cardCount: 13;
-    }
-
-    .overflowBackdropCard {
-        --cardCount: 12;
-    }
-}
-
-/* 13 posters, 11 thumbs, 4K*/
-@media (max-width: 220em) {
-
-    .portraitCard,
-    .squareCard {
-        --cardCount: 13;
-    }
-
-    .overflowPortraitCard,
-    .overflowSquareCard {
-        --cardCount: 12;
     }
 
     .squareCard:has(.cardFooter) {
@@ -610,17 +532,17 @@ html {
     }
 }
 
-/* 12 posters, 10 thumbs */
-@media (max-width: 200em) {
+/* 14 posters, 10 thumbs */
+@media (max-width: 270em) {
 
     .portraitCard,
     .squareCard {
-        --cardCount: 12;
+        --cardCount: 14;
     }
 
     .overflowPortraitCard,
     .overflowSquareCard {
-        --cardCount: 11;
+        --cardCount: 13;
     }
 
     .squareCard:has(.cardFooter) {
@@ -633,6 +555,84 @@ html {
 
     .overflowBackdropCard {
         --cardCount: 9;
+    }
+}
+
+/* 13 posters, 10 thumbs */
+@media (max-width: 240em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 13;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 12;
+    }
+
+    .squareCard:has(.cardFooter) {
+        --cardCount: 10;
+    }
+
+    .backdropCard {
+        --cardCount: 10;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 9;
+    }
+}
+
+/* 12 posters, 9 thumbs, 4K*/
+@media (max-width: 220em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 12;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 11;
+    }
+
+    .squareCard:has(.cardFooter) {
+        --cardCount: 9;
+    }
+
+    .backdropCard {
+        --cardCount: 9;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 8;
+    }
+}
+
+/* 11 posters, 9 thumbs */
+@media (max-width: 200em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 11;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 10;
+    }
+
+    .squareCard:has(.cardFooter) {
+        --cardCount: 9;
+    }
+
+    .backdropCard {
+        --cardCount: 9;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 8;
     }
 }
 
@@ -720,9 +720,7 @@ html {
     .portraitCard,
     .squareCard,
     .overflowPortraitCard,
-    .overflowSquareCard,
-    .squareCard:has(.cardFooter),
-    .backdropCard {
+    .overflowSquareCard {
         --cardCount: 7;
     }
 
@@ -755,7 +753,7 @@ html {
 
     .overflowBackdropCard,
     .backdropCard {
-        --cardCount: 5;
+        --cardCount: 4;
     }
 }
 
