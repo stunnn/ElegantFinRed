@@ -120,6 +120,10 @@
     /* use "" to enable the card hover effect [default]; 
        use none (without quotes) to disable it */
     --cardHoverEffect: "";
+
+    /* use 6em to enable the fading app bar (seamless); 
+       use 5em to get the solid app bar (cleaner with border) */
+    --appBarHeight: 5em;
 }
 
 html {
@@ -3503,6 +3507,11 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .headerTop {
     -webkit-align-items: flex-end;
     align-items: flex-end;
+    padding: .6em 0;
+}
+
+.layout-desktop .headerTop {
+    padding: .6em;
 }
 
 /* this prevents the section tabs from hiding all the way up */
@@ -3571,7 +3580,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
         align-self: center;
         -webkit-justify-content: center;
         justify-content: center;
-        margin-top: -3em;
+        margin-top: -3.25em;
         position: relative;
         width: auto;
     }
@@ -3593,12 +3602,44 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 .layout-tv .headerLeft {
     overflow: unset;
-    margin: .25em .5em;
+    margin: 0em .6em;
 }
 
 .remoteControlContent {
     padding: 0 var(--sidePadding) !important;
 }
+
+/* this allows switching between the header styles easily */
+#reactRoot>div:nth-of-type(3) {
+    container-name: skinHeader;
+    container-type: size;
+    height: var(--appBarHeight);
+}
+
+@container skinHeader (max-height: 5em) {
+
+    .skinHeader-blurred:not(.osdHeader):not(.semiTransparent) {
+        backdrop-filter: var(--blurLarge);
+        background: var(--headerColor);
+        border: var(--defaultBorder);
+        border-width: 0 0 var(--borderWidth) 0;
+    }
+
+    .skinHeader-blurred:not(.osdHeader):not(.semiTransparent)::after {
+        content: none;
+    }
+
+    .headerTabs.sectionTabs {
+        height: 3.9em;
+    }
+
+    .headroom--unpinned {
+        -webkit-transform: translateY(-3.9em);
+        transform: translateY(-3.9em);
+    }
+
+}
+
 
 /* Uncomment this to bring back the original ElegantFin header design - start */
 
@@ -3618,3 +3659,18 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 } */
 
 /* Uncomment this to bring back the original ElegantFin header design - end */
+
+/* .headroom:not(.osdHeader):not(.semiTransparent) {
+    backdrop-filter: var(--blurLarge);
+    background: var(--headerColor);
+    border: var(--defaultBorder);
+    border-width: 0 0 var(--borderWidth) 0;
+}
+
+.headroom:not(.osdHeader):not(.semiTransparent)::after {
+    content: none;
+}
+
+.headroom .headerTabs.sectionTabs {
+    height: 3.9em;
+} */
