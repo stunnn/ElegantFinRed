@@ -201,8 +201,8 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 <hr>
 
 ### 🆗 Tested on 
-- Jellyfin Server v10.10.6
-- Jellyfin Android App v2.6.2
+- Jellyfin Server v10.10.7
+- Jellyfin Android App v2.6.3
 
 <hr>
 
