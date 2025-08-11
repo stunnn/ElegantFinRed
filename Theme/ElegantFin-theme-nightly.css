@@ -2902,6 +2902,11 @@ div[data-role=controlgroup] a.ui-btn-active {
     font-family: consolas, monaco, monospace;
 }
 
+.customCssContainer textarea {
+    max-height: 40vh;
+    overflow-y: auto !important;
+}
+
 .emby-select-withcolor,
 .emby-select,
 .emby-input,
