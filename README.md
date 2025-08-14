@@ -118,7 +118,8 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 <details>
   <summary><i>1. Custom media covers for user media libraries</i></summary>
 
-- [Previews](https://github.com/lscambo13/ElegantFin/blob/main/custom-media-covers.md#%EF%B8%8F-presets-modify-these-styles-according-to-your-own-liking)
+<img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/05eb7cb6-3ac9-444b-8988-9776e0815664" />
+
 - Read more about this experimental add-on [here](https://github.com/lscambo13/ElegantFin/blob/main/custom-media-covers.md)
 
 </details>
@@ -126,7 +127,10 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 <details>
   <summary><i>2. Custom background image for the login page</i></summary>
 
-- [Preview](https://user-images.githubusercontent.com/16425113/129554147-6ac7ba51-43e7-4c8e-ba77-e646a3ef6b12.jpg)
+<img width="auto" height="350" alt="image" src="https://github.com/user-attachments/assets/70834545-d1cd-4496-975a-4310030dedd9" />
+<img width="auto" height="350" alt="image" src="https://github.com/user-attachments/assets/c3cf2d96-0db0-4acb-bc61-7b08d5445452" />
+
+
 - To enable the background wallpaper on the login screen, first tick the 'Enable the splash screen' option in your Jellyfin Dashboard below the Custom CSS Box.
 - Second, copy and paste the following code at the end in Custom CSS box but don't save yet.
   ```
@@ -143,6 +147,9 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 <details>
   <summary><i>3. Enable extra overlay buttons on cards on desktop</i></summary>
 
+  <img width="400" height="auto" alt="image" src="https://github.com/user-attachments/assets/cb8479c2-c577-4d54-a567-697f54291a3b" />
+
+
 - To enable 'Mark Played' and 'Add to Favorites' buttons that show up at the bottom right corner of cards while hovering, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
   ```
   :root{
@@ -154,6 +161,9 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 
 <details>
   <summary><i>4. Place the overlay play button at the center of cards on desktop</i></summary>
+
+  <img width="400" height="auto" alt="image" src="https://github.com/user-attachments/assets/ebde9db6-cd2f-47b5-bdb9-cee1e9852e2e" />
+
 
 - To bring the mini play button to the center of cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
   ```
@@ -167,6 +177,8 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 <details>
   <summary><i>5. Disable the card hover effect on desktop</i></summary>
 
+https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
+
 - To disable the reflection on cards that shows when hovering over them on desktop, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
 ```
   :root{
@@ -179,6 +191,9 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 <details>
   <summary><i>6. Enable labels below library cards</i></summary>
 
+  <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/5999a5de-5134-4b02-94aa-6306768a251c" />
+
+
 - To enable text labels under the media library cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
 ```
   :root{
@@ -190,6 +205,9 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 
 <details>
   <summary><i>7. Enable experimental support for the Media Bar plugin</i></summary>
+
+  <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/3e88e270-40f9-48ba-8173-f65b94344f8d" />
+
 
 - ElegantFin does not support any plugins by default, so to to add external support for [this plugin](https://github.com/IAmParadox27/jellyfin-plugin-media-bar), copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
 ```
