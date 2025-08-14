@@ -2556,6 +2556,10 @@ div[data-role=controlgroup] a.ui-btn-active {
     background-color: var(--lighterGradientPointAlpha);
 }
 
+.layout-tv .trackSelections {
+    order: 2;
+}
+
 .recordingFields {
     order: 4;
 }
@@ -2615,6 +2619,10 @@ div[data-role=controlgroup] a.ui-btn-active {
 .itemDetailsGroup {
     order: 2;
     grid-column: 1;
+}
+
+.layout-tv .itemDetailsGroup {
+    order: 2;
 }
 
 .trackSelections.hide~.recordingFields.hide~.itemDetailsGroup {
@@ -3615,6 +3623,10 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 .libraryPage:not(.noSecondaryNavPage) {
     padding-top: 9.5em !important;
+}
+
+.layout-tv .libraryPage:not(.noSecondaryNavPage) {
+    padding-top: 6em !important;
 }
 
 .layout-tv .headerLeft {
