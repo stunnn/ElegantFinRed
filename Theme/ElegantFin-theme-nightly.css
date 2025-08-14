@@ -121,9 +121,9 @@
        use none (without quotes) to disable it */
     --cardHoverEffect: "";
 
-    /* use 6em to enable the fading app bar (seamless); 
-       use 5em to get the solid app bar (cleaner with border) */
-    --appBarHeight: 5em;
+    /* use 5em to enable the fading app bar (seamless); 
+       use 4.6em to get the solid app bar (cleaner with border) */
+    --appBarHeight: 4.6em;
 }
 
 html {
@@ -3472,39 +3472,26 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     transition: transform .5s;
 }
 
-/* this is the default header, visible in home and libraries */
-.skinHeader-blurred:not(.osdHeader) {
-    backdrop-filter: none;
-    background-color: transparent;
-    border: none;
-    background: var(--headerBackground);
-    padding-top: .75em;
+/* this is the default solid header, visible in home and libraries */
+.skinHeader-blurred:not(.osdHeader):not(.semiTransparent) {
+    backdrop-filter: var(--blurLarge);
+    background: var(--headerColor);
+    border: var(--defaultBorder);
+    border-width: 0 0 var(--borderWidth) 0;
 }
 
-.layout-mobile .skinHeader-blurred:not(.osdHeader) {
-    padding-top: .25em;
-}
-
+.layout-mobile .skinHeader-blurred:not(.osdHeader),
 .layout-mobile .withSectionTabs .headerTop {
-    padding-bottom: 1.45em;
-}
-
-.skinHeader-blurred:not(.osdHeader):not(.semiTransparent)::after {
-    content: var(--headerBlurLayerVisibility);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    backdrop-filter: var(--blurLargest);
-    -webkit-mask: var(--headerBlurMask);
-    mask: var(--headerBlurMask);
-    z-index: -1;
+    padding: 0;
 }
 
 .headerTabs.sectionTabs {
-    margin: 0;
-    height: 6em;
+    display: grid;
+    height: var(--appBarHeight);
+}
+
+.layout-mobile .headerTabs.sectionTabs {
+    align-content: center;
 }
 
 /* this is the transparent header, visible in main media page */
@@ -3530,19 +3517,20 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 /* this keeps the header elements aligned when its height is modified */
 .headerTop {
-    -webkit-align-items: flex-end;
-    align-items: flex-end;
-    padding: .6em 0;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 0;
+    height: var(--appBarHeight);
 }
 
 .layout-desktop .headerTop {
-    padding: .6em;
+    padding: 0 1em;
 }
 
 /* this prevents the section tabs from hiding all the way up */
 .headroom--unpinned {
-    -webkit-transform: translateY(-3.7em);
-    transform: translateY(-3.7em);
+    -webkit-transform: translateY(calc(-1 * var(--appBarHeight) - var(--borderWidth)));
+    transform: translateY(calc(-1 * var(--appBarHeight) - var(--borderWidth)));
 }
 
 .noHomeButtonHeader .emby-tab-button[data-index="1"]:before {
@@ -3605,26 +3593,31 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
         align-self: center;
         -webkit-justify-content: center;
         justify-content: center;
-        margin-top: -3.25em;
+        margin-top: calc(-1 * var(--appBarHeight));
         position: relative;
         width: auto;
     }
 
+    /* this reduces top page padding when section tabs are minimised */
     .libraryPage:not(.noSecondaryNavPage):not(.layout-tv .libraryPage) {
         padding-top: 6.8em !important;
     }
 }
 
 @media (max-width: 100em) {
+
+    /* this makes the font size consistent */
     .sectionTabs {
         font-size: 100%;
     }
 }
 
+/* this increased top page padding when section tabs are maximised */
 .libraryPage:not(.noSecondaryNavPage) {
     padding-top: 9.5em !important;
 }
 
+/* this limits top page padding when section tabs always on TVs */
 .layout-tv .libraryPage:not(.noSecondaryNavPage) {
     padding-top: 6em !important;
 }
@@ -3634,10 +3627,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     margin: 0em .6em;
 }
 
-.remoteControlContent {
-    padding: 0 var(--sidePadding) !important;
-}
-
 /* this allows switching between the header styles easily */
 #reactRoot>div:nth-of-type(3) {
     container-name: skinHeader;
@@ -3645,61 +3634,49 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     height: var(--appBarHeight);
 }
 
-@container skinHeader (max-height: 5em) {
+@container skinHeader (min-height: 4.9em) {
 
+    /* this is the alternative faded app bar */
     .skinHeader-blurred:not(.osdHeader):not(.semiTransparent) {
-        backdrop-filter: var(--blurLarge);
-        background: var(--headerColor);
-        border: var(--defaultBorder);
-        border-width: 0 0 var(--borderWidth) 0;
+        backdrop-filter: none;
+        background-color: transparent;
+        border: none;
+        background: var(--headerBackground);
+        padding: 0;
     }
 
     .skinHeader-blurred:not(.osdHeader):not(.semiTransparent)::after {
-        content: none;
+        content: var(--headerBlurLayerVisibility);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        backdrop-filter: var(--blurLargest);
+        -webkit-mask: var(--headerBlurMask);
+        mask: var(--headerBlurMask);
+        z-index: -1;
+    }
+
+    .layout-mobile .headerTop {
+        height: calc(var(--appBarHeight) - 1em);
     }
 
     .headerTabs.sectionTabs {
-        height: 3.9em;
+        padding-bottom: 1.5em;
+    }
+
+    .layout-mobile .headerTabs.sectionTabs {
+        align-content: center;
     }
 
     .headroom--unpinned {
-        -webkit-transform: translateY(-3.9em);
-        transform: translateY(-3.9em);
+        -webkit-transform: translateY(calc(-.75 * var(--appBarHeight) - var(--borderWidth)));
+        transform: translateY(calc(-.75 * var(--appBarHeight) - var(--borderWidth)));
     }
 
 }
 
-
-/* Uncomment this to bring back the original ElegantFin header design - start */
-
-/* .skinHeader-blurred:not(.osdHeader):not(.semiTransparent) {
-    backdrop-filter: var(--blurLarge);
-    background: var(--headerColor);
-    border: var(--defaultBorder);
-    border-width: 0 0 var(--borderWidth) 0;
+.remoteControlContent {
+    padding: 0 var(--sidePadding) !important;
 }
-
-.skinHeader-blurred:not(.osdHeader):not(.semiTransparent)::after {
-    content: none;
-}
-
-.headerTabs.sectionTabs {
-    height: 4em;
-} */
-
-/* Uncomment this to bring back the original ElegantFin header design - end */
-
-/* .headroom:not(.osdHeader):not(.semiTransparent) {
-    backdrop-filter: var(--blurLarge);
-    background: var(--headerColor);
-    border: var(--defaultBorder);
-    border-width: 0 0 var(--borderWidth) 0;
-}
-
-.headroom:not(.osdHeader):not(.semiTransparent)::after {
-    content: none;
-}
-
-.headroom .headerTabs.sectionTabs {
-    height: 3.9em;
-} */
