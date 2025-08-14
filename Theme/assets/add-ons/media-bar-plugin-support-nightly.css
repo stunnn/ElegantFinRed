@@ -52,8 +52,8 @@
 
 #slides-container {
     width: calc(100vw - (2 * var(--sidePadding)));
-    height: 60%;
-    top: 8em;
+    height: 62%;
+    top: calc(1.5 * var(--appBarHeight));
     border: var(--defaultBorder);
     border-radius: var(--largerRadius);
     transition: all .125s, border 0s;
@@ -103,6 +103,12 @@
 
     .backdrop {
         transform-origin: center;
+    }
+}
+
+@media (min-width: 75em) {
+    #slides-container {
+        top: calc(.5 * var(--appBarHeight));
     }
 }
 
