@@ -3559,7 +3559,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .layout-tv .sectionTabs {
     /* this prevents the section tabs from being off-center in the music library
      after I set the overflow to visible to fix visual glitches */
-    width: 100%;
+    width: 70%;
+    margin-right: 2em;
 }
 
 .headerTabs.sectionTabs .emby-tab-button {
@@ -3589,8 +3590,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 @media (min-width: 75em) {
 
-    .layout-desktop .sectionTabs,
-    .layout-mobile .sectionTabs {
+    .sectionTabs {
         -webkit-align-items: center;
         align-items: center;
         -webkit-align-self: center;
