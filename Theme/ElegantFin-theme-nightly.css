@@ -705,6 +705,13 @@ html {
         --cardCount: 7;
     }
 
+    .layout-tv .portraitCard,
+    .layout-tv .squareCard,
+    .layout-tv .overflowPortraitCard,
+    .layout-tv .overflowSquareCard {
+        --cardCount: 6;
+    }
+
     .squareCard:has(.cardFooter) {
         --cardCount: 6;
     }
@@ -715,6 +722,11 @@ html {
 
     .overflowBackdropCard {
         --cardCount: 5;
+    }
+
+    .layout-tv .backdropCard,
+    .layout-tv .overflowBackdropCard {
+        --cardCount: 4;
     }
 }
 
