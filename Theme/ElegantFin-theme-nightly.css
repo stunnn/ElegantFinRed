@@ -319,34 +319,34 @@ html {
     color: var(--borderColor);
 }
 
-.card.card-hoverable:hover .cardScalable,
-.card.card-hoverable:hover .visualCardBox {
+.card-hoverable:hover .cardScalable,
+.card-hoverable:hover .visualCardBox {
     border-color: white !important;
 }
 
-.card.card-hoverable:hover .visualCardBox .cardScalable {
+.card-hoverable:hover .visualCardBox .cardScalable {
     border-color: var(--darkerBorderColor) !important;
 }
 
-.card.card-hoverable:hover .cardImageContainer {
+.card-hoverable:hover .cardImageContainer {
     transform: scale(1.025);
 }
 
-.card.card-hoverable .itemSelectionPanel {
+.card-hoverable .itemSelectionPanel {
     transition: transform .125s;
 }
 
-.card.card-hoverable:hover .cardScalable,
-.card.card-hoverable:hover .itemSelectionPanel {
+.card-hoverable:hover .cardScalable,
+.card-hoverable:hover .itemSelectionPanel {
     transform: scale(1.02);
 }
 
-.card.card-hoverable .cardScalable:active {
+.card-hoverable .cardScalable:active {
     transition: transform .075s;
     transform: scale(1);
 }
 
-.cardScalable:has(.cardOverlayButton:hover)>.cardImageContainer {
+.cardScalable:has(.cardOverlayButton-hover:hover)>.cardImageContainer {
     transform: scale(1);
 }
 
@@ -355,7 +355,7 @@ html {
     background: rgba(255, 255, 255, .05);
 }
 
-.card.card-hoverable .cardOverlayContainer:after {
+.card-hoverable .cardOverlayContainer:after {
     content: var(--cardHoverEffect);
     transition: .5s;
     position: absolute;
@@ -367,7 +367,7 @@ html {
     background: var(--hoverGradientV);
 }
 
-.card.card-hoverable:hover .cardOverlayContainer:after {
+.card-hoverable:hover .cardOverlayContainer:after {
     transform: translateY(50%) translateX(0);
     opacity: 0;
 }
@@ -414,7 +414,7 @@ html {
     color: white;
 }
 
-.layout-desktop .cardOverlayButton-br button[data-action="menu"],
+.cardOverlayButton-br .cardOverlayButton-hover[data-action="menu"],
 .layout-desktop .listItemButton[data-action="menu"] {
     display: none;
 }
