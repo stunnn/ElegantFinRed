@@ -1792,7 +1792,6 @@ progress+span {
     color: var(--dimTextColor);
     margin-top: 0;
     margin-bottom: 0;
-    -webkit-line-clamp: 2;
 }
 
 .detail-clamp-text p {
@@ -1800,8 +1799,18 @@ progress+span {
     margin-bottom: .25em;
 }
 
+.layout-desktop .detail-clamp-text {
+    -webkit-line-clamp: 2;
+}
+
 .layout-mobile .detail-clamp-text {
     -webkit-line-clamp: 4;
+}
+
+.layout-tv .detail-clamp-text {
+    -webkit-line-clamp: 10;
+    margin-bottom: -1.5em;
+    transition: none;
 }
 
 .overview-expand.emby-button {
