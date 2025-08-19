@@ -946,7 +946,7 @@ html {
     --itemColumnGap: 0.5em;
 }
 
-.itemsContainer {
+.itemsContainer:not(.editorsChoiceItemsContainer) {
     column-gap: var(--itemColumnGap);
 }
 
