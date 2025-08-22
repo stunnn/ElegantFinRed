@@ -196,11 +196,7 @@ html {
     color: var(--borderColor);
 }
 
-.card {
-    padding: .375em;
-    transition: width .5s;
-}
-
+.card:focus .cardBox.visualCardBox,
 .card:focus .cardBox:not(.visualCardBox) .cardScalable {
     border-color: white !important;
 }
@@ -840,8 +836,17 @@ html {
 .card {
     --effectiveWidth: calc((99vw - (var(--sidePadding) * 2)));
     --cardWidth: calc(var(--effectiveWidth) / var(--cardCount) - var(--itemColumnGap));
-    box-sizing: border-box;
     width: var(--cardWidth) !important;
+    padding: .375em;
+    transition: width .5s;
+    box-sizing: content-box;
+}
+
+/* this makes the cards bigger and center aligned on older browsers */
+@supports (aspect-ratio: 1 / 1) {
+    .card {
+        box-sizing: border-box;
+    }
 }
 
 .layout-mobile .card {
