@@ -2226,6 +2226,17 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     height: 3em;
     min-width: 10em;
     margin-right: .5em !important;
+    flex-direction: row;
+}
+
+.btnPlay:after {
+    content: attr(title);
+    padding: 0 1ch;
+}
+
+.btnPlay>.detailButton-content::after {
+    padding: 0 1ch;
+    place-content: center;
 }
 
 .btnPlay>.detailButton-content {
@@ -2240,26 +2251,13 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     justify-content: flex-start;
 }
 
-.mainDetailButtons:has(.detailButton[data-type="Book"]) .btnPlay[title="Play"]>.detailButton-content::after {
+.mainDetailButtons:has(.detailButton[data-type="Book"]) .btnPlay[title="Play"]:after {
     content: "Read";
 }
 
 .mainDetailButtons:has(.detailButton[data-type="Book"]) .btnPlay .material-icons.play_arrow:before {
     content: "\f1c6";
     padding-inline-end: 1ch;
-}
-
-.btnPlay[title="Play"]>.detailButton-content::after {
-    content: "Play";
-}
-
-.btnPlay[title="Resume"]>.detailButton-content::after {
-    content: "Resume";
-}
-
-.btnPlay>.detailButton-content::after {
-    padding: 0 1ch;
-    place-content: center;
 }
 
 .mainDetailButtons {
