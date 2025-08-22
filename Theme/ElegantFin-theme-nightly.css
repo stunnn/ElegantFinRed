@@ -182,10 +182,15 @@ html {
     transition: transform 50ms;
 }
 
+#myPreferencesMenuPage>div:after,
 .dashboardFooter::after {
     content: var(--elegantFinFooterText);
     font-size: .8em;
-    color: #4e4e60;
+    color: var(--borderColor);
+    display: inline-grid;
+    width: -webkit-fill-available;
+    justify-content: center;
+    font-weight: 600;
 }
 
 ::selection {
