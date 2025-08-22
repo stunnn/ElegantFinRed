@@ -1351,8 +1351,8 @@ html,
     background: var(--backgroundGradient);
 }
 
-.backdropImage:after,
-.backdropImage:before {
+.layout-desktop .backdropImage:after,
+.layout-desktop .backdropImage:before {
     content: "";
     position: absolute;
     top: 0;
@@ -1381,6 +1381,10 @@ html,
 .backgroundContainer.withBackdrop {
     opacity: .9;
     background: linear-gradient(0deg, var(--darkerGradientPoint), 45%, rgba(17, 24, 39, .25));
+}
+
+.layout-tv .backgroundContainer.withBackdrop {
+    background: linear-gradient(0deg, var(--darkerGradientPoint), 45%, rgba(17, 24, 39, .95));
 }
 
 .layout-mobile .withSectionTabs .backgroundContainer.withBackdrop {
