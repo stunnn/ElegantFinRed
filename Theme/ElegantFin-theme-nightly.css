@@ -224,11 +224,6 @@ html {
     outline: none !important;
 }
 
-.card.show-animation:focus>.cardBox {
-    -webkit-transform: scale(1.125);
-    transform: scale(1.125);
-}
-
 [dir=ltr] .itemsContainer>.card>.cardBox {
     margin-left: auto;
     margin-right: auto;
@@ -1912,10 +1907,10 @@ progress+span {
         border: unset;
     }
 
-    body:has(.dialog.dialog-fixedSize.opened,
+    /* body:has(.dialog.dialog-fixedSize.opened,
         .dialog.dialog-fullscreen-lowres.opened) {
         overflow: hidden;
-    }
+    } */
 }
 
 
@@ -3524,6 +3519,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .headerTop {
     -webkit-align-items: center;
     align-items: center;
+    /* this removes different padding set on different layouts in various media queries */
     padding: 0;
     height: var(--appBarHeight);
 }
