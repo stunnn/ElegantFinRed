@@ -1265,6 +1265,7 @@ html {
 /* this shows the poster in the cast, book and music pages */
 .detailImageContainer .card:has(.book, .person, .album),
 .detailImageContainer .card.backdropCard:has(.tv),
+.detailImageContainer .card.backdropCard:has(.movie),
 .detailImageContainer .card.backdropCard:has(.live_tv) {
     display: block;
 }
