@@ -55,7 +55,7 @@
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
     --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), 25%, var(--lighterGradientPoint));
     --headerColorGradient: linear-gradient(180deg, rgba(30, 40, 54, .95) 30%, 55%, transparent 90%);
-    --headerColorGradientAlt: linear-gradient(180deg, rgba(30, 40, 54, .95), 70%, transparent);
+    --headerColorGradientAlt: linear-gradient(180deg, rgba(30, 40, 54, 1), 70%, transparent);
     --headerBlurMask: linear-gradient(180deg, white 50%, 85%, transparent);
 
     --cardFooterGradient: linear-gradient(0deg, rgb(0 0 0 / 90%), 40%, transparent);
@@ -123,7 +123,7 @@
 
     /* use 5em to enable the fading app bar (seamless); 
        use 4.6em to get the solid app bar (cleaner with border) */
-    --appBarHeight: 4.6em;
+    --appBarHeight: 5em;
 }
 
 html {
@@ -137,6 +137,9 @@ html {
 .layout-mobile {
     --itemColumnGap: 0;
     --sidePadding: 5%;
+    --headerColorGradient: var(--headerColorGradientAlt);
+    --blurLargest: blur(12px);
+    --headerBlurMask: linear-gradient(180deg, white 60%, 90%, transparent);
 }
 
 /* Material Icons Round */
@@ -3529,8 +3532,16 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     height: var(--appBarHeight);
 }
 
+.osdHeader .headerTop {
+    max-height: var(--appBarHeight);
+}
+
 .layout-desktop .headerTop {
     padding: 0 1em;
+}
+
+.layout-tv .headerTop {
+    padding: 0 .5em;
 }
 
 /* this prevents the section tabs from hiding all the way up */
