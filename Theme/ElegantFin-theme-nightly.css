@@ -201,6 +201,10 @@ html {
     color: var(--borderColor);
 }
 
+.cardPadder .cardImageIcon {
+    color: var(--selectorBackgroundColorAlpha);
+}
+
 .card:focus .cardBox.visualCardBox,
 .card:focus .cardBox:not(.visualCardBox) .cardScalable {
     border-color: white !important;
