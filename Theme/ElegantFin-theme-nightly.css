@@ -124,6 +124,10 @@
     /* use 5em to enable the fading app bar (seamless); 
        use 4.6em to get the solid app bar (cleaner with border) */
     --appBarHeight: 5em;
+
+    /* use 50% to crop the top of the backdrop image slightly (recommended) [default]; 
+       use 0% to prevent the cropping from top, or choose between 0% and 100% according to your preference */
+    --backdropPositionY: 50%;
 }
 
 html {
@@ -1359,8 +1363,12 @@ html,
     background: var(--backgroundGradient);
 }
 
-.layout-desktop .backdropImage:after,
-.layout-desktop .backdropImage:before {
+.backdropImage {
+    background-position-y: var(--backdropPositionY);
+}
+
+.backdropImage:after,
+.backdropImage:before {
     content: "";
     position: absolute;
     top: 0;
