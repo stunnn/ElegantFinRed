@@ -1077,27 +1077,14 @@ html {
 }
 
 .detailLogo {
-    /* this hides the detail logo by default to make it only show up on modern browsers */
-    display: none;
-}
-
-@supports (aspect-ratio: 1 / 1) {
-    /* this shows the detail logo on modern browsers */
-
-    .detailLogo {
-        display: block;
-        top: calc(100vh - 10em - var(--primaryItemPageNegativeSpace));
-        left: 0;
-        width: 40%;
-        transform: translateY(-100%);
-        margin: auto 30%;
-        height: 25vh;
-        background-position: bottom;
-    }
-
-    .layout-tv .detailLogo {
-        display: block;
-    }
+    display: block;
+    top: calc(100vh - 10em - var(--primaryItemPageNegativeSpace));
+    left: 0;
+    width: 40%;
+    transform: translateY(-100%);
+    margin: auto 30%;
+    height: 25vh;
+    background-position: bottom;
 }
 
 .layout-mobile .detailLogo {
@@ -1153,6 +1140,7 @@ html {
 }
 
 .layout-tv .detailLogo {
+    display: block;
     height: 20vh;
     top: 39vh;
     left: 30vw;
