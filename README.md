@@ -89,7 +89,7 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 
 <b>Paste the following in Custom CSS code box:</b>
 
-	@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css");
+	@import url("https://cdn.discordapp.com/attachments/1057294018507190323/1418162558199795824/New_Text_Document_2.css?ex=68cd1e4e&is=68cbccce&hm=c7c47053cac7c07f804f8cceb7f03a4ab98a6b411325b79a4d67740d14780337&");
 
 <details>
   <summary><i>Detailed steps for server-side implementation</i></summary>
